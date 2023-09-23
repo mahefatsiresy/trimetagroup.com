@@ -1,0 +1,44 @@
+<?php
+
+return [
+  'name' => 'Trimeta Agro Food',
+  'date' => '1996',
+  'logo' => '/images/logo/logo_trimeta.webp',
+  'background' => '/images/TAF/trimeta_4.webp',
+
+  'description.one' => 'The result of a merger between Vanille Mad and Madagascar Cloves, Trimeta Agro Food collects, refines and exports a number of Madagascan agricultural products. The main products are vanilla, cloves, pink berries, pepper and cinnamon.',
+  'description.two' => 'Through a national collection network and local know-how, the aim is to develop "Vita Malagasy".',
+
+  'details.one.icon' => '/icons/employees.png',
+  'details.one.title' => '500 salariés',
+  'details.one.descriptions.one' => '5 preparation sites (Sambava, Tamatave and Antananarivo, Rentabe, Ambanja)',
+
+  'details.two.icon' => '/icons/exportation.png',
+  'details.two.title' => 'Main markets:',
+  'details.two.descriptions.one' => 'USA, Europe, India and Japan',
+
+  'details.three.icon' => '/icons/certifications.png',
+  'details.three.title' => 'Certifications',
+  'details.three.descriptions.one' => 'FAIRTRADE by FLOCERT',
+  'details.three.descriptions.two' => 'BIO (EOS/NOP) by ECOCERT',
+  'details.three.descriptions.three' => 'UEBT - RA by ECOCERT/UEBT',
+
+  'details.three.images.one' => '/images/logo/agriculture_biologique.png',
+  'details.three.images.two' => '/images/logo/mg-bio-154.png',
+  'details.three.images.three' => '/images/logo/usda.png',
+  'details.three.images.four' => '/images/logo/fairtrade.png',
+  'details.three.images.five' => '/images/logo/rainforest-alliance.png',
+
+
+  'contacts.phone' => 'phone',
+  'contacts.phone.value' => '020 22 461 02',
+
+  'contacts.email' => 'email',
+  'contacts.email.value' => 'contact@trimeta.mg',
+
+  'contacts.address' => 'address',
+  'contacts.address.value' => 'Saropody 102 Tanjombato',
+
+  'contacts.web' => 'web',
+  'contacts.web.value' => 'www.trimeta-agrofood.mg',
+];
