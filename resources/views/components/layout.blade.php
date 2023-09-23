@@ -21,6 +21,7 @@
     <x-navbar />
     {{ $slot }}
     <x-footer />
+    <script src="{{ asset('js/motion.js') }}"></script>
 </body>
 
 </html>

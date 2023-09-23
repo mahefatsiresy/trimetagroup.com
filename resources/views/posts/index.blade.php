@@ -1,5 +1,5 @@
  <x-layout :title="__('common.news.document-title')">
-     @if (isset($post) && isset($posts))
+     @if (isset($posts))
          <x-post.hero :post="$posts[0]" withCta />
 
          <div class="px-4 lg:px-12 py-12">

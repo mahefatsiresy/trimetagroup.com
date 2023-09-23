@@ -75,7 +75,7 @@
             <x-section-title :text="__('home.sections.responsibilities.title')" dark />
         </div>
         @foreach ($responsibilities as $data)
-            <x-fullpage-card class="bg-top" :image="$data['image']" :index="$loop->index" dark>
+            <x-fullpage-card class="bg-top" :image="$data['image']" :index="$loop->index" dark motionSm>
                 <x-description-card :data="$data" :index="$loop->index" />
             </x-fullpage-card>
         @endforeach
