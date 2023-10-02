@@ -77,12 +77,12 @@
             </div>
         </x-fullpage-card>
 
-        <section class="px-4 md:px-12 w-full pb-16">
-            <x-section-title text={csrData.title} />
-            <ul class="grid text-slate-700 justify-items-start md:grid-cols-2 gap-8 mt-8">
+        <section class="w-full px-4 pb-16 md:px-12">
+            <x-section-title :text="__('commitments.csr-projects.title')" />
+            <ul class="grid gap-8 mt-8 text-slate-700 justify-items-start md:grid-cols-2">
                 @foreach ($csrData['categories'] as $category)
                     <li class="mb-6">
-                        <h3 class="uppercase rounded-md text-green-600 font-bold mb-4 text-lg">
+                        <h3 class="mb-4 text-lg font-bold text-green-600 uppercase rounded-md">
                             {{ $category['title'] }}
                         </h3>
                         <ul class="pl-4">
