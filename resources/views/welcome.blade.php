@@ -40,30 +40,30 @@
     </section>
 
     {{-- ethics --}}
-    <section class="bg-green-300 py-8 px-6 md:py-12 md:px-12">
+    <section class="px-6 py-8 bg-green-300 md:py-12 md:px-12">
         <div class="flex flex-col gap-4 md:flex-row md:justify-between">
             <x-section-title :text="__('home.sections.ethics.title')" />
-            <ul class="self-center w-full flex gap-2 justify-center md:w-fit md:gap-4 lg:text-lg lg:gap-6">
-                <li class="uppercase text-green-800 font-bold">
+            <ul class="flex self-center justify-center w-full gap-2 md:w-fit md:gap-4 lg:text-lg lg:gap-6">
+                <li class="font-bold text-green-800 uppercase">
                     {{ __('home.sections.ethics.willingness') }}
                 </li>
-                <li class="uppercase text-red-700 font-bold">
+                <li class="font-bold text-red-700 uppercase">
                     {{ __('home.sections.ethics.responsibility') }}
                 </li>
-                <li class="uppercase text-gray-900 font-bold">
+                <li class="font-bold text-gray-900 uppercase">
                     {{ __('home.sections.ethics.performance') }}
                 </li>
             </ul>
         </div>
-        <div class="mt-8 flex flex-col md:gap-4">
+        <div class="flex flex-col mt-8 md:gap-4">
             <ul class="pl-4 text-lg md:text-xl max-w-[640px] text-gray-950">
                 @foreach (['one', 'two', 'three'] as $num)
-                    <li class="list-disc mb-6">
+                    <li class="mb-6 list-disc">
                         {{ __("home.sections.ethics.resume.${num}") }}
                     </li>
                 @endforeach
             </ul>
-            <x-button href="/our-ethical-charter">
+            <x-button href="/about-us/our-ethical-charter">
                 {{ __('home.sections.ethics.cta') }}
             </x-button>
         </div>
@@ -71,7 +71,7 @@
 
     {{-- responsibilities --}}
     <section class="pt-8 bg-gray-950">
-        <div class="px-4 lg:px-12 pb-12">
+        <div class="px-4 pb-12 lg:px-12">
             <x-section-title :text="__('home.sections.responsibilities.title')" dark />
         </div>
         @foreach ($responsibilities as $data)
