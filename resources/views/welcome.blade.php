@@ -1,16 +1,16 @@
 @php
     $numberLetter = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight'];
-    
+
     $descData = [3, 5, 3, 3, 2, 1];
-    
+
     $responsibilities = array_map(
         function ($data, $index) use ($numberLetter) {
             $desc = [];
-    
+
             for ($i = 0; $i < $data; $i++) {
                 $desc[] = __("home.sections.responsibilities.{$numberLetter[$index]}.descriptions.{$numberLetter[$i]}");
             }
-    
+
             return [
                 'title' => __("home.sections.responsibilities.{$numberLetter[$index]}.title"),
                 'icon' => __("home.sections.responsibilities.{$numberLetter[$index]}.icon"),
@@ -83,9 +83,10 @@
 
 
     {{-- news --}}
+    {{--
     <div class="px-4 md:px-12">
         <x-section-title :text="__('common.news.section-title')" />
-        @if (isset($post))
+        @if (isset($posts))
 
             <ul class="grid gap-4 my-12">
                 @if (!$posts || 0 === $posts->count())
@@ -100,5 +101,7 @@
             <p class="pb-8">CDN is not reponsding...</p>
         @endif
     </div>
+    --}}
+
 
 </x-layout>

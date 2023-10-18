@@ -65,13 +65,17 @@ Route::get('about-us/{slug}', function ($slug) {
 
         $post = buildPost($post);
 
-        $posts = Post::where('post_name', '!=', $slug)
-            ->where('ping_status', 'open')
-            ->published()
-            ->paginate(3)
-            ->map(function ($p) {
-                return buildPost($p);
-            });
+        $posts = [];
+
+        if ('ceo-words' !== $slug || $frTranslation['ceo-words'] !== $slug || 'our-history' !== $slug || $frTranslation['our-history'] !== $slug) {
+            $posts = Post::where('post_name', '!=', $slug)
+                ->where('ping_status', 'open')
+                ->published()
+                ->paginate(3)
+                ->map(function ($p) {
+                    return buildPost($p);
+                });
+        }
 
         return view('posts.show', ['post' => $post, 'posts' => $posts]);
     } catch (Exception $e) {
@@ -88,6 +92,8 @@ Route::get('news/{slug}', function ($slug) {
     $post = Post::slug($slug)->first();
 
     $post = buildPost($post);
+
+    $posts = null;
 
     $posts = Post::where('post_name', '!=', $slug)
         ->where('ping_status', 'open')

@@ -7,5 +7,8 @@
             {!! $post['content'] !!}
         </div>
     @endif
-    <x-post.more :posts="$posts" />
+
+    @if ($posts)
+        <x-post.more :posts="$posts" />
+    @endif
 </div>

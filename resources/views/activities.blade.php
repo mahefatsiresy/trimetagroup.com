@@ -8,7 +8,7 @@
     <div class="px-4 md:px-12">
 
         <x-section-title :text="__('common.company-news-title :company', ['company' => $title])" />
-        @if (isset($post))
+        @if (isset($posts))
             <ul class="grid gap-4 my-12">
                 @if (!$posts || 0 === $posts->count())
                     <div>
