@@ -10,6 +10,8 @@ return [
     'navbar.links.group.our-ethical-charter' => 'Notre charte éthique',
 
     'navbar.links.activities.trigger' => 'Nos activités',
+    'navbar.links.activities.1.title' => 'Industrie Agro-alimentaire',
+    'navbar.links.activities.2.title' => 'Hoteleries',
     'navbar.links.activities.enduma' => 'Enduma',
     'navbar.links.activities.trimeta-agrofood' => 'Trimeta Agro Food',
     'navbar.links.activities.wimmo' => 'Wimmo',

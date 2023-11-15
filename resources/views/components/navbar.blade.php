@@ -1,6 +1,9 @@
 @php
-    $group = ['ceo-words', 'our-history', 'key-dates', 'our-ethical-charter'];
-    $activities = ['enduma', 'trimeta-agrofood', 'wimmo', 'millot', 'orkidex', 'alma-villas'];
+    $group = ['our-history', 'key-dates', 'our-ethical-charter'];
+    $activities = [
+        "agro" => ['enduma', 'trimeta-agrofood', 'millot', 'orkidex'],
+        "hotel" => ['wimmo',  'alma-villas']
+    ];
 @endphp
 
 <nav class="fixed top-0 z-20 navbar bg-gray-950/95 backdrop-blur text-gray-50">
