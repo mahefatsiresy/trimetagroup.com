@@ -3,7 +3,7 @@ return [
 
     'document-title' => 'Dates clés du Groupe',
 
-    'Alma Villas.date' => '2001',
+    'Alma Villas.date' => '2021',
     'Alma Villas.image' => '/images/logo/alma_logo.webp',
     'Alma Villas.about.one' => 'Création de ALMA VILLA Maison d\'hôtes',
 
