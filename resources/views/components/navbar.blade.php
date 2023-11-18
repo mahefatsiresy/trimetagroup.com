@@ -6,7 +6,7 @@
     ];
 @endphp
 
-<nav class="fixed top-0 z-20 navbar bg-gray-950/95 backdrop-blur text-gray-50">
+<nav class="fixed top-0 z-20 navbar bg-gray-950/90 backdrop-blur text-gray-50 w-screen">
     <div class="w-full nav-container">
         <div class="flex items-center h-full gap-6 pl-4 lg:px-12 lg:justify-between">
             {{-- logo --}}
@@ -40,7 +40,7 @@
 
             {{-- hamburger menu --}}
             <input class="checkbox" type="checkbox" />
-            <div class="hamburger-lines">
+            <div class="hamburger-lines mt-1">
                 <span class="line line1 bg-gray-50"></span>
                 <span class="line line2 bg-gray-50"></span>
                 <span class="line line3 bg-gray-50"></span>
