@@ -1,5 +1,5 @@
 @php
-    $title = ($slug === 'trimeta-agrofood' ? 'Trimeta Agro Food' : 'alma-villas' === $slug) ? 'Alma Villas' : ucwords($slug);
+    $title = $slug === 'trimeta-agrofood' ? 'Trimeta Agro Food' : ('alma-villas' === $slug ? 'Alma Villas' : ucwords($slug));
 @endphp
 
 <x-layout :title="$title">

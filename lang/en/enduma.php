@@ -18,11 +18,12 @@ return [
   'details.three.title' => '26 500 000 m2 de sacs fabriqués/an',
 
   'details.four.icon' => '/icons/certifications.png',
-  'details.four.title' => 'Certifications',
-  'details.four.descriptions.one' => 'Certified ISO: 9001/2015',
-  'details.four.descriptions.two' => 'Certifications in progress: ISO 14001 on Environmental Management.',
-  'details.four.descriptions.three' => 'ISO 45001 on Occupational Health and Safety.',
-  'details.four.images.one' => '/images/logo/malagasy_ny_antsika.png',
+  // 'details.four.title' => 'Certifications',
+  'certifications.descriptions.one' => 'Certified ISO: 9001/2015',
+  'certifications.descriptions.two' => 'Certifications in progress: ISO 14001 on Environmental Management.',
+  'certifications.descriptions.three' => 'ISO 45001 on Occupational Health and Safety.',
+  'certifications.images.one' => '/images/logo/malagasy_ny_antsika.png',
+
 
   'contacts.phone' => 'phone',
   'contacts.phone.value' => '020 22 469 42',

@@ -17,17 +17,17 @@ return [
   'details.two.title' => 'Principaux marchés:',
   'details.two.descriptions.one' => 'Les Etas-Unis, l\'Europe, l\'Inde et le Japon',
 
-  'details.three.icon' => '/icons/certifications.png',
-  'details.three.title' => 'Certifications',
-  'details.three.descriptions.one' => 'FAIRTRADE par FLOCERT',
-  'details.three.descriptions.two' => 'BIO (EOS/NOP) par ECOCERT',
-  'details.three.descriptions.three' => 'UEBT - RA par ECOCERT/UEBT',
+  // 'details.three.icon' => '/icons/certifications.png',
+  // 'details.three.title' => 'Certifications',
+  'certifications.descriptions.one' => 'FAIRTRADE par FLOCERT',
+  'certifications.descriptions.two' => 'BIO (EOS/NOP) par ECOCERT',
+  'certifications.descriptions.three' => 'UEBT - RA par ECOCERT/UEBT',
 
-  'details.three.images.one' => '/images/logo/agriculture_biologique.png',
-  'details.three.images.one' => '/images/logo/mg-bio-154.png',
-  'details.three.images.one' => '/images/logo/usda.png',
-  'details.three.images.one' => '/images/logo/fairtrade.png',
-  'details.three.images.one' => '/images/logo/rainforest-alliance.png',
+  'certifications.images.one' => '/images/logo/agriculture_biologique.png',
+  'certifications.images.two' => '/images/logo/mg-bio-154.png',
+  'certifications.images.three' => '/images/logo/usda.png',
+  'certifications.images.four' => '/images/logo/fairtrade.png',
+  'certifications.images.five' => '/images/logo/rainforest-alliance.png',
 
 
   'contacts.phone' => 'téléphone',
