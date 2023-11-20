@@ -26,8 +26,49 @@
 <x-layout>
     <x-home.hero />
 
+    {{-- ethics --}}
+    <section class="px-6 py-8 bg-gray-100 md:py-12 md:px-12 pb-24 bg-gradient-to-tl from-gray-950 to-gray-900">
+        <div class="flex flex-col gap-4 md:flex-row md:justify-between">
+            <x-section-title :text="__('home.sections.ethics.title')" dark/>
+            <ul class="flex self-center justify-center w-full gap-2 md:w-fit md:gap-4 lg:text-lg lg:gap-6 text-gray-300">
+                <li class="font-bold uppercase">
+                    {{ __('home.sections.ethics.willingness') }}
+                </li>
+                <li class="font-bold uppercase">
+                    {{ __('home.sections.ethics.responsibility') }}
+                </li>
+                <li class="font-bold uppercase">
+                    {{ __('home.sections.ethics.performance') }}
+                </li>
+            </ul>
+        </div>
+        <div class="flex flex-col mt-8 md:gap-4">
+            <div class="pl-4 pb-6 text-lg md:text-xl max-w-[640px] text-gray-100">
+                {{ __("home.sections.ethics.resume.one") }}
+            </div>
+            <x-button href="/our-commitments#ethics">
+                {{ __('home.sections.ethics.cta') }}
+            </x-button>
+        </div>
+    </section>
+
+    {{-- commitments --}}
+    <section class="px-6 py-8 text-gray-100 bg-gradient-to-bl from-gray-950 to-gray-900 md:py-12 md:px-12 pb-24">
+        <div class="flex flex-col gap-4 md:flex-row md:justify-between">
+            <x-section-title :text="__('home.sections.commitment.title')" dark/>
+        </div>
+        <div class="flex flex-col mt-8 md:gap-4">
+            <div class="pl-4 pb-6 text-lg md:text-xl max-w-[640px]">
+                {{ __("home.sections.commitment.content") }}
+            </div>
+            <x-button href="/our-commitments">
+                {{ __('home.sections.commitment.cta') }}
+            </x-button>
+        </div>
+    </section>
+
     {{-- companies --}}
-    <section class="w-full pt-8 text-gray-100 bg-gradient-to-bl from-gray-950 to-gray-900 md:pt-12 md:pb-24">
+    <section class="w-full pt-8 text-gray-100 bg-gradient-to-tl from-gray-950 to-gray-900 md:pt-12 md:pb-24">
         <x-section-title class="px-6 mb-4 md:px-12" :text="__('home.sections.group.title')" dark />
         <p class="px-6 mt-4 mb-8 md:px-12">
             {{ __('home.sections.group.subtitle') }}
@@ -39,47 +80,23 @@
         </ul>
     </section>
 
-    {{-- ethics --}}
-    <section class="px-6 py-8 bg-green-300 md:py-12 md:px-12">
-        <div class="flex flex-col gap-4 md:flex-row md:justify-between">
-            <x-section-title :text="__('home.sections.ethics.title')" />
-            <ul class="flex self-center justify-center w-full gap-2 md:w-fit md:gap-4 lg:text-lg lg:gap-6">
-                <li class="font-bold text-green-800 uppercase">
-                    {{ __('home.sections.ethics.willingness') }}
-                </li>
-                <li class="font-bold text-red-700 uppercase">
-                    {{ __('home.sections.ethics.responsibility') }}
-                </li>
-                <li class="font-bold text-gray-900 uppercase">
-                    {{ __('home.sections.ethics.performance') }}
-                </li>
-            </ul>
-        </div>
-        <div class="flex flex-col mt-8 md:gap-4">
-            <ul class="pl-4 text-lg md:text-xl max-w-[640px] text-gray-950">
-                @foreach (['one', 'two', 'three'] as $num)
-                    <li class="mb-6 list-disc">
-                        {{ __("home.sections.ethics.resume.${num}") }}
-                    </li>
-                @endforeach
-            </ul>
-            <x-button href="/about-us/our-ethical-charter">
-                {{ __('home.sections.ethics.cta') }}
-            </x-button>
-        </div>
-    </section>
 
     {{-- responsibilities --}}
+    {{--
     <section class="pt-8 bg-gray-950">
         <div class="px-4 pb-12 lg:px-12">
             <x-section-title :text="__('home.sections.responsibilities.title')" dark />
         </div>
+        <p class="text-gray-100 px-4 pb-16 lg:px-12 text-lg md:text-xl max-w-[640px]">
+            {{__('home.sections.responsibilities.subtitle')}}
+        </p>
         @foreach ($responsibilities as $data)
             <x-fullpage-card class="bg-top" :image="$data['image']" :index="$loop->index" dark motionSm>
                 <x-description-card :data="$data" :index="$loop->index" />
             </x-fullpage-card>
         @endforeach
     </section>
+    --}}
 
 
     {{-- news --}}
