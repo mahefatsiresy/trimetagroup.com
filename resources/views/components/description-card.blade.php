@@ -1,11 +1,11 @@
-@props(['data', 'index']);
+@props(['data', 'index'])
 
-<div class="w-[72px] h-[72px] rounded-full border-2 border-green-500 self-center grid place-items-center bg-gray-100">
+<div class="w-[80px] h-[80px] rounded-full border-2 border-gray-950 self-center grid place-items-center">
     <img class="h-[48x] w-[48px]" src="{{ $data['icon'] }}" alt="icon" height="64" width="64" />
 </div>
-<x-section-title class="mt-8 lg:text-xl text-lg text-green-400" :text="$data['title']" :underline="false" />
-<ul class="lg:max-w-[700px] pr-4 pb-8">
+<x-section-title class="mt-8 lg:text-xl font-bold text-lg text-gray-900" :text="$data['title']" :underline="false" />
+<ul class="pr-4 pb-8">
     @foreach ($data['descriptions'] as $description)
-        <li class="prose md:prose-lg mb-4 text-gray-300 list-disc ml-4 max-w-[600px]">{!! $description !!}</li>
+        <li class="prose md:prose-lg mb-4 text-gray-700 list-disc ml-8 max-w-[600px]">{!! $description !!}</li>
     @endforeach
 </ul>
