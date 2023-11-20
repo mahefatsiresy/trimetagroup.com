@@ -17,7 +17,7 @@
         rel="stylesheet">
 </head>
 
-<body class="scrollbar-track-green-500 scrollbar-thin" style="font-family: Inter, sans-serif;">
+<body style="font-family: Inter, sans-serif;">
     <x-navbar />
     {{ $slot }}
     <x-footer />

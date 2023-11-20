@@ -8,7 +8,7 @@
         <div class="flex flex-col lg:flex-row justify-between items-center">
             <img src="/images/logo/groupe.png" alt="logo groupe trimeta" width="200" height="200"
                 class="w-[200px] h-auto" />
-            <div class="mt-12 pb-8 flex justify-center">
+            <div id="contact-us" class="mt-12 pb-8 flex justify-center">
                 <div class="lg:w-fit flex flex-col md:flex-row items-start lg:items-center gap-6 lg:gap-12">
                     <div class="flex gap-3 text-lg items-center font-semibold">
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="32"

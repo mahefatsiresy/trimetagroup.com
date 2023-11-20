@@ -1,8 +1,7 @@
 @php
 
     function getCommitmentsdata($key, $descs)
-    {
-        $numberLetter = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight'];
+    { $numberLetter = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight'];
 
         $desc = [];
         for ($i = 0; $i < $descs; $i++) {
@@ -71,9 +70,8 @@
 @endphp
 
 <x-layout :title="__('commitments.document-title')">
-
-    <article class="pt-16">
-        <x-section-title :text="__('commitments.document-title')" class="px-4 md:px-12 pb-6"/>
+    <article class="pt-16 bg-gray-950">
+        <x-section-title :text="__('commitments.document-title')" class="px-4 md:px-12 pb-6" dark/>
         <div class="p-4 md:p-12 grid lg:grid-cols-2 gap-y-8">
             @foreach ($ethics as $descriptions)
                 <div class="w-[80%]">
@@ -85,12 +83,12 @@
 
     <article>
 
-        <x-fullpage-card class="bg-gray-100" :image="$environmentCommitments['image']" index="1">
-            <div class="mt-16">
-                <x-section-title :text="$environmentCommitments['title']" />
-                <ul class="lg:max-w-[700px] pr-4 pb-4">
+        <x-fullpage-card :image="$environmentCommitments['image']" index="1" dark>
+            <div class="pt-8 text-gray-100">
+                <x-section-title :text="$environmentCommitments['title']" dark/>
+                <ul class="lg:max-w-[700px] pr-4 py-4">
                     @foreach ($environmentCommitments['descriptions'] as $desc)
-                        <li class="prose md:prose-lg mb-4 list-disc ml-4 max-w-[600px]">
+                        <li class="prose md:prose-lg mb-4 list-disc ml-4 max-w-[600px] text-gray-400">
                             {{ $desc }}
                         </li>
                     @endforeach
@@ -98,12 +96,12 @@
             </div>
         </x-fullpage-card>
 
-        <x-fullpage-card class="bg-gray-100" :image="$societalCommitments['image']" index="2">
-            <div class="mt-16">
-                <x-section-title :text="$societalCommitments['title']" />
-                <ul class="lg:max-w-[700px] pr-4 pb-4">
+        <x-fullpage-card :image="$societalCommitments['image']" index="2" dark>
+            <div class="pt-8">
+                <x-section-title :text="$societalCommitments['title']" dark/>
+                <ul class="lg:max-w-[700px] pr-4 py-4">
                     @foreach ($societalCommitments['descriptions'] as $desc)
-                        <li class="prose md:prose-lg mb-4 list-disc ml-4 max-w-[600px]">
+                        <li class="prose md:prose-lg mb-4 list-disc ml-4 max-w-[600px] text-gray-400">
                             {{ $desc }}
                         </li>
                     @endforeach
@@ -111,15 +109,15 @@
             </div>
         </x-fullpage-card>
 
-        <section class="w-full px-4 pb-16 md:px-12">
-            <x-section-title :text="__('commitments.csr-projects.title')" />
+        <section class="w-full px-4 md:px-12 bg-gradient-to-tr from-gray-950 from-55% to-gray-950/95 py-12 pt-12">
+            <x-section-title :text="__('commitments.csr-projects.title')" dark/>
             <ul class="grid gap-8 mt-8 text-slate-700 justify-items-start md:grid-cols-2">
                 @foreach ($csrData['categories'] as $category)
                     <li class="mb-6">
-                        <h3 class="mb-4 text-lg font-bold text-grey-600 uppercase rounded-md">
+                        <h3 class="mb-4 text-lg font-bold text-gray-300 uppercase rounded-md">
                             {{ $category['title'] }}
                         </h3>
-                        <ul class="pl-4">
+                        <ul class="pl-4 text-gray-400">
                             @foreach ($category['descriptions'] as $desc)
                                 <li class="mb-2 list-disc">
                                     {{ $desc }}
@@ -131,4 +129,12 @@
             </ul>
         </section>
     </article>
+
+    <section id="ethics" class="bg-gradient-to-br from-gray-950 from-55% to-gray-950/90 py-12">
+        <x-section-title :text="__('ethics.document-title')" class="px-4 md:px-12 pb-6" dark/>
+        <div class="prose lg:prose-lg text-gray-300 px-4 md:px-12">
+            {!! __("ethics.content") !!}
+        </div>
+    </section>
+
 </x-layout>
