@@ -1,8 +1,11 @@
 @php
-    $group = ['our-history', 'key-dates', 'our-ethical-charter'];
+    // $group = ['ceo-words', 'our-history', 'key-dates', 'our-ethical-charter'];
+    $group = ['key-dates', 'our-ethical-charter'];
     $activities = [
-        "agro" => ['enduma', 'trimeta-agrofood', 'millot', 'orkidex'],
-        "hotel" => ['wimmo',  'alma-villas']
+        "industry" => ['enduma'],
+        "agro" => ['trimeta-agrofood', 'millot', 'orkidex'],
+        "immo" => ['wimmo'],
+        "hotel" => ['alma-villas']
     ];
 @endphp
 

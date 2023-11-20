@@ -10,12 +10,14 @@ return [
     'navbar.links.group.our-ethical-charter' => 'Our ethical charter',
 
     'navbar.links.activities.trigger' => 'Our activities',
-    'navbar.links.activities.1.title' => 'Food Industry',
-    'navbar.links.activities.2.title' => 'Hotel Industry',
+    'navbar.links.activities.1.title' => 'Industry',
+    'navbar.links.activities.2.title' => 'Food Industry',
+    'navbar.links.activities.3.title' => 'Real estate',
+    'navbar.links.activities.4.title' => 'Hotel Industry',
     'navbar.links.activities.enduma' => 'Enduma',
     'navbar.links.activities.trimeta-agrofood' => 'Trimeta Agro Food',
     'navbar.links.activities.wimmo' => 'Wimmo',
-    'navbar.links.activities.millot' => 'Millot',
+    'navbar.links.activities.millot' => 'Plantation Millot',
     'navbar.links.activities.orkidex' => 'Orkidex',
     'navbar.links.activities.alma-villas' => 'Alma Villas',
 
