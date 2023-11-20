@@ -1,3 +1,3 @@
 @props(['href', 'secondary' => false])
-<a {{ $attributes(['class' => 'px-4 py-2 inline-block bg-green-700 text-white rounded-md w-fit hover:bg-green-600' . ($secondary ? ' text-green-600 bg-transparent border border-green-600 hover:text-white' : '')]) }}
+<a {{ $attributes(['class' => 'px-4 py-2 inline-block w-fit font-semibold text-gray-900 border border-gray-50 bg-gray-50 hover:bg-gray-900 hover:text-gray-50 ' . ($secondary ? ' text-white bg-transparent border border-gray-900 hover:text-white' : '')]) }}
     href="{{ $href }}">{{ $slot }}</a>
