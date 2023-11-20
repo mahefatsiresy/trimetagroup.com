@@ -31,4 +31,6 @@ return [
     'cards.six.title' => 'A l\'écoute du client pour une amélioration de la qualité',
     'cards.six.descriptions.one' => '<span class="font-bold">La satisfaction du client</span> est notre priorité.',
     'cards.six.descriptions.two' => '<span class="font-bold">La performance du produit et du service</span> sont les garanties de notre engagement.',
+
+    'content' => "<p>La préservation de ces métiers, de leurs traditions, est capitale pour la pérennité le Groupe. C’est en effet la virtuosité de nos collaborateurs qui garantit à nos produits l’excellence de l’exécution. Patrimoine unique, ce savoir-faire est également au cœur de notre rayonnement, de notre aura, à travers le monde.</p><p>Préserver ne veut pas pour autant dire figer : il n’y a pas de pérennité sans renouvellement, sans modernité.</p><p>C’est pourquoi le Groupe s’engage à accompagner durablement l’ensemble des filières en assurant la transmission des métiers de l’artisanat et de la création auprès des jeunes générations et en incitant ses fournisseurs, également détenteurs de savoir-faire spécifiques, à l’innovation.</p><p>Pour garantir l’excellence de nos produits, nous avons besoin de nous assurer de l’approvisionnement et de la qualité des matières premières, des matières souvent rares ou rarescentes.</p>"
 ];
