@@ -45,9 +45,9 @@ Route::get('/about-us/key-dates', function () {
     return view('key-dates');
 })->name('about-us');
 
-Route::get('/about-us/our-ethical-charter', function () {
-    return view('our-ethical-charter');
-})->name('about-us');
+// Route::get('/about-us/our-ethical-charter', function () {
+//     return view('our-ethical-charter');
+// })->name('about-us');
 
 Route::get('about-us/{slug}', function ($slug) {
     try {
