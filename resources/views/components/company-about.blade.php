@@ -189,7 +189,7 @@
             @if (0 !== count($certifications['images']))
                 <ul class="pt-4 grid grid-cols-2 md:grid-cols-3 gap-4 mt-8">
                     @foreach ($certifications['images'] as $img)
-                        <li class="w-full grid place-items-center">
+                        <li class="w-fit">
                             <img src={{ $img }} alt="detail image" width="400" height="400" class='object-contain w-full h-[160px]'/>
                         </li>
                     @endforeach
