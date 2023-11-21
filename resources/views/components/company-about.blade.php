@@ -138,7 +138,7 @@
 
     {{-- details --}}
     @if (0 !== count($details))
-        <x-section-title :text="__("common.company-about.key-figures")" dark/>
+        <x-section-title :text="__('common.company-about.key-figures')" dark/>
         <ul class="grid md:grid-cols-2 gap-4 mt-8 items-start">
             @foreach ($details as $detail)
                 <li class="flex flex-col gap-2 lg:text-lg font-semibold text-gray-200">
