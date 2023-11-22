@@ -115,6 +115,45 @@ Route::get('/news', function () {
     }
 })->name('news');
 
+Route::get('/career', function () {
+    try {
+        return view('career.index', ['posts' => getNewsOrFail(getNewsSlug())]);
+    } catch (Exception $e) {
+        return view('career.index', ['posts' => [
+            [
+                'name' => 'Enduma',
+                'posts' => [
+                    [
+                        'title' => 'Mon titre',
+                        'slug' => 'slg',
+                        'thumbnail' => '/images/Millot/millot-plantation.webp'
+                    ]
+                ]
+            ],
+            [
+                'name' => 'Trimeta AgroFood',
+                'posts' => []
+            ],
+            [
+                'name' => 'Wimmo',
+                'posts' => []
+            ],
+            [
+                'name' => 'Plantation Millot',
+                'posts' => []
+            ],
+            [
+                'name' => 'Orkidex',
+                'posts' => []
+            ],
+            [
+                'name' => 'Alma Villas',
+                'posts' => []
+            ],
+        ]]);
+    }
+})->name('career');
+
 
 function buildPost($value)
 {

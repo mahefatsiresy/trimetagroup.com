@@ -25,6 +25,8 @@ return [
     'navbar.links.news' => 'News',
     'navbar.links.cta' => 'Contact us',
 
+    'navbar.links.career' => 'Career',
+
     'company-news-title :company' => ':company news and activities',
     'company-news-empty :company' => 'No article about :company has been published',
 

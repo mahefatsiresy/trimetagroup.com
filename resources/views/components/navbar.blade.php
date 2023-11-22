@@ -13,8 +13,8 @@
     <div class="w-full nav-container">
         <div class="flex items-center h-full gap-6 pl-4 lg:px-12 lg:justify-between">
             {{-- logo --}}
-            <a href="/" class="inline-block h-full">
-                <img src="/images/logo/groupe.png" alt="logo trimeta group" class="w-auto h-full">
+            <a href="/" class="block font-semibold text-lg" style="font-family: Poppins">
+                {{-- <img src="/images/logo/groupe.png" alt="logo trimeta group" class="w-auto h-full"> --}} Trimeta Group
             </a>
 
 
@@ -27,6 +27,8 @@
                     class="block px-4 py-2 rounded-md hover:bg-gray-800/70 {{ request()->routeIs('commitments') ? 'text-green-400' : '' }}">{{ __('common.navbar.links.our-commitments') }}</a>
                 <a href="/news"
                     class="block px-4 py-2 rounded-md hover:bg-gray-800/70 {{ request()->routeIs('news') ? 'text-green-400' : '' }}">{{ __('common.navbar.links.news') }}</a>
+                <a href="/career"
+                    class="block px-4 py-2 rounded-md hover:bg-gray-800/70 {{ request()->routeIs('career') ? 'text-green-400' : '' }}">{{ __('common.navbar.links.career') }}</a>
             </div>
 
 
@@ -55,6 +57,7 @@
                 <x-navbar.drawer-link trigger="activities" :contents="$activities" parentRoute="/activities" />
                 <a href="/our-commitments" class="block py-2">{{ __('common.navbar.links.our-commitments') }}</a>
                 <a href="/news" class="block py-2">{{ __('common.navbar.links.news') }}</a>
+                <a href="/career" class="block py-2">{{ __('common.navbar.links.career') }}</a>
             </div>
         {{-- </div> --}}
     </div>
