@@ -1,16 +1,12 @@
-@php
-    $group = ['ceo-words', 'our-history', 'key-dates', 'our-ethical-charter'];
-    $activities = ['enduma', 'trimeta-agrofood', 'wimmo', 'millot', 'orkidex', 'alma-villas'];
-@endphp
-
 <footer class="bg-neutral-950 text-neutral-200">
     <div class="px-4 md:px-12 py-8">
-        <div class="flex flex-col lg:flex-row justify-between items-center">
-        <div class="text-2xl font-semibold">Trimeta Group</div>
-            {{-- <img src="/images/logo/groupe.png" alt="logo groupe trimeta" width="200" height="200" --}}
-            {{--     class="w-[200px] h-auto" /> --}}
-            <div id="contact-us" class="flex justify-center mt-8 lg:mt-0">
-                <div class="lg:w-fit flex flex-col md:flex-row items-start lg:items-center gap-6 lg:gap-12">
+        <div class="flex flex-col lg:flex-row justify-between items-center  id="contact-us" ">
+                <div class="text-2xl font-semibold mb-8 lg:mb-0">Trimeta Group</div>
+                <div class="flex flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-12">
+                    <a href="mailto:contact@trimetagroupe.mg" class="flex gap-3 lg:text-lg items-center font-semibold">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M3 8L8.44992 11.6333C9.73295 12.4886 10.3745 12.9163 11.0678 13.0825C11.6806 13.2293 12.3194 13.2293 12.9322 13.0825C13.6255 12.9163 14.2671 12.4886 15.5501 11.6333L21 8M6.2 19H17.8C18.9201 19 19.4802 19 19.908 18.782C20.2843 18.5903 20.5903 18.2843 20.782 17.908C21 17.4802 21 16.9201 21 15.8V8.2C21 7.0799 21 6.51984 20.782 6.09202C20.5903 5.71569 20.2843 5.40973 19.908 5.21799C19.4802 5 18.9201 5 17.8 5H6.2C5.0799 5 4.51984 5 4.09202 5.21799C3.71569 5.40973 3.40973 5.71569 3.21799 6.09202C3 6.51984 3 7.07989 3 8.2V15.8C3 16.9201 3 17.4802 3.21799 17.908C3.40973 18.2843 3.71569 18.5903 4.09202 18.782C4.51984 19 5.07989 19 6.2 19Z" stroke="#e5e5e5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                        contact@trimetagroupe.mg
+                    </a>
                     <div class="flex gap-3 lg:text-lg items-center font-semibold">
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="32"
                             height="32">
@@ -25,7 +21,8 @@
                         </svg>
                         +261 20 22 269 42
                     </div>
-                    <div class="flex gap-3 lg:text-lg items-center font-semibold" style="font-family: Poppins">
+                    <div class="flex gap-6 lg:gap-12 justify-center w-full lg:w-fit mt-4 lg:mt-0">
+                    <a href="https://www.facebook.com/groupetrimeta/"  class="flex gap-3 lg:text-lg items-center font-semibold hover:-translate-y-1">
                         <svg width="30" height="30" viewBox="-5 0 20 20" version="1.1"
                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                             fill="#000000">
@@ -47,9 +44,8 @@
                                 </g>
                             </g>
                         </svg>
-                        Groupe Trimeta
-                    </div>
-                    <div class="flex gap-3 lg:text-lg items-center font-semibold">
+                    </a>
+                    <a href="https://mg.linkedin.com/company/groupe-trimeta-madagascar" class="flex gap-3 lg:text-lg items-center font-semibold  hover:-translate-y-1">
                         <svg width="28" height="28" viewBox="0 0 20 20" version="1.1"
                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                             fill="#000000">
@@ -71,49 +67,10 @@
                                 </g>
                             </g>
                         </svg>
-                        Groupe Trimeta
+                    </a>
                     </div>
                 </div>
-            </div>
         </div>
-
-        {{-- useful links --}}
-
-        {{-- <div class="my-12 pt-8 border-t border-neutral-600"> --}}
-        {{--     <div class="flex flex-col md:flex-row gap-8 lg:gap-16 mt-12 lg:mt-0 text-neutral-300"> --}}
-        {{--         <x-footer.links trigger="group" :contents="$group" parentRoute="/about-us" /> --}}
-        {{--         <x-footer.links trigger="activities" :contents="$activities" parentRoute="/activities" /> --}}
-
-        {{--         <dl> --}}
-        {{--             <dt class="mb-2 font-semibold"> --}}
-        {{--                 {{ __('common.navbar.links.our-commitments') }} --}}
-        {{--             </dt> --}}
-        {{--             <dd> --}}
-        {{--                 <ul> --}}
-        {{--                     <li class="mb-1"> --}}
-        {{--                         <a href="/commitments#societal" class="hover:underline"> --}}
-        {{--                             {{ __('common.commitments.societal.document-title') }} --}}
-        {{--                         </a> --}}
-        {{--                     </li> --}}
-        {{--                     <li class="mb-1"> --}}
-        {{--                         <a href="/commitments#environmental" class="hover:underline"> --}}
-        {{--                             {{ __('common.commitments.environmental.document-title') }} --}}
-        {{--                         </a> --}}
-        {{--                     </li> --}}
-        {{--                     <li class="mb-1"> --}}
-        {{--                         <a href="/commitments#csr-projects" class="hover:underline"> --}}
-        {{--                             {{ __('common.commitments.csr-projects.document-title') }} --}}
-        {{--                         </a> --}}
-        {{--                     </li> --}}
-        {{--                 </ul> --}}
-        {{--             </dd> --}}
-        {{--         </dl> --}}
-        {{--         <p class="mb-2 font-semibold"> --}}
-        {{--             <a href="/news">{{ __('common.navbar.links.news') }}</a> --}}
-        {{--         </p> --}}
-        {{--     </div> --}}
-        {{-- </div> --}}
-
     </div>
     <div class="flex items-center justify-center p-1 bg-neutral-900 text-neutral-50 self-end">
         <small class="flex items-center gap-1">

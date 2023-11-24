@@ -37,16 +37,13 @@
         </ul>
     </section>
 
-    <div class="bg-neutral-950 pt-8 pb-4 px-4 md:px-12 2xl:px-24">
-        <x-section-title :text="__('home.about-us')" class="!mt-0" dark/>
-    </div>
     <x-home.hero />
 
     {{-- ethics --}}
-    <section class="px-6 py-8 bg-neutral-100 md:py-12 md:px-12 pb-24 bg-gradient-to-tl from-neutral-950 to-neutral-900">
-        <div class="flex flex-col gap-4 md:flex-row md:justify-between">
-            <x-section-title :text="__('home.sections.ethics.title')" dark/>
-            <ul class="flex self-center justify-center w-full gap-2 md:w-fit md:gap-4 text-sm lg:text-lg lg:gap-6 text-neutral-300">
+    <section class="px-6 py-8 bg-neutral-100 md:py-12 md:px-12 pb-24 bg-gradient-to-tl from-neutral-950 to-neutral-900 min-h-[512px] lg:h-[90vh]">
+        <x-section-title :text="__('home.sections.ethics.title')" dark/>
+        <div class="flex flex-col gap-4 md:flex-row md:justify-between mx-auto w-fit">
+            <ul class="flex self-center justify-center w-full gap-2 md:w-fit md:gap-4 text-sm lg:text-lg lg:gap-6 text-neutral-400">
                 <li class="font-bold uppercase">
                     {{ __('home.sections.ethics.willingness') }}
                 </li>
@@ -58,8 +55,8 @@
                 </li>
             </ul>
         </div>
-        <div class="flex flex-col mt-8 md:gap-4">
-            <div class="pl-4 pb-6 text-lg md:text-xl max-w-[640px] text-neutral-100">
+        <div class="flex flex-col mt-8 md:gap-4 items-center">
+            <div class="pl-4 pb-6 text-lg md:text-xl md:max-w-3xl text-neutral-100">
                 {{ __("home.sections.ethics.resume.one") }}
             </div>
             <x-button href="/our-commitments#ethics">
@@ -69,11 +66,9 @@
     </section>
 
     {{-- commitments --}}
-    <section class="px-6 py-8 text-neutral-100 bg-gradient-to-bl from-neutral-950 to-neutral-900 md:py-12 md:px-12 pb-24">
-        <div class="flex flex-col gap-4 md:flex-row md:justify-between">
-            <x-section-title :text="__('home.sections.commitment.title')" dark/>
-        </div>
-        <div class="flex flex-col mt-8 md:gap-4">
+    <section class="px-6 py-8 text-neutral-100 bg-gradient-to-bl from-neutral-950 to-neutral-900 md:py-12 md:px-12 pb-24 min-h-[512px] lg:h-[90vh]">
+        <x-section-title :text="__('home.sections.commitment.title')" dark/>
+        <div class="flex flex-col mt-8  gap-8 md:gap-16 items-center">
             <div class="pl-4 pb-6 text-lg md:text-xl max-w-[640px]">
                 {{ __("home.sections.commitment.content") }}
             </div>
