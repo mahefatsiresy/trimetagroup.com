@@ -84,36 +84,11 @@
             <x-description-card :data="$environmentCommitments" :index="1" :image="$environmentCommitments['image']" textBoxClass="h-full"/>
         </div>
         <x-description-card :data="$societalCommitments" :index="0" :image="$societalCommitments['image']" textBoxClass="h-full"/>
-        {{-- <x-fullpage-card :image="$environmentCommitments['image']" index="1" dark> --}}
-        {{--     <div class="pt-8 text-neutral-100"> --}}
-        {{--         <x-section-title :text="$environmentCommitments['title']" dark/> --}}
-        {{--         <ul class="lg:max-w-[700px] pr-4 py-4"> --}}
-        {{--             @foreach ($environmentCommitments['descriptions'] as $desc) --}}
-        {{--                 <li class="prose md:prose-lg mb-4 list-disc ml-4 max-w-[600px] text-neutral-400"> --}}
-        {{--                     {{ $desc }} --}}
-        {{--                 </li> --}}
-        {{--             @endforeach --}}
-        {{--         </ul> --}}
-        {{--     </div> --}}
-        {{-- </x-fullpage-card> --}}
-
-        {{-- <x-fullpage-card :image="$societalCommitments['image']" index="2" dark> --}}
-        {{--     <div class="pt-8"> --}}
-        {{--         <x-section-title :text="$societalCommitments['title']" dark/> --}}
-        {{--         <ul class="lg:max-w-[700px] pr-4 py-4"> --}}
-        {{--             @foreach ($societalCommitments['descriptions'] as $desc) --}}
-        {{--                 <li class="prose md:prose-lg mb-4 list-disc ml-4 max-w-[600px] text-neutral-400"> --}}
-        {{--                     {{ $desc }} --}}
-        {{--                 </li> --}}
-        {{--             @endforeach --}}
-        {{--         </ul> --}}
-        {{--     </div> --}}
-        {{-- </x-fullpage-card> --}}
     </article>
 
     <section class="w-full px-4 md:px-12 bg-gradient-to-tr from-neutral-950 from-55% to-neutral-950/95 py-12 pt-12">
         <x-section-title :text="__('commitments.csr-projects.title')" dark/>
-        <ul class="grid gap-8 mt-8 text-slate-700 justify-items-start md:grid-cols-2">
+        <ul class="grid gap-8 mt-16 text-slate-700 justify-items-start md:grid-cols-2">
             @foreach ($csrData['categories'] as $category)
                 <li class="mb-6">
                      <h3 class="mb-4 text-lg font-bold text-neutral-300 uppercase rounded-md">
@@ -133,7 +108,7 @@
 
     <section id="ethics" class="bg-gradient-to-br from-neutral-950 from-60% to-neutral-900 py-12">
         <x-section-title :text="__('ethics.document-title')" class="px-4 md:px-12 pb-6" dark/>
-        <div class="prose lg:prose-lg text-neutral-300 px-4 md:px-12">
+        <div class="prose-lg md:prose-xl text-neutral-300 px-4 md:px-12 max-w-3xl mx-auto">
             {!! __("ethics.content") !!}
         </div>
     </section>
