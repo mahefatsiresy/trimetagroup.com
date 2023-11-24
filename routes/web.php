@@ -55,6 +55,9 @@ Route::get('about-us/{slug}', function ($slug) {
         $frTranslation = [
             "ceo-words" => "les-mots-du-president",
             'our-history' => "notre-histoire",
+            'our-mission' => "notre-mission",
+            'our-values' => "nos-valeurs",
+            'legal-notice' => 'mentions-legales'
         ];
 
         if ('fr' === Session::get('locale')) {
@@ -65,21 +68,34 @@ Route::get('about-us/{slug}', function ($slug) {
 
         $post = buildPost($post);
 
+        // get related posts
         $posts = [];
 
-        if ('ceo-words' !== $slug || $frTranslation['ceo-words'] !== $slug || 'our-history' !== $slug || $frTranslation['our-history'] !== $slug) {
-            $posts = Post::where('post_name', '!=', $slug)
+        $isNotCEOWords = 'ceo-words' !== $slug || $frTranslation['ceo-words'] !== $slug;
+        $isNotOurHistory = 'our-history' !== $slug || $frTranslation['our-history'] !== $slug;
+        $isNotOurMission = 'our-mission' !== $slug || $frTranslation['our-mission'] !== $slug;
+
+
+        // if not special pages
+        if ($isNotCEOWords || $isNotOurHistory || $isNotOurMission) {
+            $temp = Post::where('post_name', '!=', $slug)
                 ->where('ping_status', 'open')
                 ->published()
-                ->paginate(3)
-                ->map(function ($p) {
-                    return buildPost($p);
-                });
-        }
+                ->paginate(3);
+                // ->map(function ($p) {
+                //     return buildPost($p);
+                // });
 
+            // only add non null value
+            foreach($temp as $p) {
+                if ($p) {
+                    $posts[] = $p;
+                }
+            }
+        }
         return view('posts.show', ['post' => $post, 'posts' => $posts]);
     } catch (Exception $e) {
-        return view('posts.show');
+        return view('posts.show', ['error' => true]);
     }
 })->name('about-us');
 
@@ -88,30 +104,40 @@ Route::get('/our-commitments', function () {
 })->name('commitments');
 
 Route::get('news/{slug}', function ($slug) {
+    try {
+        $post = Post::slug($slug)->first();
 
-    $post = Post::slug($slug)->first();
+        $post = buildPost($post);
 
-    $post = buildPost($post);
+        $posts = [];
 
-    $posts = null;
+        $temp = Post::where('post_name', '!=', $slug)
+            ->where('ping_status', 'open')
+            ->published()
+            ->taxonomy('category', getNewsSlug())
+            ->paginate(3);
+            // ->map(function ($p) {
+            //     return buildPost($p);
+            // });
 
-    $posts = Post::where('post_name', '!=', $slug)
-        ->where('ping_status', 'open')
-        ->published()
-        ->taxonomy('category', getNewsSlug())
-        ->paginate(3)
-        ->map(function ($p) {
-            return buildPost($p);
-        });
+        // only add non null value
+        foreach($temp as $p) {
+            if ($p) {
+                $posts[] = $p;
+            }
+        }
 
-    return view('posts.show', ['post' => $post, 'posts' => $posts]);
+        return view('posts.show', ['post' => $post, 'posts' => $posts]);
+    } catch (\Throwable $th) {
+        return view('posts.show', ['error' => true]);
+    }
 })->name('news');
 
 Route::get('/news', function () {
     try {
         return view('posts.index', ['posts' => getNewsOrFail(getNewsSlug())]);
     } catch (Exception $e) {
-        return view('posts.index');
+        return view('posts.index', ['error' => true]);
     }
 })->name('news');
 
@@ -122,16 +148,10 @@ Route::get('/career', function () {
         return view('career.index', ['posts' => [
             [
                 'name' => 'Enduma',
-                'posts' => [
-                    [
-                        'title' => 'Mon titre',
-                        'slug' => 'slg',
-                        'thumbnail' => '/images/Millot/millot-plantation.webp'
-                    ]
-                ]
+                'posts' => []
             ],
             [
-                'name' => 'Trimeta AgroFood',
+                'name' => 'Trimeta Agro Food',
                 'posts' => []
             ],
             [

@@ -17,7 +17,7 @@
         rel="stylesheet">
 </head>
 
-<body style="font-family: Inter, sans-serif;">
+<body style="font-family: Inter, sans-serif;" class="overflow-x-hidden">
     <x-navbar />
     {{ $slot }}
     <x-footer />

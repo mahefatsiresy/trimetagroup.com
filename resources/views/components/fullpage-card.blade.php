@@ -1,7 +1,7 @@
 @props(['index', 'image', 'dark' => false, 'motionSm' => false])
 
 @php
-    $classes = 'flex flex-col md:flex-row w-full min-h-[360px] ' . ($dark ? 'from-gray-950 to-gray-900 ' : 'bg-gray-100 ') . (0 !== $index % 2 ? 'bg-gradient-to-tl md:flex-row' : 'bg-gradient-to-tr md:flex-row-reverse');
+    $classes = 'flex flex-col md:flex-row w-full min-h-[360px] ' . ($dark ? 'from-neutral-950 to-neutral-900 ' : 'bg-neutral-100 ') . (0 !== $index % 2 ? 'bg-gradient-to-tl md:flex-row' : 'bg-gradient-to-tr md:flex-row-reverse');
 @endphp
 
 <div class="{{ $classes }}">

@@ -24,13 +24,29 @@
 @endphp
 
 <x-layout>
+    {{-- companies --}}
+    <section class="w-full pt-8 text-neutral-100 bg-gradient-to-tl from-neutral-950 to-neutral-900 md:pt-12">
+        {{-- <x-section-title class="px-6 mb-4 md:px-12" :text="__('home.sections.group.title')" dark /> --}}
+        <p class="px-6 mt-16 mb-8 md:px-12 text-center text-lg">
+            {{ __('home.sections.group.subtitle') }}
+        </p>
+        <ul class="flex flex-col md:grid md:grid-cols-2 lg:flex lg:flex-row lg:max-h-[512px] lg:h-[80vh]">
+            @foreach (['enduma', 'trimeta-agrofood', 'wimmo', 'millot', 'orkidex', 'alma-villas'] as $name)
+                <x-home.company-preview :key="$name" :index="$loop->iteration" />
+            @endforeach
+        </ul>
+    </section>
+
+    <div class="bg-neutral-950 pt-8 pb-4 px-4 md:px-12 2xl:px-24">
+        <x-section-title :text="__('home.about-us')" class="!mt-0" dark/>
+    </div>
     <x-home.hero />
 
     {{-- ethics --}}
-    <section class="px-6 py-8 bg-gray-100 md:py-12 md:px-12 pb-24 bg-gradient-to-tl from-gray-950 to-gray-900">
+    <section class="px-6 py-8 bg-neutral-100 md:py-12 md:px-12 pb-24 bg-gradient-to-tl from-neutral-950 to-neutral-900">
         <div class="flex flex-col gap-4 md:flex-row md:justify-between">
             <x-section-title :text="__('home.sections.ethics.title')" dark/>
-            <ul class="flex self-center justify-center w-full gap-2 md:w-fit md:gap-4 lg:text-lg lg:gap-6 text-gray-300">
+            <ul class="flex self-center justify-center w-full gap-2 md:w-fit md:gap-4 text-sm lg:text-lg lg:gap-6 text-neutral-300">
                 <li class="font-bold uppercase">
                     {{ __('home.sections.ethics.willingness') }}
                 </li>
@@ -43,7 +59,7 @@
             </ul>
         </div>
         <div class="flex flex-col mt-8 md:gap-4">
-            <div class="pl-4 pb-6 text-lg md:text-xl max-w-[640px] text-gray-100">
+            <div class="pl-4 pb-6 text-lg md:text-xl max-w-[640px] text-neutral-100">
                 {{ __("home.sections.ethics.resume.one") }}
             </div>
             <x-button href="/our-commitments#ethics">
@@ -53,7 +69,7 @@
     </section>
 
     {{-- commitments --}}
-    <section class="px-6 py-8 text-gray-100 bg-gradient-to-bl from-gray-950 to-gray-900 md:py-12 md:px-12 pb-24">
+    <section class="px-6 py-8 text-neutral-100 bg-gradient-to-bl from-neutral-950 to-neutral-900 md:py-12 md:px-12 pb-24">
         <div class="flex flex-col gap-4 md:flex-row md:justify-between">
             <x-section-title :text="__('home.sections.commitment.title')" dark/>
         </div>
@@ -67,27 +83,15 @@
         </div>
     </section>
 
-    {{-- companies --}}
-    <section class="w-full pt-8 text-gray-100 bg-gradient-to-tl from-gray-950 to-gray-900 md:pt-12 md:pb-24">
-        <x-section-title class="px-6 mb-4 md:px-12" :text="__('home.sections.group.title')" dark />
-        <p class="px-6 mt-4 mb-8 md:px-12">
-            {{ __('home.sections.group.subtitle') }}
-        </p>
-        <ul class="flex flex-col md:grid md:grid-cols-2 lg:flex lg:flex-row lg:max-h-[512px] lg:h-[80vh]">
-            @foreach (['enduma', 'trimeta-agrofood', 'wimmo', 'millot', 'orkidex', 'alma-villas'] as $name)
-                <x-home.company-preview :key="$name" :index="$loop->iteration" />
-            @endforeach
-        </ul>
-    </section>
 
 
     {{-- responsibilities --}}
     {{--
-    <section class="pt-8 bg-gray-950">
+    <section class="pt-8 bg-neutral-950">
         <div class="px-4 pb-12 lg:px-12">
             <x-section-title :text="__('home.sections.responsibilities.title')" dark />
         </div>
-        <p class="text-gray-100 px-4 pb-16 lg:px-12 text-lg md:text-xl max-w-[640px]">
+        <p class="text-neutral-100 px-4 pb-16 lg:px-12 text-lg md:text-xl max-w-[640px]">
             {{__('home.sections.responsibilities.subtitle')}}
         </p>
         @foreach ($responsibilities as $data)
@@ -100,7 +104,7 @@
 
 
     {{-- news --}}
-    {{--
+    {{--mission
     <div class="px-4 md:px-12">
         <x-section-title :text="__('common.news.section-title')" />
         @if (isset($posts))

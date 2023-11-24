@@ -130,7 +130,7 @@
 
         {{-- descriptions --}}
         @foreach ($descriptions as $description)
-            <p class="text-lg mb-8 drop-shadow text-gray-200 max-w-[600px]">
+            <p class="text-lg mb-8 drop-shadow text-neutral-200 max-w-[600px]">
                 {{ $description }}
             </p>
         @endforeach
@@ -141,9 +141,9 @@
         <x-section-title :text="__('common.company-about.key-figures')" dark/>
         <ul class="grid md:grid-cols-2 gap-4 mt-8 items-start">
             @foreach ($details as $detail)
-                <li class="flex flex-col gap-2 lg:text-lg font-semibold text-gray-200">
+                <li class="flex flex-col gap-2 lg:text-lg font-semibold text-neutral-200">
                     <div class="flex items-center gap-4">
-                        <img class="w-[40px] h-[40px] bg-gray-200 rounded-full" src="{{ $detail['icon'] }}" alt="icon" width="80"
+                        <img class="w-[40px] h-[40px] bg-neutral-200 rounded-full" src="{{ $detail['icon'] }}" alt="icon" width="80"
                             height="80" />
                         <span>{{ $detail['title'] }}</span>
                     </div>
@@ -151,7 +151,7 @@
                     @if ($detail['descriptions'] && 0 !== $detail['descriptions'])
                         <ul class="pl-8 pt-4">
                             @foreach ($detail['descriptions'] as $description)
-                                <li class="text-sm text-gray-400 mb-2 font-normal w-2/3">
+                                <li class="text-sm text-neutral-400 mb-2 font-normal w-2/3">
                                     {{ $description }}
                                 </li>
                             @endforeach
@@ -179,7 +179,7 @@
             @if (0 !== count($certifications['descriptions']))
                 <ul class="pt-4 pl-4 list-disc">
                     @foreach ($certifications['descriptions'] as $description)
-                        <li class="text-gray-400 mb-2 font-normal w-2/3">
+                        <li class="text-neutral-400 mb-2 font-normal w-2/3">
                             {{ $description }}
                         </li>
                     @endforeach
@@ -201,7 +201,7 @@
         <x-section-title text="Contacts" dark/>
         <div class="flex w-full md: grap mt-12 pb-8">
             <ul aria-label="contacts"
-                class="grid justify-items-start gap-6 gap-x-12 lg:gap-12 md:grid-cols-2 w-fit md:text-lg text-gray-200">
+                class="grid justify-items-start gap-6 gap-x-12 lg:gap-12 md:grid-cols-2 w-fit md:text-lg text-neutral-200">
                 @foreach ($contacts as $contact)
                     @if ($contact)
                         <li class="flex gap-4 lg:gap-2 items-center">

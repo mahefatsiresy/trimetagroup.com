@@ -35,7 +35,7 @@ return [
 
     'sections.group.alma-villas.name' => 'Alma Villas',
     'sections.group.alma-villas.logo' => '/images/logo/alma_logo.webp',
-    'sections.group.alma-villas.background' => '/images/Wimmo/wimmo_2.webp',
+    'sections.group.alma-villas.background' => '/images/alma/alma-1.webp',
     'sections.group.alma-villas.description' => 'Guest house rentals in Nosy-Be',
 
     'sections.ethics.title' => 'Our values and ethics',
@@ -121,4 +121,6 @@ return [
     'sections.commitment.title' => 'Our commitment',
     'sections.commitment.content' => 'Culture, social responsibility or environment... The Trimeta Group and its entities mobilize resources and skills for initiatives that benefit society.',
     'sections.commitment.cta' => 'See details',
+
+    'about-us' => 'About us'
 ];

@@ -3,11 +3,12 @@
 return [
     'document-title' => 'Trimeta Group',
 
-    'navbar.links.group.trigger' => 'About us',
-    'navbar.links.group.ceo-words' => 'CEO Words',
-    'navbar.links.group.our-history' => 'Our History',
-    'navbar.links.group.key-dates' => 'Key Dates',
-    'navbar.links.group.our-ethical-charter' => 'Our ethical charter',
+    'navbar.links.group.trigger' => 'The group',
+    'navbar.links.group.ceo-words' => 'CEO words',
+    'navbar.links.group.our-history' => 'Our history',
+    'navbar.links.group.key-dates' => 'Key dates',
+    'navbar.links.group.our-mission' => 'Our mission',
+    'navbar.links.group.our-values' => 'Our values',
 
     'navbar.links.activities.trigger' => 'Our activities',
     'navbar.links.activities.1.title' => 'Industry',
@@ -25,7 +26,7 @@ return [
     'navbar.links.news' => 'News',
     'navbar.links.cta' => 'Contact us',
 
-    'navbar.links.career' => 'Career',
+    'navbar.links.career' => 'Careers',
 
     'company-news-title :company' => ':company news and activities',
     'company-news-empty :company' => 'No article about :company has been published',
@@ -46,6 +47,7 @@ return [
     'news.no-more' => 'No more article has been published',
     'news.more' => 'More news',
     'news.section-title' => 'Our news',
+    'new.post.no-found' => 'Post not found',
 
     'company-about.key-figures' => 'Key figures',
     'company-about.contacts' => 'Contacts',

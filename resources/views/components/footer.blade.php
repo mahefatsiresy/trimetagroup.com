@@ -3,14 +3,15 @@
     $activities = ['enduma', 'trimeta-agrofood', 'wimmo', 'millot', 'orkidex', 'alma-villas'];
 @endphp
 
-<footer class="bg-gray-900 text-gray-200">
-    <div class="px-4 md:px-12 pt-24">
+<footer class="bg-neutral-950 text-neutral-200">
+    <div class="px-4 md:px-12 py-8">
         <div class="flex flex-col lg:flex-row justify-between items-center">
-            <img src="/images/logo/groupe.png" alt="logo groupe trimeta" width="200" height="200"
-                class="w-[200px] h-auto" />
-            <div id="contact-us" class="mt-12 pb-8 flex justify-center">
+        <div class="text-2xl font-semibold">Trimeta Group</div>
+            {{-- <img src="/images/logo/groupe.png" alt="logo groupe trimeta" width="200" height="200" --}}
+            {{--     class="w-[200px] h-auto" /> --}}
+            <div id="contact-us" class="flex justify-center mt-8 lg:mt-0">
                 <div class="lg:w-fit flex flex-col md:flex-row items-start lg:items-center gap-6 lg:gap-12">
-                    <div class="flex gap-3 text-lg items-center font-semibold">
+                    <div class="flex gap-3 lg:text-lg items-center font-semibold">
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="32"
                             height="32">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -24,7 +25,7 @@
                         </svg>
                         +261 20 22 269 42
                     </div>
-                    <div class="flex gap-3 text-lg items-center font-semibold">
+                    <div class="flex gap-3 lg:text-lg items-center font-semibold" style="font-family: Poppins">
                         <svg width="30" height="30" viewBox="-5 0 20 20" version="1.1"
                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                             fill="#000000">
@@ -48,8 +49,8 @@
                         </svg>
                         Groupe Trimeta
                     </div>
-                    <div class="flex gap-3 text-lg items-center font-semibold">
-                        <svg width="30" height="30" viewBox="0 0 20 20" version="1.1"
+                    <div class="flex gap-3 lg:text-lg items-center font-semibold">
+                        <svg width="28" height="28" viewBox="0 0 20 20" version="1.1"
                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                             fill="#000000">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -78,43 +79,43 @@
 
         {{-- useful links --}}
 
-        <div class="my-12 pt-8 border-t border-gray-600">
-            <div class="flex flex-col md:flex-row gap-8 lg:gap-16 mt-12 lg:mt-0 text-gray-300">
-                <x-footer.links trigger="group" :contents="$group" parentRoute="/about-us" />
-                <x-footer.links trigger="activities" :contents="$activities" parentRoute="/activities" />
+        {{-- <div class="my-12 pt-8 border-t border-neutral-600"> --}}
+        {{--     <div class="flex flex-col md:flex-row gap-8 lg:gap-16 mt-12 lg:mt-0 text-neutral-300"> --}}
+        {{--         <x-footer.links trigger="group" :contents="$group" parentRoute="/about-us" /> --}}
+        {{--         <x-footer.links trigger="activities" :contents="$activities" parentRoute="/activities" /> --}}
 
-                <dl>
-                    <dt class="mb-2 font-semibold">
-                        {{ __('common.navbar.links.our-commitments') }}
-                    </dt>
-                    <dd>
-                        <ul>
-                            <li class="mb-1">
-                                <a href="/commitments#societal" class="hover:underline">
-                                    {{ __('common.commitments.societal.document-title') }}
-                                </a>
-                            </li>
-                            <li class="mb-1">
-                                <a href="/commitments#environmental" class="hover:underline">
-                                    {{ __('common.commitments.environmental.document-title') }}
-                                </a>
-                            </li>
-                            <li class="mb-1">
-                                <a href="/commitments#csr-projects" class="hover:underline">
-                                    {{ __('common.commitments.csr-projects.document-title') }}
-                                </a>
-                            </li>
-                        </ul>
-                    </dd>
-                </dl>
-                <p class="mb-2 font-semibold">
-                    <a href="/news">{{ __('common.navbar.links.news') }}</a>
-                </p>
-            </div>
-        </div>
+        {{--         <dl> --}}
+        {{--             <dt class="mb-2 font-semibold"> --}}
+        {{--                 {{ __('common.navbar.links.our-commitments') }} --}}
+        {{--             </dt> --}}
+        {{--             <dd> --}}
+        {{--                 <ul> --}}
+        {{--                     <li class="mb-1"> --}}
+        {{--                         <a href="/commitments#societal" class="hover:underline"> --}}
+        {{--                             {{ __('common.commitments.societal.document-title') }} --}}
+        {{--                         </a> --}}
+        {{--                     </li> --}}
+        {{--                     <li class="mb-1"> --}}
+        {{--                         <a href="/commitments#environmental" class="hover:underline"> --}}
+        {{--                             {{ __('common.commitments.environmental.document-title') }} --}}
+        {{--                         </a> --}}
+        {{--                     </li> --}}
+        {{--                     <li class="mb-1"> --}}
+        {{--                         <a href="/commitments#csr-projects" class="hover:underline"> --}}
+        {{--                             {{ __('common.commitments.csr-projects.document-title') }} --}}
+        {{--                         </a> --}}
+        {{--                     </li> --}}
+        {{--                 </ul> --}}
+        {{--             </dd> --}}
+        {{--         </dl> --}}
+        {{--         <p class="mb-2 font-semibold"> --}}
+        {{--             <a href="/news">{{ __('common.navbar.links.news') }}</a> --}}
+        {{--         </p> --}}
+        {{--     </div> --}}
+        {{-- </div> --}}
 
     </div>
-    <div class="flex items-center justify-center p-1 bg-gray-950 text-gray-50 self-end">
+    <div class="flex items-center justify-center p-1 bg-neutral-900 text-neutral-50 self-end">
         <small class="flex items-center gap-1">
             &copy; Copyright, 2023
         </small>

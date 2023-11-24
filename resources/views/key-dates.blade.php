@@ -22,10 +22,10 @@
 @endphp
 
 <x-layout :title="__('key-dates.document-title')">
-    <div class="pt-24 pb-24 overflow-x-hidden bg-gradient-to-tl from-gray-950 from-80% to-gray-900">
+    <div class="pt-24 pb-24 overflow-x-hidden bg-gradient-to-tl from-neutral-950 from-80% to-neutral-900">
         <x-section-title :text="__('key-dates.document-title')" class="px-4 md:px-12" dark/>
         <div class="w-2/3 mx-auto mt-12">
-            <ul class="text-gray-900">
+            <ul class="text-neutral-900">
                 @foreach ($companies as $company)
                     <x-company-millestone :company="$company" :index="$loop->index" />
                 @endforeach

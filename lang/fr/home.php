@@ -35,7 +35,7 @@ return [
 
     'sections.group.alma-villas.name' => 'Alma Villas',
     'sections.group.alma-villas.logo' => '/images/logo/alma_logo.webp',
-    'sections.group.alma-villas.background' => '/images/Wimmo/wimmo_2.webp',
+    'sections.group.alma-villas.background' => '/images/alma/alma-1.webp',
     'sections.group.alma-villas.description' => 'Location de maisons d\'hôtes à Nosy-Be',
 
     'sections.ethics.title' => 'Nos valeurs et éthiques',
@@ -119,5 +119,7 @@ return [
 
     'sections.commitment.title' => 'Notre engagement',
     'sections.commitment.title' => 'Notre engagement',
-    'sections.commitment.cta' => 'Voir les détails'
+    'sections.commitment.cta' => 'Voir les détails',
+
+    'about-us' => 'A propos du groupe'
 ];

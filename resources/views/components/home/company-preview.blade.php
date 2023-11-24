@@ -13,7 +13,7 @@
     style="background-image: url({{ $background }});z-index: {{ $index + 2 }};">
 
     <a href="/activities/{{ $href }}"
-        class="bg-gradient-to-t from-gray-950/90 from-35% w-full h-full flex flex-col justify-end p-4 transition-none">
+        class="bg-gradient-to-t from-neutral-950/90 from-35% w-full h-full flex flex-col justify-end p-4 transition-none">
 
         <p class="mb-4 w-[164px]">{{ $description }}</p>
 
