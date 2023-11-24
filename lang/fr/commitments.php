@@ -6,8 +6,7 @@ return [
     'background' => '/images/Groupe/groupe_2.webp',
 
     'environmental.title' => 'Engagements environnementaux',
-    'environmental.image' => '/images/Groupe/enduma_7.webp',
-
+    'environmental.image' => '/images/plants.webp',
     'environmental.descriptions.one' => 'Respect des réglementations internationales relatives à la protection de l\'environnement.',
     'environmental.descriptions.two' => 'Réduction de l\'empreinte carbone en utilisant des sources d\'énergie renouvelables et en promouvant l\'efficacité énergétique.',
     'environmental.descriptions.three' => 'Réduction de la production de déchets par le recyclage et le compostage.',
@@ -18,7 +17,7 @@ return [
     'environmental.href' => '/commitments/environmental',
 
     'societal.title' => 'Engagements sociétaux',
-    'societal.image' => '/images/Groupe/health.webp',
+    'societal.image' => '/images/formation.webp',
     'societal.descriptions.one' => 'Rejet de toute forme de corruption.',
     'societal.descriptions.two' => 'Égalité des chances pour tous en matière d\'embauche, sans distinction de race, de religion, de sexe, d\'orientation sexuelle ou de toute autre caractéristique protégée.',
     'societal.descriptions.three' => 'Préservation de l\'intégrité physique et mentale de l\'ensemble des salariés en leur offrant un environnement de travail sûr et sain.',
