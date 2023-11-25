@@ -24,12 +24,10 @@
 <x-layout :title="__('key-dates.document-title')">
     <div class="pt-24 pb-24 overflow-x-hidden bg-gradient-to-tl from-neutral-950 from-80% to-neutral-900">
         <x-section-title :text="__('key-dates.document-title')" class="px-4 md:px-12" dark/>
-        <div class="w-2/3 mx-auto mt-12">
-            <ul class="text-neutral-900">
+        <ul class="w-full px-4 lg:px-12 lg:w-2/3 lg:max-w-6xl mx-auto mt-12 text-neutral-300 md:text-neutral-900">
                 @foreach ($companies as $company)
                     <x-company-millestone :company="$company" :index="$loop->index" />
                 @endforeach
-            </ul>
-        </div>
+        </ul>
     </div>
 </x-layout>
