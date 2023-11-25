@@ -72,21 +72,21 @@
 <x-layout :title="__('commitments.document-title')">
     <article class="pt-16 bg-neutral-950">
         <x-section-title :text="__('commitments.document-title')" class="px-4 md:px-12 pb-6" dark/>
-        <div class="p-4 md:p-12">
+        <div class="p-4 md:p-12 2xl:px-24">
             @foreach ($ethics as $descriptions)
                 <x-description-card :descriptions="$descriptions['descriptions']" :data="$descriptions" :index="$loop->index" />
             @endforeach
         </div>
     </article>
 
-    <article class="px-4 md:px-12 bg-neutral-950 pb-16">
+    <article class="px-4 md:px-12 2xl:px-24 bg-neutral-950 pb-16">
         <div class="mb-32">
             <x-description-card :data="$environmentCommitments" :index="1" :image="$environmentCommitments['image']" textBoxClass="h-full"/>
         </div>
         <x-description-card :data="$societalCommitments" :index="0" :image="$societalCommitments['image']" textBoxClass="h-full"/>
     </article>
 
-    <section class="w-full px-4 md:px-12 bg-gradient-to-tr from-neutral-950 from-55% to-neutral-950/95 py-12 pt-12">
+    <section class="w-full px-4 md:px-12 2xl:px-24 bg-gradient-to-tr from-neutral-950 from-55% to-neutral-950/95 py-12 pt-12">
         <x-section-title :text="__('commitments.csr-projects.title')" dark/>
         <ul class="grid gap-8 mt-16 text-slate-700 justify-items-start md:grid-cols-2">
             @foreach ($csrData['categories'] as $category)

@@ -40,7 +40,7 @@
     <x-home.hero />
 
     {{-- ethics --}}
-    <section class="px-6 py-8 bg-neutral-100 md:py-12 md:px-12 pb-24 bg-gradient-to-tl from-neutral-950 to-neutral-900 min-h-[512px] lg:h-[90vh]">
+    <section class="px-6 py-8 bg-neutral-100 md:py-12 md:px-12 pb-24 bg-gradient-to-tl from-neutral-950 to-neutral-900 min-h-[512px] lg:h-[80vh] flex flex-col justify-center">
         <x-section-title :text="__('home.sections.ethics.title')" dark/>
         <div class="flex flex-col gap-4 md:flex-row md:justify-between mx-auto w-fit">
             <ul class="flex self-center justify-center w-full gap-2 md:w-fit md:gap-4 text-sm lg:text-lg lg:gap-6 text-neutral-400">
@@ -66,7 +66,7 @@
     </section>
 
     {{-- commitments --}}
-    <section class="px-6 py-8 text-neutral-100 bg-gradient-to-bl from-neutral-950 to-neutral-900 md:py-12 md:px-12 pb-24 min-h-[512px] lg:h-[90vh]">
+    <section class="px-6 py-8 text-neutral-100 bg-gradient-to-bl from-neutral-950 to-neutral-900 md:py-12 md:px-12 pb-24 min-h-[512px] lg:h-[80vh] flex flex-col justify-center">
         <x-section-title :text="__('home.sections.commitment.title')" dark/>
         <div class="flex flex-col mt-8  gap-8 md:gap-16 items-center">
             <div class="pl-4 pb-6 text-lg md:text-xl max-w-[640px]">
