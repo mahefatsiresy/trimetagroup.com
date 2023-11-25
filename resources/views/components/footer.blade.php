@@ -1,5 +1,5 @@
 <footer class="bg-neutral-950 text-neutral-200">
-    <div class="px-4 md:px-12 py-8">
+    <div class="px-4 md:px-12 2xl:px-24 py-8">
         <div class="flex flex-col lg:flex-row justify-between items-center  id="contact-us" ">
                 <div class="text-2xl font-semibold mb-8 lg:mb-0">Trimeta Group</div>
                 <div class="flex flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-12">

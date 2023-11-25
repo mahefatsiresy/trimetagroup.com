@@ -11,7 +11,7 @@
 
 <nav class="fixed top-0 z-20 bg-neutral-950/95 backdrop-blur text-neutral-50 w-screen">
     <div class="w-full nav-container">
-        <div class="flex items-center h-full gap-6 pl-4 lg:px-12 lg:justify-between">
+        <div class="flex items-center h-full gap-6 pl-4 lg:px-12 2xl:px-24 lg:justify-between">
             {{-- logo --}}
             <a href="/" class="block font-semibold text-lg" style="font-family: Poppins">
                 {{-- <img src="/images/logo/groupe.png" alt="logo trimeta group" class="w-auto h-full"> --}} Trimeta Group
