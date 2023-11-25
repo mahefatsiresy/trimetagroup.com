@@ -5,7 +5,7 @@ return [
    'name' => 'Alma Villas',
    'date' => '2021',
    'logo' => '/images/logo/alma_logo.webp',
-   'background' => '/images/Wimmo/wimmo_2.webp',
+   'background' => '/images/alma/alma-1.webp',
 
    'description.one' => 'Taking advantage of Madagascar\'s tourism potential, with over 500,000 tourists expected every year, Wimmo is unveiling its new Alma Villas label.',
    'description.two' => '"Madagascar has 4,000 km of coastline, a rich fauna and flora, 90% endemic, and tourists from all over the world are prepared to fly ten hours just to enjoy a sunset on our beaches. Neighboring islands are rightly jealous of our heritage."',
