@@ -16,7 +16,7 @@
 
     <div class="px-4 md:px-12 2xl:px-24 py-12 bg-gradient-to-tr from-neutral-950 to-neutral-900">
         <x-section-title :text='__("career.company-career")' dark />
-        <p class="prose lg:prose-lg 2xl:prose-xl mb-8 text-neutral-100">{{__('career.intro')}}</p>
+        <p class="prose lg:prose-lg 2xl:prose-xl mb-8 text-neutral-200 mx-auto">{{__('career.intro')}}</p>
     </div>
 
     <div class="bg-gradient-to-r from-neutral-950 from-90% to to-neutral-900 px-4 md:px-12 2xl:px-24">
