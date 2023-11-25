@@ -37,7 +37,7 @@ Route::get('/activities/{slug}', function ($slug) {
     try {
         return view('activities', ['slug' => $slug, 'posts' => getNewsOrFail([$slug])]);
     } catch (Exception $e) {
-        return view('activities', ['slug' => $slug]);
+        return view('activities', ['slug' => $slug, 'error' => true]);
     }
 })->name('activities');
 
