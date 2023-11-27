@@ -1,14 +1,12 @@
 @props(['post', 'posts'])
-<div class="grid px-4 py-8 md:px-12 lg:grid-cols-[auto_352px] gap-8">
+
+<x-post.hero :post="$post" centered/>
+<div class="grid px-4 md:py-16 md:px-12 gap-8 bg-gradient-to-tr from-neutral-950 from-80% to-neutral-900 min-h-[400px]">
     @if (!$post['content'])
-        <div>This post has no content</div>
+        <div>{{__('news.post.no-content')}}</div>
     @else
-        <div class="prose lg:prose-lg prose-gray">
+        <div class="prose-lg md:prose-xl text-neutral-200 px-4 md:px-12 w-3/4 min-w-[640px] max-w-3xl mx-auto">
             {!! $post['content'] !!}
         </div>
-    @endif
-
-    @if ($posts)
-        <x-post.more :posts="$posts" />
     @endif
 </div>

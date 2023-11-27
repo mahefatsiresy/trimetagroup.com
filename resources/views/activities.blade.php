@@ -8,7 +8,8 @@
     <div class="px-4 md:px-12 2xl:px-24 bg-neutral-950 pt-12">
         <x-section-title :text="__('common.company-news-title :company', ['company' => $title])" class="!mt-0" dark/>
         @if (isset($error))
-            <p class="pb-8 text-neutral-100 text-center">CDN is not reponsding...</p>
+            {{-- <p class="pb-8 text-neutral-100 text-center">CDN is not reponsding...</p> --}}
+            <p class="md:max-w-3xl prose text-neutral-400 pb-8 mx-auto mb-0">{{__("common.cdn-error-description")}}</p>
         @else
             @if (0 === $posts->count())
                 <div>

@@ -26,7 +26,7 @@ Route::get('lang/{locale}', function ($locale) {
 Route::get('/', function () {
     try {
 
-        return view('welcome', ['posts' => getNewsOrFail(getNewsSlug())]);
+        return view('welcome', ['posts' => getPostsByCategory(getNewsSlug())]);
     } catch (Exception $e) {
 
         return view('welcome');
@@ -35,7 +35,7 @@ Route::get('/', function () {
 
 Route::get('/activities/{slug}', function ($slug) {
     try {
-        return view('activities', ['slug' => $slug, 'posts' => getNewsOrFail([$slug])]);
+        return view('activities', ['slug' => $slug, 'posts' => getPostsByCategory([$slug])]);
     } catch (Exception $e) {
         return view('activities', ['slug' => $slug, 'error' => true]);
     }
@@ -82,12 +82,12 @@ Route::get('about-us/{slug}', function ($slug) {
                 ->where('ping_status', 'open')
                 ->published()
                 ->paginate(3);
-                // ->map(function ($p) {
-                //     return buildPost($p);
-                // });
+            // ->map(function ($p) {
+            //     return buildPost($p);
+            // });
 
             // only add non null value
-            foreach($temp as $p) {
+            foreach ($temp as $p) {
                 if ($p) {
                     $posts[] = $p;
                 }
@@ -116,12 +116,12 @@ Route::get('news/{slug}', function ($slug) {
             ->published()
             ->taxonomy('category', getNewsSlug())
             ->paginate(3);
-            // ->map(function ($p) {
-            //     return buildPost($p);
-            // });
+        // ->map(function ($p) {
+        //     return buildPost($p);
+        // });
 
         // only add non null value
-        foreach($temp as $p) {
+        foreach ($temp as $p) {
             if ($p) {
                 $posts[] = $p;
             }
@@ -129,21 +129,110 @@ Route::get('news/{slug}', function ($slug) {
 
         return view('posts.show', ['post' => $post, 'posts' => $posts]);
     } catch (\Throwable $th) {
-        return view('posts.show', ['error' => true]);
+        // return view('posts.show', ['error' => true]);
+        return view('posts.show', [
+            'post' => [
+                'title' => 'An exemple of a very long title',
+                'slug' => 'test',
+                'content' => 'My contents',
+                'excerpt' => 'excerpt',
+                'thumbnail' => '',
+                'date' => '25/11/2023',
+                'categories' => 'test'
+            ],
+            'posts' => [
+                [
+                    'title' => 'An exemple of a very long title',
+                    'slug' => 'test',
+                    'content' => 'My contents',
+                    'excerpt' => 'excerpt',
+                    'thumbnail' => '',
+                    'date' => '25/11/2023',
+                    'categories' => 'test'
+                ],
+                [
+                    'title' => 'Test',
+                    'slug' => 'test',
+                    'content' => 'My contents',
+                    'excerpt' => '<p>Hello world</p>',
+                    'thumbnail' => '',
+                    'date' => '25/11/2023',
+                    'categories' => 'test'
+                ],
+            ]
+        ]);
     }
 })->name('news');
 
 Route::get('/news', function () {
     try {
-        return view('posts.index', ['posts' => getNewsOrFail(getNewsSlug())]);
+        return view('posts.index', ['posts' => getPostsByCategory(getNewsSlug())]);
     } catch (Exception $e) {
         return view('posts.index', ['error' => true]);
+        // return view('posts.index', ['posts' => [
+        //     [
+        //         'title' => 'An exemple of a very long title',
+        //         'slug' => 'test',
+        //         'content' => 'My contents',
+        //         'excerpt' => 'excerpt',
+        //         'thumbnail' => '',
+        //         'date' => '25/11/2023',
+        //         'categories' => 'test'
+        //     ],
+        //     [
+        //         'title' => 'Test',
+        //         'slug' => 'test',
+        //         'content' => 'My contents',
+        //         'excerpt' => '<p>Hello world</p>',
+        //         'thumbnail' => '',
+        //         'date' => '25/11/2023',
+        //         'categories' => 'test'
+        //     ],
+        // ]]);
     }
 })->name('news');
 
 Route::get('/career', function () {
     try {
-        return view('career.index', ['posts' => getNewsOrFail(getNewsSlug())]);
+        $temp = getPostsByCategory(getCareerSlug());
+
+        $enduma = [];
+
+        foreach ($temp as $t) {
+            if ($t->category === 'endumma') {
+                $enduma[] = $t;
+            }
+        }
+
+        $posts = [
+            [
+                'name' => 'Enduma',
+                'posts' => $enduma
+            ],
+            [
+                'name' => 'Trimeta Agro Food',
+                'posts' => []
+            ],
+            [
+                'name' => 'Wimmo',
+                'posts' => []
+            ],
+            [
+                'name' => 'Plantation Millot',
+                'posts' => []
+            ],
+            [
+                'name' => 'Orkidex',
+                'posts' => []
+            ],
+            [
+                'name' => 'Alma Villas',
+                'posts' => []
+            ],
+
+        ];
+
+        return view('career.index', ['posts' => $posts]);
     } catch (Exception $e) {
         return view('career.index', ['posts' => [
             [
@@ -194,7 +283,7 @@ function buildPost($value)
     return null;
 }
 
-function getNewsOrFail($slug = 'news')
+function getPostsByCategory($slug = 'news')
 {
     return Post::published()
         ->taxonomy('category', $slug)
@@ -211,4 +300,13 @@ function getNewsSlug()
         return 'news-fr';
     }
     return 'news';
+}
+
+function getCareerSlug()
+{
+
+    if ('fr' === Session::get('locale')) {
+        return 'careers-fr';
+    }
+    return 'careers';
 }

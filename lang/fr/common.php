@@ -47,8 +47,15 @@ return [
     'news.no-more' => 'Aucun autre article n\'a été publié',
     'news.more' => 'Plus d\'actualiés',
     'news.section-title' => 'Nos actualités',
+    'news.soon' => "Plus d'articles à venir...",
     'new.post.no-found' => "L'article n'a pas été trouvé",
+    'news.post.no-content' => "Cet article n'a pas de contenu",
 
     'company-about.key-figures' => 'Chiffres clés',
     'company-about.contacts' => 'Contacts',
+
+    'cdn-error-title' => "Échec de l'extraction du contenu",
+    'cdn-error-description' => "Nous sommes désolés, mais nous n'avons pas pu récupérer le contenu nécessaire auprès de notre CDN (Content Delivery Network). Cela peut être dû à un problème temporaire avec les serveurs CDN ou à un problème de réseau.",
+
+    'go-home' => "Retour à l'accueil"
 ];
