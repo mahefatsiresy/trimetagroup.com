@@ -6,7 +6,7 @@
             <x-button href='/'>{{__('common.go-home')}}</x-button>
         </div>
     @else
-        @if (empty($posts))
+        @if ($posts->isEmpty())
             <div class="pb-8 h-[90vh] flex items-center justify-center bg-neutral-950 text-neutral-100">
                 <h1>{{__('common.news.soon')}}</h1>
                 <a href='/' class="underline pl-1">Go back home</a>

@@ -1,7 +1,4 @@
 <x-layout :title="isset($error) ? __('common.cdn-error-title') : ($post ? $post['title'] : __('common.news.post.no-found'))">
-post is not defined but posts is : Post not found, show suggestions
-post is not defined and posts in not defined : CDN error
-
     @if (isset($error))
         <div class="px-4 md:px-12 2xl:px-24 pb-8 h-[60vh] md:h-[75vh] lg:h-[90vh] flex flex-col items-center justify-center bg-neutral-950 text-neutral-100">
             <h1 class="text-xl md:text-3xl text-red-500 mb-8">{{__("common.cdn-error-title")}}</h1>
@@ -10,7 +7,9 @@ post is not defined and posts in not defined : CDN error
         </div>
     @else
         @if (!$post)
-            <h1>Post not found</h1>
+            <div class="pb-8 h-[90vh] flex items-center justify-center bg-neutral-950 text-neutral-100">
+                <h1>{{__('common.news.post.no-found')}}</h1>
+            </div>
         @else
             <x-post.body :post="$post"/>
 

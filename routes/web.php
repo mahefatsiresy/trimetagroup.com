@@ -129,38 +129,7 @@ Route::get('news/{slug}', function ($slug) {
 
         return view('posts.show', ['post' => $post, 'posts' => $posts]);
     } catch (\Throwable $th) {
-        // return view('posts.show', ['error' => true]);
-        return view('posts.show', [
-            'post' => [
-                'title' => 'An exemple of a very long title',
-                'slug' => 'test',
-                'content' => 'My contents',
-                'excerpt' => 'excerpt',
-                'thumbnail' => '',
-                'date' => '25/11/2023',
-                'categories' => 'test'
-            ],
-            'posts' => [
-                [
-                    'title' => 'An exemple of a very long title',
-                    'slug' => 'test',
-                    'content' => 'My contents',
-                    'excerpt' => 'excerpt',
-                    'thumbnail' => '',
-                    'date' => '25/11/2023',
-                    'categories' => 'test'
-                ],
-                [
-                    'title' => 'Test',
-                    'slug' => 'test',
-                    'content' => 'My contents',
-                    'excerpt' => '<p>Hello world</p>',
-                    'thumbnail' => '',
-                    'date' => '25/11/2023',
-                    'categories' => 'test'
-                ],
-            ]
-        ]);
+        return view('posts.show', ['error' => true]);
     }
 })->name('news');
 
@@ -169,26 +138,6 @@ Route::get('/news', function () {
         return view('posts.index', ['posts' => getPostsByCategory(getNewsSlug())]);
     } catch (Exception $e) {
         return view('posts.index', ['error' => true]);
-        // return view('posts.index', ['posts' => [
-        //     [
-        //         'title' => 'An exemple of a very long title',
-        //         'slug' => 'test',
-        //         'content' => 'My contents',
-        //         'excerpt' => 'excerpt',
-        //         'thumbnail' => '',
-        //         'date' => '25/11/2023',
-        //         'categories' => 'test'
-        //     ],
-        //     [
-        //         'title' => 'Test',
-        //         'slug' => 'test',
-        //         'content' => 'My contents',
-        //         'excerpt' => '<p>Hello world</p>',
-        //         'thumbnail' => '',
-        //         'date' => '25/11/2023',
-        //         'categories' => 'test'
-        //     ],
-        // ]]);
     }
 })->name('news');
 
@@ -197,10 +146,34 @@ Route::get('/career', function () {
         $temp = getPostsByCategory(getCareerSlug());
 
         $enduma = [];
+        $orkidex = [];
+        $trimetaAgroFood = [];
+        $millot = [];
+        $wimmo = [];
+        $almaVillas = [];
 
         foreach ($temp as $t) {
-            if ($t->category === 'endumma') {
-                $enduma[] = $t;
+            if ($t['categories']) {
+                foreach($t['categories'] as $category) {
+                    if ($category->slug === 'enduma-career') {
+                        $enduma[] = $t;
+                    }
+                    if ($category->slug === 'orkidex-career') {
+                        $orkidex[] = $t;
+                    }
+                    if ($category->slug === 'trimeta-agro-food-career') {
+                        $trimetaAgroFood[] = $t;
+                    }
+                    if ($category->slug === 'plantation-millot-career') {
+                        $millot[] = $t;
+                    }
+                    if ($category->slug === 'wimmo-career') {
+                        $wimmo[] = $t;
+                    }
+                    if ($category->slug === 'alma-villas-career') {
+                        $almaVillas[] = $t;
+                    }
+                }
             }
         }
 
@@ -211,57 +184,44 @@ Route::get('/career', function () {
             ],
             [
                 'name' => 'Trimeta Agro Food',
-                'posts' => []
+                'posts' => $trimetaAgroFood
             ],
             [
                 'name' => 'Wimmo',
-                'posts' => []
+                'posts' => $wimmo
             ],
             [
                 'name' => 'Plantation Millot',
-                'posts' => []
+                'posts' => $millot
             ],
             [
                 'name' => 'Orkidex',
-                'posts' => []
+                'posts' => $orkidex
             ],
             [
                 'name' => 'Alma Villas',
-                'posts' => []
+                'posts' => $almaVillas
             ],
 
         ];
 
         return view('career.index', ['posts' => $posts]);
     } catch (Exception $e) {
-        return view('career.index', ['posts' => [
-            [
-                'name' => 'Enduma',
-                'posts' => []
-            ],
-            [
-                'name' => 'Trimeta Agro Food',
-                'posts' => []
-            ],
-            [
-                'name' => 'Wimmo',
-                'posts' => []
-            ],
-            [
-                'name' => 'Plantation Millot',
-                'posts' => []
-            ],
-            [
-                'name' => 'Orkidex',
-                'posts' => []
-            ],
-            [
-                'name' => 'Alma Villas',
-                'posts' => []
-            ],
-        ]]);
+        return view('career.index', ['error' => true]);
     }
 })->name('career');
+
+Route::get('career/{slug}', function ($slug) {
+    try {
+        $post = Post::slug($slug)->first();
+
+        $post = buildPost($post);
+
+        return view('posts.show', ['post' => $post, 'posts' => []]);
+    } catch (Exception $e) {
+        return view('posts.show', ['error' => true]);
+    }
+});
 
 
 function buildPost($value)
