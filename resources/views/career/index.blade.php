@@ -19,6 +19,14 @@
         <p class="prose lg:prose-lg 2xl:prose-xl mb-8 text-neutral-200 mx-auto">{{__('career.intro')}}</p>
     </div>
 
+    {{-- <div class="relative min-h-[512px] h-[60vh]">
+        <div class="w-full h-full bg-cover bg-bottom" style="background: url(/images/Groupe/recruitment-and-development.webp)"></div>
+        <div class="absolute inset-0 px-4 md:px-12 z-10 2xl:px-24 py-12  bg-neutral-950/80">
+            <x-section-title :text='__("career.company-career")' dark />
+            <p class="prose lg:prose-lg 2xl:prose-2xl mb-8 text-neutral-200 mx-auto">{{__('career.intro')}}</p>
+        </div>
+    </div> --}}
+
     <div class="bg-neutral-950 px-4 md:px-12 2xl:px-24">
         @if (isset($error))
             <div class="px-4 md:px-12 2xl:px-24 pb-8 h-[60vh] flex flex-col items-center justify-center bg-neutral-950 text-neutral-100 py-16">
@@ -44,7 +52,7 @@
                             <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/70 from-30% hover:from-neutral-950/40 flex items-end p-4 pb-8 text-neutral-50 rounded-lg">
                                 <p class="font-semibold text-lg">{{$post['title']}}</p>
                             </div>
-                            <div class="h-full w-full bg-cover rounded-lg" style="background-image: url({{$post['thumbnail']}});"></div>
+                            <div class="h-full w-full bg-cover bg-center rounded-lg" style="background-image: url({{$post['thumbnail']}});"></div>
                         </a>
                         @endforeach
                     </div>

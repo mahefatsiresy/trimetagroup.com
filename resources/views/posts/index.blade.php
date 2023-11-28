@@ -14,7 +14,7 @@
         @else
             <x-post.hero :post="$posts[0]" withCta />
 
-            <section class="px-4 lg:px-12 2x:px-24 bg-gradient-to-br from-neutral-950 from-80% to-neutral-900 py-12">
+            <section class="px-4 lg:px-12 2xl:px-24 bg-gradient-to-br from-neutral-950 from-80% to-neutral-900 py-12">
                     {{-- @if ($posts->count() > 1) --}}
                     @if (count($posts) > 1)
                         <ul class="grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-8">

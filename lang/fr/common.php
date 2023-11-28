@@ -7,6 +7,7 @@ return [
     'navbar.links.group.ceo-words' => 'Les mots du président',
     'navbar.links.group.our-history' => 'Notre histoire',
     'navbar.links.group.key-dates' => 'Date clés',
+    'navbar.links.group.about-us' => 'A propos de nous',
     'navbar.links.group.our-mission' => 'Notre mission',
     'navbar.links.group.our-values' => 'Nos valeurs',
 
@@ -57,5 +58,7 @@ return [
     'cdn-error-title' => "Échec de l'extraction du contenu",
     'cdn-error-description' => "Nous sommes désolés, mais nous n'avons pas pu récupérer le contenu nécessaire auprès de notre CDN (Content Delivery Network). Cela peut être dû à un problème temporaire avec les serveurs CDN ou à un problème de réseau.",
 
-    'go-home' => "Retour à l'accueil"
+    'go-home' => "Retour à l'accueil",
+
+    'terms-of-use' => 'Mentions légales'
 ];

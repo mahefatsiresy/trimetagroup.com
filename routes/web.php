@@ -57,7 +57,8 @@ Route::get('about-us/{slug}', function ($slug) {
             'our-history' => "notre-histoire",
             'our-mission' => "notre-mission",
             'our-values' => "nos-valeurs",
-            'legal-notice' => 'mentions-legales'
+            'legal-notice' => 'mentions-legales',
+            'about-us' => 'a-propos-de-nous'
         ];
 
         if ('fr' === Session::get('locale')) {
@@ -109,23 +110,14 @@ Route::get('news/{slug}', function ($slug) {
 
         $post = buildPost($post);
 
-        $posts = [];
-
-        $temp = Post::where('post_name', '!=', $slug)
+        $posts = Post::where('post_name', '!=', $slug)
             ->where('ping_status', 'open')
             ->published()
             ->taxonomy('category', getNewsSlug())
-            ->paginate(3);
-        // ->map(function ($p) {
-        //     return buildPost($p);
-        // });
-
-        // only add non null value
-        foreach ($temp as $p) {
-            if ($p) {
-                $posts[] = $p;
-            }
-        }
+            ->paginate(3)
+            ->map(function ($p) {
+                return buildPost($p);
+            });
 
         return view('posts.show', ['post' => $post, 'posts' => $posts]);
     } catch (\Throwable $th) {

@@ -7,6 +7,7 @@ return [
     'navbar.links.group.ceo-words' => 'CEO words',
     'navbar.links.group.our-history' => 'Our history',
     'navbar.links.group.key-dates' => 'Key dates',
+    'navbar.links.group.about-us' => 'About us',
     'navbar.links.group.our-mission' => 'Our mission',
     'navbar.links.group.our-values' => 'Our values',
 
@@ -55,5 +56,6 @@ return [
     'cdn-error-title' => 'Failed to Fetch Content',
     'cdn-error-description' => "We're sorry, but we were unable to retrieve the necessary content from our CDN (Content Delivery Network). This could be due to a temporary issue with the CDN servers or a network problem.",
 
-    'go-home' => 'Go back to homepage'
+    'go-home' => 'Go back to homepage',
+    'terms-of-use' => 'Terms of use'
 ];

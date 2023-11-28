@@ -1,6 +1,6 @@
 @php
     // $group = ['ceo-words', 'our-history', 'key-dates', 'our-ethical-charter'];
-    $group = ['key-dates', 'our-mission', 'our-values'];
+    $group = ['key-dates', 'about-us', 'our-mission', 'our-values'];
     $activities = [
         "industry" => ['enduma'],
         "agro" => ['trimeta-agrofood', 'millot', 'orkidex'],
