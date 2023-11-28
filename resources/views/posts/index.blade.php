@@ -19,7 +19,7 @@
                     @if (count($posts) > 1)
                         <ul class="grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-8">
                             {{-- @foreach ($posts->skip(1) as $post) --}}
-                            @foreach ($posts as $post)
+                            @foreach ($posts->skip(1) as $post)
                                 <x-post.preview :post="$post" />
                             @endforeach
                         </ul>
