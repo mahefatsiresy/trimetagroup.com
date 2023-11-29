@@ -66,7 +66,7 @@
     </section>
 
     {{-- commitments --}}
-    <section class="px-6 py-8 text-neutral-100 bg-gradient-to-bl from-neutral-950 to-neutral-900 md:py-12 md:px-12 pb-24 min-h-[512px] lg:h-[80vh] flex flex-col justify-center">
+    <section class="px-6 py-8 text-neutral-100 bg-gradient-to-bl from-neutral-900 to-neutral-800 md:py-12 md:px-12 pb-24 min-h-[512px] lg:h-[80vh] flex flex-col justify-center">
         <x-section-title :text="__('home.sections.commitment.title')" dark/>
         <div class="flex flex-col mt-8  gap-8 md:gap-16 items-center">
             <div class="pl-4 pb-6 text-lg md:text-xl max-w-[640px]">
