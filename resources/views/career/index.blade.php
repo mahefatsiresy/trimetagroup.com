@@ -1,14 +1,13 @@
 <x-layout>
     {{-- hero --}}
-    <div class="flex relative h-[50vh] lg:h-[60vh]">
-        <div class="bg-neutral-500 h-full w-full"></div>
-        <div class="bg-neutral-600 h-full w-full"></div>
-        <div class="bg-neutral-700 h-full w-full hidden md:block"></div>
-        <div class="bg-neutral-800 h-full w-full hidden md:block"></div>
-        <div class="bg-neutral-900 h-full w-full hidden lg:block"></div>
-        <div class="bg-neutral-950 h-full w-full hidden lg:block"></div>
+    <div class="flex relative h-[50vh] lg:h-[70vh] pt-16 bg-neutral-950">
+        <div class="h-full w-full bg-cover bg-center" style="background-image: url(/images/career/enduma-job.webp);"></div>
+        <div class="h-full w-full bg-cover bg-center" style="background-image: url(/images/career/orkidex-job2.webp);"></div>
+        <div class="h-full w-full bg-cover bg-center hidden md:block" style="background-image: url(/images/career/trimeta-job.webp);"></div>
+        <div class="h-full w-full bg-cover bg-center hidden lg:block" style="background-image: url(/images/career/orkidex-job1.webp);"></div>
 
-        <h1 class="absolute bottom-12 px-4 md:px-12 text-center w-full font-semibold text-lg lg:text-2xl flex justify-center drop-shadow text-neutral-50" style="font-family: Poppins">
+        <div class="absolute bottom-0 bg-gradient-to-t from-neutral-950/95 to-30% h-full w-full"></div>
+        <h1 class="absolute bottom-12 px-4 md:px-12 text-center w-full font-semibold text-lg lg:text-2xl flex justify-center text-neutral-50 drop-shadow-md" style="font-family: Poppins">
             <div class="max-w-lg">{{__("career.title")}}
                 <div>
         </h1>

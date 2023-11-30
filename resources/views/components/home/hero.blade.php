@@ -1,4 +1,4 @@
- <x-bg-with-motion background="/images/Groupe/groupe_10.webp">
+ <x-bg-with-motion background="/images/hero.webp">
     <section class="h-screen w-screen flex flex-col justify-center px-6 md:px-12 bg-gradient-to-t from-neutral-950/80 from-50% lg:from-40% to-neutral-950/0">
         <div class="flex items-center justify-center w-full gap-4">
             <div>

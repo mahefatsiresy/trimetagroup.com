@@ -26,11 +26,10 @@
 <x-layout>
     {{-- companies --}}
     <section class="w-full pt-8 text-neutral-100 bg-gradient-to-tl from-neutral-950 to-neutral-900 md:pt-12">
-        {{-- <x-section-title class="px-6 mb-4 md:px-12" :text="__('home.sections.group.title')" dark /> --}}
         <p class="px-6 mt-16 mb-8 md:px-12 text-center text-lg">
             {{ __('home.sections.group.subtitle') }}
         </p>
-        <ul class="flex flex-col md:grid md:grid-cols-2 lg:flex lg:flex-row lg:max-h-[512px] lg:h-[80vh]">
+        <ul class="flex flex-col md:grid md:grid-cols-2 lg:flex lg:flex-row lg:max-h-[512px] lg:h-[100vh]">
             @foreach (['enduma', 'trimeta-agrofood', 'wimmo', 'millot', 'orkidex', 'alma-villas'] as $name)
                 <x-home.company-preview :key="$name" :index="$loop->iteration" />
             @endforeach
