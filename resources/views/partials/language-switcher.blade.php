@@ -17,7 +17,7 @@
 
      <div x-show="show" class="absolute z-50 w-24 pt-4 rounded-md bg-neutral-950 text-neutral-50" style="display: none">
          @foreach ($available_locales as $locale_name => $locale_value)
-             <a href="lang/{{ $locale_value }}"
+             <a href="/lang/{{ $locale_value }}"
                  class="block px-3 py-4 hover:underline hover:underline-offset-8 hover:font-semibold">{{ $locale_name }}</a>
          @endforeach
      </div>
