@@ -9,7 +9,7 @@
     ];
 @endphp
 
-<nav class="fixed top-0 z-20 bg-neutral-950/95 backdrop-blur text-neutral-50 w-screen">
+<nav class="fixed top-0 z-20 bg-neutral-950/70 backdrop-blur text-neutral-50 w-screen">
     <div class="w-full nav-container">
         <div class="flex items-center h-full gap-6 pl-4 lg:px-12 2xl:px-24 lg:justify-between">
             {{-- logo --}}

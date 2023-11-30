@@ -3,7 +3,7 @@
 return [
     'document-title' => 'Trimeta Group',
 
-    'navbar.links.group.trigger' => 'The group',
+    'navbar.links.group.trigger' => 'Our group',
     'navbar.links.group.ceo-words' => 'CEO words',
     'navbar.links.group.our-history' => 'Our history',
     'navbar.links.group.key-dates' => 'Key dates',
