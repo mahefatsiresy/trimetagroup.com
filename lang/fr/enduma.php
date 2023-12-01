@@ -21,9 +21,10 @@ return [
   // 'details.four.icon' => '/icons/certifications.png',
   // 'details.four.title' => 'Certifications',
   'certifications.descriptions.one' => 'Certifié ISO: 9001/2015',
-  'certifications.descriptions.two' => 'Certifications en cours: ISO 14001 sur le Management environnemental.',
-  'certifications.descriptions.three' => 'ISO 45001 sur la santé, sécurité au travail',
-  'certifications.images.one' => '/images/logo/malagasy_ny_antsika.png',
+  'certifications.descriptions.two' => 'ISO 45001 sur la santé, sécurité au travail',
+  'certifications.descriptions.three' => 'Certifications en cours: ISO 14001 sur le Management environnemental.',
+  'certifications.images.one' => '/icons/iso-9001-2015.svg',
+  'certifications.images.two' => '/images/logo/malagasy_ny_antsika.png',
 
   'contacts.phone' => 'téléphone',
   'contacts.phone.value' => '020 22 469 42',

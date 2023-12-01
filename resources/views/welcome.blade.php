@@ -29,7 +29,7 @@
         <p class="px-6 mt-16 mb-8 md:px-12 text-center text-lg">
             {{ __('home.sections.group.subtitle') }}
         </p>
-        <ul class="flex flex-col md:grid md:grid-cols-2 lg:flex lg:flex-row lg:max-h-[512px] lg:h-[100vh]">
+        <ul class="flex flex-col md:grid md:grid-cols-2 lg:flex lg:flex-row lg:flex-grow lg:max-h-[632px] lg:h-[90vh]">
             @foreach (['enduma', 'trimeta-agrofood', 'wimmo', 'millot', 'orkidex', 'alma-villas'] as $name)
                 <x-home.company-preview :key="$name" :index="$loop->iteration" />
             @endforeach
@@ -58,7 +58,7 @@
             <div class="pl-4 pb-6 text-lg md:text-xl md:max-w-3xl text-neutral-100">
                 {{ __("home.sections.ethics.resume.one") }}
             </div>
-            <x-button href="/our-commitments#ethics">
+            <x-button href="/about-us/our-values">
                 {{ __('home.sections.ethics.cta') }}
             </x-button>
         </div>

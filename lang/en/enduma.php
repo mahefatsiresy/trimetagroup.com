@@ -20,9 +20,10 @@ return [
   'details.four.icon' => '/icons/certifications.png',
   // 'details.four.title' => 'Certifications',
   'certifications.descriptions.one' => 'Certified ISO: 9001/2015',
-  'certifications.descriptions.two' => 'Certifications in progress: ISO 14001 on Environmental Management.',
-  'certifications.descriptions.three' => 'ISO 45001 on Occupational Health and Safety.',
-  'certifications.images.one' => '/images/logo/malagasy_ny_antsika.png',
+  'certifications.descriptions.two' => 'ISO 45001 on Occupational Health and Safety.',
+  'certifications.descriptions.three' => 'Certifications in progress: ISO 14001 on Environmental Management.',
+  'certifications.images.one' => '/icons/iso-9001-2015.svg',
+  'certifications.images.two' => '/images/logo/malagasy_ny_antsika.png',
 
 
   'contacts.phone' => 'phone',

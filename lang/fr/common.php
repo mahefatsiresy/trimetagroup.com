@@ -6,7 +6,7 @@ return [
     'navbar.links.group.trigger' => 'Notre groupe',
     'navbar.links.group.ceo-words' => 'Les mots du président',
     'navbar.links.group.our-history' => 'Notre histoire',
-    'navbar.links.group.key-dates' => 'Date clés',
+    'navbar.links.group.key-dates' => 'Dates clés',
     'navbar.links.group.about-us' => 'A propos de nous',
     'navbar.links.group.our-mission' => 'Notre mission',
     'navbar.links.group.our-values' => 'Nos valeurs',

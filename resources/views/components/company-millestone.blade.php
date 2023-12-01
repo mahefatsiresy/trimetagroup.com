@@ -2,7 +2,7 @@
 
 @if (0 === $index % 2)
     <li
-        class="md:h-[168px] md:min-h-[142px] md:max-h-[168px] border border-neutral-800 px-6 md:px-12 md:rounded-full md:grid grid-cols-[1fr_48px_1fr] gap-4 md:gap-8 mb-4 md:bg-neutral-100/80">
+        class="md:h-[240px] md:min-h-[142px] border border-neutral-800 px-6 md:px-12 md:rounded-full md:grid grid-cols-[1fr_48px_1fr] gap-4 md:gap-8 mb-4 md:bg-neutral-100/80">
         <div class="flex items-center justify-between h-full py-4">
             <img src="{{ $company['image'] }}" alt="{{ $company['name'] }} logo" width="800" height="800"
                 class="w-[156px] h-[128px] object-contain object-center" />
@@ -15,7 +15,7 @@
             <x-timeline-graph />
         </div>
 
-        <ul class="py-4 text-lg">
+        <ul class="py-4 lg:py-8 text-lg">
             @foreach ($company['abouts'] as $about)
                 <li class="flex items-center gap-1 list-disc">
                     {{ $about }}
@@ -25,7 +25,7 @@
     </li>
 @else
     <li
-        class="md:h-[168px] md:min-h-[142px] md:max-h-[168px] border border-neutral-800 md:rounded-full px-6 md:px-12 grid md:grid-cols-[1fr_48px_1fr] gap-4 md:gap-8 mb-4 md:bg-neutral-100/80">
+        class="md:h-[240px] md:min-h-[142px] border border-neutral-800 md:rounded-full px-6 md:px-12 grid md:grid-cols-[1fr_48px_1fr] gap-4 md:gap-8 mb-4 md:bg-neutral-100/80">
         <div class="flex items-center justify-between h-full py-4 md:hidden">
             <img src="{{ $company['image'] }}" alt="{{ $company['name'] }} logo" width="800" height="800"
                 class="w-[156px] h-[128px] object-contain object-center" />
@@ -43,7 +43,7 @@
         </ul>
 
         {{-- // hidden on small screen --}}
-        <ul class="py-4 text-lg hidden md:block">
+        <ul class="py-4  lg:py-8 text-lg hidden md:block">
             @foreach ($company['abouts'] as $about)
                 <li class="flex items-center gap-1 list-disc">
                     {{ $about }}

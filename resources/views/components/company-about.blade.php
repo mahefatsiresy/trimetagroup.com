@@ -11,7 +11,8 @@
                 'descriptionCount' => 2,
                 'detailsDesc' => [0, 0, 0],
                 'detailsImg' => [0, 0, 0],
-                'certifications' => [3, 1]
+                'certifications' => [3, 2],
+                'products' => ['/images/Enduma/enduma-product-1.webp', '/images/Enduma/enduma-product-2.webp', '/images/Enduma/enduma-product-3.webp', '/images/Enduma/enduma-product-5.webp']
             ];
             break;
         case 'trimeta-agrofood':
@@ -19,7 +20,8 @@
                 'descriptionCount' => 2,
                 'detailsDesc' => [1, 1],
                 'detailsImg' => [0, 0],
-                'certifications' => [3, 5]
+                'certifications' => [3, 5],
+                'products' => []
             ];
             break;
         case 'wimmo':
@@ -27,7 +29,9 @@
                 'descriptionCount' => 2,
                 'detailsDesc' => [1, 0, 0, 0, 0],
                 'detailsImg' => [0, 0, 0, 0, 0],
-                'certifications' => [0, 0]
+                'certifications' => [0, 0],
+                'products' => []
+
             ];
             break;
         case 'millot':
@@ -35,7 +39,9 @@
                 'descriptionCount' => 3,
                 'detailsDesc' => [0, 0, 0],
                 'detailsImg' => [0, 0, 0],
-                'certifications' => [0, 0]
+                'certifications' => [0, 0],
+                'products' => []
+
             ];
             break;
         case 'orkidex':
@@ -43,7 +49,9 @@
                 'descriptionCount' => 2,
                 'detailsDesc' => [1],
                 'detailsImg' => [0],
-                'certifications' => [0, 0]
+                'certifications' => [0, 0],
+                'products' => []
+
             ];
             break;
         case 'alma-villas':
@@ -51,7 +59,9 @@
                 'descriptionCount' => 4,
                 'detailsDesc' => [],
                 'detailsImg' => [],
-                'certifications' => [0, 0]
+                'certifications' => [0, 0],
+                'products' => ['/images/alma/alma-villas-product.webp','/images/alma/alma-villas-product-2.webp','/images/alma/alma-villas-product-3.webp']
+
             ];
             break;
         default:
@@ -173,29 +183,6 @@
         </ul>
     @endif
 
-    {{-- certifications --}}
-    @if (0 !== count($certifications['descriptions']) || 0 !== count($certifications['images']))
-        <x-section-title text="Certifications" dark/>
-            @if (0 !== count($certifications['descriptions']))
-                <ul class="pt-4 pl-4 list-disc">
-                    @foreach ($certifications['descriptions'] as $description)
-                        <li class="text-neutral-400 mb-2 font-normal w-2/3">
-                            {{ $description }}
-                        </li>
-                    @endforeach
-                </ul>
-            @endif
-
-            @if (0 !== count($certifications['images']))
-                <ul class="pt-4 grid grid-cols-2 md:grid-cols-3 gap-4 mt-8">
-                    @foreach ($certifications['images'] as $img)
-                        <li class="w-fit">
-                            <img src={{ $img }} alt="detail image" width="400" height="400" class='object-contain w-full h-[160px]'/>
-                        </li>
-                    @endforeach
-                </ul>
-            @endif
-    @endif
 
     @if (0 !== count($contacts))
         <x-section-title text="Contacts" dark/>
@@ -222,3 +209,46 @@
     @endif
 
 </x-fullpage-card>
+
+@if (0 !== count($companyData['products']))
+<section class="bg-gradient-to-tr from-neutral-950 to-neutral-900 py-8 px-4 md:px-12 2xl:px-24">
+    <x-section-title text="Products" dark/>
+    <ul class="grid md:grid-cols-2 gap-4 lg:grid-cols-3">
+        @foreach($companyData['products'] as $product)
+        <li class="relative h-[320px]">
+            <img src="{{$product}}" alt="{{$slug}} product" class="w-full h-full object-cover object-bottom bg-neutral-800"/>
+            {{-- <div class="absolute inset-0 flex items-end justify-center bg-gradient-to-t from-neutral-950/80 from-20% text-neutral-50 p-4"> --}}
+            {{--     Product name --}}
+            {{-- </div> --}}
+        </li>
+        @endforeach
+    </ul>
+</section>
+@endif
+
+{{-- certifications --}}
+@if (0 !== count($certifications['descriptions']) || 0 !== count($certifications['images']))
+<section class="bg-gradient-to-tr from-neutral-950 to-neutral-900 py-8 px-4 md:px-12 2xl:px-24">
+    <x-section-title text="Certifications" dark/>
+        @if (0 !== count($certifications['descriptions']))
+            <ul class="pt-4 pl-4 list-disc">
+                @foreach ($certifications['descriptions'] as $description)
+                    <li class="text-neutral-400 mb-2 font-normal w-2/3">
+                        {{ $description }}
+                    </li>
+                @endforeach
+            </ul>
+        @endif
+
+        @if (0 !== count($certifications['images']))
+            <ul class="pt-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-12 mt-8 w-fit">
+                @foreach ($certifications['images'] as $img)
+                    <li class="w-fit">
+                        <img src={{ $img }} alt="detail image" width="400" height="400" class='object-contain w-full h-[160px]'/>
+                    </li>
+                @endforeach
+            </ul>
+        @endif
+</section>
+@endif
+

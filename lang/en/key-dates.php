@@ -3,9 +3,11 @@ return [
 
     'document-title' => 'Group milestones',
 
-    'Alma Villas.date' => '2021',
+    'Alma Villas.date' => '2022',
     'Alma Villas.image' => '/images/logo/alma_logo.webp',
     'Alma Villas.about.one' => 'Creation of ALMA VILLA Guest house',
+    'Alma Villas.about.two' => '2022 official opening of the 4 rental villas in Nosybe',
+
 
     'Orkidex.date' => '2019',
     'Orkidex.image' => '/images/logo/logo_orkidex.webp',
@@ -29,6 +31,7 @@ return [
     'Trimeta Agrofood.about.one' => 'VANILLE MAD became Trimeta Agro Food in 2000',
     'Trimeta Agrofood.about.two' => 'Export of cloves and pink berries',
     'Trimeta Agrofood.about.three' => 'Extraction of essential oils',
+    'Trimeta Agrofood.about.four' =>"TRIMETA AGRO FOOD merged with BIOSAVE and MADAGASCAR CLOVES on December 28, 2006." ,
 
     'Vanille Mad.date' => '1991',
     'Vanille Mad.image' => '/images/logo/logo_vanille_mad.webp',
@@ -39,6 +42,7 @@ return [
     'Wimmo.image' => '/images/logo/logo_wimmo.webp',
     'Wimmo.about.one' => 'SIM: Société Immonilière Michelin',
     'Wimmo.about.two' => 'Real estate developer',
+    'Wimmo.about.three' => 'SIM (Société Immobilère Michelin), the real estate developer, became WIMMO in January 2020',
 
     'Enduma.date' => '1976',
     'Enduma.image' => '/images/logo/logo_enduma.webp',

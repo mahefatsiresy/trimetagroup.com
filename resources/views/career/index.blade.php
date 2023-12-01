@@ -4,7 +4,7 @@
         <div class="h-full w-full bg-cover bg-center" style="background-image: url(/images/career/enduma-job.webp);"></div>
         <div class="h-full w-full bg-cover bg-center" style="background-image: url(/images/career/orkidex-job2.webp);"></div>
         <div class="h-full w-full bg-cover bg-center hidden md:block" style="background-image: url(/images/career/trimeta-job.webp);"></div>
-        <div class="h-full w-full bg-cover bg-center hidden lg:block" style="background-image: url(/images/career/orkidex-job1.webp);"></div>
+        <div class="h-full w-full bg-cover bg-center hidden lg:block" style="background-image: url(/images/career/wimmo-job.webp);"></div>
 
         <div class="absolute bottom-0 bg-gradient-to-t from-neutral-950/95 to-30% h-full w-full"></div>
         <h1 class="absolute bottom-12 px-4 md:px-12 text-center w-full font-semibold text-lg lg:text-2xl flex justify-center text-neutral-50 drop-shadow-md" style="font-family: Poppins">

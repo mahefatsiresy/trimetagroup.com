@@ -62,6 +62,7 @@
                 'icon' => __("ethics.cards.{$numberLetter[$index]}.icon"),
                 'title' => __("ethics.cards.{$numberLetter[$index]}.title"),
                 'descriptions' => $desc,
+                'image' => __("ethics.cards.{$numberLetter[$index]}.image"),
             ];
         },
         $descData,
@@ -74,7 +75,7 @@
         <x-section-title :text="__('commitments.document-title')" class="px-4 md:px-12 pb-6" dark/>
         <div class="p-4 md:p-12 2xl:px-24">
             @foreach ($ethics as $descriptions)
-                <x-description-card :descriptions="$descriptions['descriptions']" :data="$descriptions" :index="$loop->index" />
+                <x-description-card :data="$descriptions" :index="$loop->index" :image="$descriptions['image']" />
             @endforeach
         </div>
     </article>

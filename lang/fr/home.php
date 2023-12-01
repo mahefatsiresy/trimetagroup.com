@@ -11,41 +11,44 @@ return [
     'sections.group.enduma.name' => 'Enduma',
     'sections.group.enduma.logo' => '/images/logo/logo_enduma.webp',
     'sections.group.enduma.background' => '/images/Enduma/enduma_2.webp',
-    'sections.group.enduma.description' => 'Concepteur, fabriquant et négociant de produits tissés ou non tissés à base de Polypropylène.',
+    'sections.group.enduma.description' => "Concepteur d'emballage",
+    // 'sections.group.enduma.description' => 'Concepteur, fabriquant et négociant de produits tissés ou non tissés à base de Polypropylène.',
 
     'sections.group.trimeta-agrofood.name' => 'Trimeta Agro Food',
     'sections.group.trimeta-agrofood.logo' => '/images/logo/logo_trimeta.webp',
     'sections.group.trimeta-agrofood.background' => '/images/TAF/trimeta_4.webp',
-    'sections.group.trimeta-agrofood.description' => 'Collecteur, préparateur, conditionneur, exportateur de vanille et d\'épices malgaches.',
+    'sections.group.trimeta-agrofood.description' => "Exportateur de vanille et d'épice",
+    // 'sections.group.trimeta-agrofood.description' => 'Collecteur, préparateur, conditionneur, exportateur de vanille et d\'épices malgaches.',
 
     'sections.group.wimmo.name' => 'Wimmo',
     'sections.group.wimmo.logo' => '/images/logo/logo_wimmo.webp',
     'sections.group.wimmo.background' => '/images/Wimmo/wimmo_2.webp',
-    'sections.group.wimmo.description' => 'Promoteur immobilier: innovantes en sécurité, praticité et confort, répondant aux évolutions des besoins et des modes de vies.',
+    'sections.group.wimmo.description' => 'Promoteur immobilier',
+    // 'sections.group.wimmo.description' => 'Promoteur immobilier: innovantes en sécurité, praticité et confort, répondant aux évolutions des besoins et des modes de vies.',
 
     'sections.group.millot.name' => 'Millot',
     'sections.group.millot.logo' => '/images/logo/Millot.webp',
     'sections.group.millot.background' => '/images/Millot/millot-plantation.webp',
-    'sections.group.millot.description' => '',
+    'sections.group.millot.description' => 'Exportateur de cacao',
 
     'sections.group.orkidex.name' => 'Orkidex',
     'sections.group.orkidex.logo' => '/images/logo/logo_orkidex.webp',
     'sections.group.orkidex.background' => '/images/TAF/trimeta_2.webp',
-    'sections.group.orkidex.description' => 'Transformateur de vanille en poudre et extrait de vanille',
+    'sections.group.orkidex.description' => 'Transformateur de vanille',
 
     'sections.group.alma-villas.name' => 'Alma Villas',
     'sections.group.alma-villas.logo' => '/images/logo/alma_logo.webp',
     'sections.group.alma-villas.background' => '/images/alma/alma-1.webp',
-    'sections.group.alma-villas.description' => 'Location de maisons d\'hôtes à Nosy-Be',
+    'sections.group.alma-villas.description' => 'Location de villa touristique',
 
-    'sections.ethics.title' => 'Nos valeurs et éthiques',
+    'sections.ethics.title' => 'Nos valeurs',
     'sections.ethics.willingness' => 'volonté',
     'sections.ethics.responsibility' => 'responsabilité',
     'sections.ethics.performance' => 'performance',
 
     'sections.ethics.resume.one' => 'Notre modèle repose sur une vision de long terme, valorise l’héritage de nos entités et stimule l’expertise et l’excellence. Il est le moteur de la réussite du Groupe et le garant de son avenir.',
-    'sections.ethics.cta' => 'Voir notre charte éthique',
-    'sections.ethics.cta-href' => '/our-values-and-ethics',
+    'sections.ethics.cta' => 'Voir les détails',
+    'sections.ethics.cta-href' => '/about-us/our-values',
 
     'sections.responsibilities.title' => 'Nos responsabilité sociaux',
     'sections.responsibilities.subtitle' => 'Culture, responsabilité sociale ou environnement... Le Groupe Trimeta et ses entités mobilisent ressources et compétences au service d’initiatives en faveur de la société.',
@@ -117,8 +120,7 @@ return [
     'csr-project.environment.descriptions.three' => 'Découverte du système de biogaz',
     'csr-project.environment.descriptions.four' => 'Création de puit pour la population locale',
 
-    'sections.commitment.title' => 'Notre engagement',
-    'sections.commitment.title' => 'Notre engagement',
+    'sections.commitment.title' => 'Nos engagements',
     'sections.commitment.cta' => 'Voir les détails',
 
     'about-us' => 'A propos du groupe'
