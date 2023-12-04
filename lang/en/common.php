@@ -57,5 +57,7 @@ return [
     'cdn-error-description' => "We're sorry, but we were unable to retrieve the necessary content from our CDN (Content Delivery Network). This could be due to a temporary issue with the CDN servers or a network problem.",
 
     'go-home' => 'Go back to homepage',
-    'terms-of-use' => 'Terms of use'
+    'terms-of-use' => 'Terms of use',
+
+    'company.products' => 'Products'
 ];

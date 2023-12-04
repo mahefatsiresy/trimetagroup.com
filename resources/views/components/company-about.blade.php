@@ -30,7 +30,7 @@
                 'detailsDesc' => [1, 0, 0, 0, 0],
                 'detailsImg' => [0, 0, 0, 0, 0],
                 'certifications' => [0, 0],
-                'products' => []
+                'products' => ['/images/Wimmo/wimmo-product-2.webp', '/images/Wimmo/wimmo-product-4.jpg']
 
             ];
             break;
@@ -212,14 +212,11 @@
 
 @if (0 !== count($companyData['products']))
 <section class="bg-gradient-to-tr from-neutral-950 to-neutral-900 py-8 px-4 md:px-12 2xl:px-24">
-    <x-section-title text="Products" dark/>
+    <x-section-title :text="__('common.company.products')" dark/>
     <ul class="grid md:grid-cols-2 gap-4 lg:grid-cols-3">
         @foreach($companyData['products'] as $product)
         <li class="relative h-[320px]">
             <img src="{{$product}}" alt="{{$slug}} product" class="w-full h-full object-cover object-bottom bg-neutral-800"/>
-            {{-- <div class="absolute inset-0 flex items-end justify-center bg-gradient-to-t from-neutral-950/80 from-20% text-neutral-50 p-4"> --}}
-            {{--     Product name --}}
-            {{-- </div> --}}
         </li>
         @endforeach
     </ul>

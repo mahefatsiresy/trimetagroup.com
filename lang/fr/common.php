@@ -60,5 +60,7 @@ return [
 
     'go-home' => "Retour à l'accueil",
 
-    'terms-of-use' => 'Mentions légales'
+    'terms-of-use' => 'Mentions légales',
+
+    'company.products' => 'Produits'
 ];
