@@ -10,7 +10,7 @@ return [
 
     'sections.group.enduma.name' => 'Enduma',
     'sections.group.enduma.logo' => '/images/logo/logo_enduma.webp',
-    'sections.group.enduma.background' => '/images/Enduma/enduma_2.webp',
+    'sections.group.enduma.background' => '/images/Enduma/enduma.webp',
     'sections.group.enduma.description' => "Concepteur d'emballage",
     // 'sections.group.enduma.description' => 'Concepteur, fabriquant et négociant de produits tissés ou non tissés à base de Polypropylène.',
 
@@ -38,7 +38,8 @@ return [
 
     'sections.group.alma-villas.name' => 'Alma Villas',
     'sections.group.alma-villas.logo' => '/images/logo/alma_logo.webp',
-    'sections.group.alma-villas.background' => '/images/alma/alma-1.webp',
+    'sections.group.alma-villas.background' => '/images/alma/alma-villas-product.webp',
+    // 'sections.group.alma-villas.background' => '/images/alma/alma-1.webp',
     'sections.group.alma-villas.description' => 'Location de villa touristique',
 
     'sections.ethics.title' => 'Nos valeurs',

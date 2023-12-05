@@ -10,7 +10,7 @@ return [
 
     'sections.group.enduma.name' => 'Enduma',
     'sections.group.enduma.logo' => '/images/logo/logo_enduma.webp',
-    'sections.group.enduma.background' => '/images/Enduma/enduma_2.webp',
+    'sections.group.enduma.background' => '/images/Enduma/enduma.webp',
     'sections.group.enduma.description' => "Packaging designer",
     // 'sections.group.enduma.description' => 'Designer, manufacturer and trader of woven Polypropylene products.',
 
@@ -39,7 +39,7 @@ return [
 
     'sections.group.alma-villas.name' => 'Alma Villas',
     'sections.group.alma-villas.logo' => '/images/logo/alma_logo.webp',
-    'sections.group.alma-villas.background' => '/images/alma/alma-1.webp',
+    'sections.group.alma-villas.background' => '/images/alma/alma-villas-product.webp',
     'sections.group.alma-villas.description' => 'Tourist villa rental',
     // 'sections.group.alma-villas.description' => 'Guest house rentals in Nosy-Be',
 

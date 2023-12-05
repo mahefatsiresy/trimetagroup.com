@@ -11,8 +11,8 @@
                 'descriptionCount' => 2,
                 'detailsDesc' => [0, 0, 0],
                 'detailsImg' => [0, 0, 0],
-                'certifications' => [3, 2],
-                'products' => ['/images/Enduma/enduma-product-1.webp', '/images/Enduma/enduma-product-2.webp', '/images/Enduma/enduma-product-3.webp', '/images/Enduma/enduma-product-5.webp']
+                'certifications' => [3, 2, 2],
+                'products' => 7
             ];
             break;
         case 'trimeta-agrofood':
@@ -20,8 +20,9 @@
                 'descriptionCount' => 2,
                 'detailsDesc' => [1, 1],
                 'detailsImg' => [0, 0],
-                'certifications' => [3, 5],
-                'products' => []
+                'certifications' => [3, 5, 0],
+                'products' => 6
+                //'products' => ['/images/TAF/trimeta-product-1.webp', '/images/TAF/trimeta-product-2.webp',]
             ];
             break;
         case 'wimmo':
@@ -29,8 +30,9 @@
                 'descriptionCount' => 2,
                 'detailsDesc' => [1, 0, 0, 0, 0],
                 'detailsImg' => [0, 0, 0, 0, 0],
-                'certifications' => [0, 0],
-                'products' => ['/images/Wimmo/wimmo-product-2.webp', '/images/Wimmo/wimmo-product-4.jpg']
+                'certifications' => [0, 0, 0],
+                'products' => 6
+                //'products' => ['/images/Wimmo/wimmo-product-2.webp','/images/Wimmo/wimmo-product-3.webp', '/images/Wimmo/wimmo-product-4.jpg']
 
             ];
             break;
@@ -39,8 +41,9 @@
                 'descriptionCount' => 3,
                 'detailsDesc' => [0, 0, 0],
                 'detailsImg' => [0, 0, 0],
-                'certifications' => [0, 0],
-                'products' => []
+                'certifications' => [0, 0, 0],
+                'products' => 0
+                //'products' => []
 
             ];
             break;
@@ -49,8 +52,9 @@
                 'descriptionCount' => 2,
                 'detailsDesc' => [1],
                 'detailsImg' => [0],
-                'certifications' => [0, 0],
-                'products' => []
+                'certifications' => [0, 0, 0],
+                'products' => 0
+                //'products' => []
 
             ];
             break;
@@ -59,8 +63,9 @@
                 'descriptionCount' => 4,
                 'detailsDesc' => [],
                 'detailsImg' => [],
-                'certifications' => [0, 0],
-                'products' => ['/images/alma/alma-villas-product.webp','/images/alma/alma-villas-product-2.webp','/images/alma/alma-villas-product-3.webp']
+                'certifications' => [0, 0, 0],
+                'products' => 3
+                //'products' => ['/images/alma/alma-villas-product.webp','/images/alma/alma-villas-product-2.webp','/images/alma/alma-villas-product-3.webp']
 
             ];
             break;
@@ -114,7 +119,10 @@
         }
 
         for ($i = 0; $i < $companyData['certifications'][1]; $i++) {
-           $certifications['images'][] = __("{$slug}.certifications.images.{$numberLetter[$i]}");
+           $certifications['images'][] = [
+               'image' => __("{$slug}.certifications.images.{$numberLetter[$i]}"),
+               'desc' => __("{$slug}.certifications.images.{$numberLetter[$i]}.desc") === "{$slug}.certifications.images.{$numberLetter[$i]}.desc" ? '' : __("{$slug}.certifications.images.{$numberLetter[$i]}.desc"),
+           ];
         }
     }
 
@@ -149,7 +157,7 @@
     {{-- details --}}
     @if (0 !== count($details))
         <x-section-title :text="__('common.company-about.key-figures')" dark/>
-        <ul class="grid md:grid-cols-2 gap-4 mt-8 items-start">
+        <ul class="grid md:grid-cols-2 gap-4 mt-8 items-start pb-8">
             @foreach ($details as $detail)
                 <li class="flex flex-col gap-2 lg:text-lg font-semibold text-neutral-200">
                     <div class="flex items-center gap-4">
@@ -182,43 +190,18 @@
             @endforeach
         </ul>
     @endif
-
-
-    @if (0 !== count($contacts))
-        <x-section-title text="Contacts" dark/>
-        <div class="flex w-full md: grap mt-12 pb-8">
-            <ul aria-label="contacts"
-                class="grid justify-items-start gap-6 gap-x-12 lg:gap-12 md:grid-cols-2 w-fit md:text-lg text-neutral-200">
-                @foreach ($contacts as $contact)
-                    @if ($contact)
-                        <li class="flex gap-4 lg:gap-2 items-center">
-                            <x-contact-icon :index="$loop->index" />
-                            @if ('web' === $contact['key'])
-                                <a href="https://{{ $contact['value'] }}" target="_blank"
-                                    class="hover:underline hover:text-blue-400">
-                                    {{ $contact['value'] }}
-                                </a>
-                            @else
-                                {{ $contact['value'] }}
-                            @endif
-                        </li>
-                    @endif
-                @endforeach
-            </ul>
-        </div>
-    @endif
-
 </x-fullpage-card>
 
-@if (0 !== count($companyData['products']))
+@if (0 !== $companyData['products'])
 <section class="bg-gradient-to-tr from-neutral-950 to-neutral-900 py-8 px-4 md:px-12 2xl:px-24">
     <x-section-title :text="__('common.company.products')" dark/>
-    <ul class="grid md:grid-cols-2 gap-4 lg:grid-cols-3">
-        @foreach($companyData['products'] as $product)
-        <li class="relative h-[320px]">
-            <img src="{{$product}}" alt="{{$slug}} product" class="w-full h-full object-cover object-bottom bg-neutral-800"/>
+    <ul class="grid md:grid-cols-2 gap-8 lg:grid-cols-3">
+        @for($i = 0; $i < $companyData['products']; $i++)
+        <li class="h-[320px]">
+            <div class="text-neutral-100 text-center pb-2">{{__("{$slug}.products.{$numberLetter[$i]}.name")}}</div>
+            <img src='{{__("{$slug}.products.{$numberLetter[$i]}.image")}}' alt="{{$slug}} product" class="w-full h-[296px] object-cover object-bottom bg-neutral-800"/>
         </li>
-        @endforeach
+        @endfor
     </ul>
 </section>
 @endif
@@ -238,10 +221,16 @@
         @endif
 
         @if (0 !== count($certifications['images']))
-            <ul class="pt-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-12 mt-8 w-fit">
+            {{-- <ul class="pt-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-12 mt-8 w-fit"> --}}
+            <ul class="pt-4 lg:pt-8 grid w-full gap-y-8 lg:gap-y-12">
                 @foreach ($certifications['images'] as $img)
-                    <li class="w-fit">
-                        <img src={{ $img }} alt="detail image" width="400" height="400" class='object-contain w-full h-[160px]'/>
+                    <li class="flex flex-col lg:flex-row gap-4 lg:gap-8">
+                            <img src={{ $img['image'] }} alt="detail image" width="400" height="400" class='inline-block object-contain w-fit h-[196px]'/>
+                            @if ($img['desc'])
+                                <div class="prose lg:prose-lg text-neutral-100">
+                                    {!! $img['desc'] !!}
+                                </div>
+                            @endif
                     </li>
                 @endforeach
             </ul>
@@ -249,3 +238,29 @@
 </section>
 @endif
 
+{{-- contacts --}}
+@if (0 !== count($contacts))
+<section class="bg-gradient-to-tr from-neutral-950 to-neutral-900 py-8 px-4 md:px-12 2xl:px-24">
+    <x-section-title text="Contacts" dark/>
+    <div class="w-fit mx-auto mt-12 pb-8">
+        <ul aria-label="contacts"
+            class="grid justify-items-start gap-6 gap-x-12 lg:gap-12 md:grid-cols-2 w-fit md:text-lg text-neutral-200">
+            @foreach ($contacts as $contact)
+                @if ($contact)
+                    <li class="flex gap-4 lg:gap-2 items-center">
+                        <x-contact-icon :index="$loop->index" />
+                        @if ('web' === $contact['key'])
+                            <a href="https://{{ $contact['value'] }}" target="_blank"
+                                class="hover:underline hover:text-blue-400">
+                                {{ $contact['value'] }}
+                            </a>
+                        @else
+                            {{ $contact['value'] }}
+                        @endif
+                    </li>
+                @endif
+            @endforeach
+        </ul>
+    </div>
+</section>
+@endif

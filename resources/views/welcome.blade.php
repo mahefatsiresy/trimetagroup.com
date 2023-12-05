@@ -65,15 +65,17 @@
     </section>
 
     {{-- commitments --}}
-    <section class="px-6 py-8 text-neutral-100 bg-gradient-to-bl from-neutral-900 to-neutral-800 md:py-12 md:px-12 pb-24 min-h-[512px] lg:h-[80vh] flex flex-col justify-center">
-        <x-section-title :text="__('home.sections.commitment.title')" dark/>
-        <div class="flex flex-col mt-8  gap-8 md:gap-16 items-center">
-            <div class="pl-4 pb-6 text-lg md:text-xl max-w-[640px]">
-                {{ __("home.sections.commitment.content") }}
+    <section class="min-h-[512px] lg:h-[80vh] flex flex-col justify-center bg-bottom bg-cover" style="background-image: url(/images/commitments-bg.webp);">
+        <div class="bg-neutral-950/70 px-6 py-8 text-neutral-100 md:py-12 md:px-12 pb-24 h-full">
+            <x-section-title :text="__('home.sections.commitment.title')" dark/>
+            <div class="flex flex-col mt-8  gap-8 md:gap-16 items-center">
+                <div class="pl-4 pb-6 text-lg md:text-xl max-w-[640px]">
+                    {{ __("home.sections.commitment.content") }}
+                </div>
+                <x-button href="/our-commitments">
+                    {{ __('home.sections.commitment.cta') }}
+                </x-button>
             </div>
-            <x-button href="/our-commitments">
-                {{ __('home.sections.commitment.cta') }}
-            </x-button>
         </div>
     </section>
 
