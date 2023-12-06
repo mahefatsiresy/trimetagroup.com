@@ -30,7 +30,7 @@
             {{ __('home.sections.group.subtitle') }}
         </p>
         <ul class="flex flex-col md:grid md:grid-cols-2 lg:flex lg:flex-row lg:flex-grow lg:max-h-[632px] lg:h-[90vh]">
-            @foreach (['enduma', 'trimeta-agrofood', 'wimmo', 'millot', 'orkidex', 'alma-villas'] as $name)
+            @foreach (['enduma', 'trimeta-agrofood', 'wimmo', 'orkidex', 'alma-villas'] as $name)
                 <x-home.company-preview :key="$name" :index="$loop->iteration" />
             @endforeach
         </ul>

@@ -6,7 +6,7 @@ return [
     'subtitle' => 'A family-run group, its vocation is to ensure the long-term development of each of its of each of its entities, while respecting their know-how and experience.',
     'cta' => 'Contact Us',
     'sections.group.title' => 'Our entities',
-    'sections.group.subtitle' => 'We bring together 6 distinct trades/companies',
+    'sections.group.subtitle' => 'We bring together 5 distinct trades/companies',
 
     'sections.group.enduma.name' => 'Enduma',
     'sections.group.enduma.logo' => '/images/logo/logo_enduma.webp',
