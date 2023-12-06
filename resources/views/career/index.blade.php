@@ -41,7 +41,7 @@
                 @if (empty($companyPosts['posts']))
                     <div class="flex w-full lg:items-center justify-center">
                         <div class="h-[360px] lg:h-[240px] w-full lg:w-3/4 bg-gradient-to-bl from-neutral-900 from-40% to-neutral-800 rounded-lg flex items-center justify-center p-4 pb-8 text-neutral-50 bg-cover">
-                            <p class="font-semibold text-lg">Coming soon...</p>
+                            <p class="font-semibold text-lg">{{__('common.comming-soon')}}</p>
                         </div>
                     </div>
                 @else

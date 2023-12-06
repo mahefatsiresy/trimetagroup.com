@@ -1,6 +1,6 @@
-<footer class="bg-neutral-950 text-neutral-200">
+<footer class="bg-neutral-950 text-neutral-200" id="contact-us">
     <div class="px-4 md:px-12 2xl:px-24 py-8">
-        <div class="flex flex-col lg:flex-row justify-between items-center  id="contact-us" ">
+        <div class="flex flex-col lg:flex-row justify-between items-center">
                 <div class="text-2xl font-semibold mb-8 lg:mb-0">Trimeta Group</div>
                 <div class="flex flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-12">
                     <a href="mailto:contact@trimetagroupe.mg" class="flex gap-3 lg:text-lg items-center font-semibold">

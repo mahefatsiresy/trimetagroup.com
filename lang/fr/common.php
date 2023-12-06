@@ -62,5 +62,7 @@ return [
 
     'terms-of-use' => 'Mentions légales',
 
-    'company.products' => 'Produits'
+    'company.products' => 'Produits',
+
+    'comming-soon' => "Plus d'offres à venir..."
 ];

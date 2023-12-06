@@ -59,5 +59,7 @@ return [
     'go-home' => 'Go back to homepage',
     'terms-of-use' => 'Terms of use',
 
-    'company.products' => 'Products'
+    'company.products' => 'Products',
+
+    'comming-soon' => 'Comming soon ...'
 ];
