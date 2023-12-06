@@ -36,17 +36,17 @@
 
             ];
             break;
-        case 'millot':
-            $companyData = [
-                'descriptionCount' => 3,
-                'detailsDesc' => [0, 0, 0],
-                'detailsImg' => [0, 0, 0],
-                'certifications' => [0, 0, 0],
-                'products' => 0
+        // case 'millot':
+           //  $companyData = [
+               //  'descriptionCount' => 3,
+               //  'detailsDesc' => [0, 0, 0],
+                // 'detailsImg' => [0, 0, 0],
+                // 'certifications' => [0, 0, 0],
+                //'products' => 0
                 //'products' => []
 
-            ];
-            break;
+            //];
+            // break;
         case 'orkidex':
             $companyData = [
                 'descriptionCount' => 2,
@@ -70,9 +70,10 @@
             ];
             break;
         default:
-            throw Error('slug not recognized');
+            $companyData = [];
             break;
     }
+
 
     $name = __("{$slug}.name");
     $logo = __("{$slug}.logo");

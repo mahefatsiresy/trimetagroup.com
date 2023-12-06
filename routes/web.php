@@ -34,11 +34,16 @@ Route::get('/', function () {
 });
 
 Route::get('/activities/{slug}', function ($slug) {
-    try {
-        return view('activities', ['slug' => $slug, 'posts' => getPostsByCategory([$slug])]);
-    } catch (Exception $e) {
-        return view('activities', ['slug' => $slug, 'error' => true]);
+    if (
+        $slug === 'enduma' ||
+        $slug === 'trimeta-agrofood' ||
+        $slug === 'wimmo' ||
+        $slug === 'orkidex' ||
+        $slug === 'alma-villas'
+    ) {
+        return view('activities', ['slug' => $slug]);
     }
+    abort(404);
 })->name('activities');
 
 Route::get('/about-us/key-dates', function () {
@@ -143,7 +148,7 @@ Route::get('/career', function () {
 
         foreach ($temp as $t) {
             if ($t['categories']) {
-                foreach($t['categories'] as $category) {
+                foreach ($t['categories'] as $category) {
                     if ($category->slug === 'enduma-career') {
                         $enduma[] = $t;
                     }
