@@ -15,7 +15,7 @@ return [
     'navbar.links.activities.2.title' => 'Industrie',
     'navbar.links.activities.2.title' => 'Industrie agro-alimentaire',
     'navbar.links.activities.3.title' => 'Immobilier',
-    'navbar.links.activities.4.title' => 'Hotelerie',
+    'navbar.links.activities.4.title' => 'Hôtellerie et le tourisme',
     'navbar.links.activities.enduma' => 'Enduma',
     'navbar.links.activities.trimeta-agrofood' => 'Trimeta Agro Food',
     'navbar.links.activities.wimmo' => 'Wimmo',
