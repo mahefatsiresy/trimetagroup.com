@@ -75,7 +75,13 @@
         <x-section-title :text="__('commitments.document-title')" class="px-4 md:px-12 pb-6" dark/>
         <div class="p-4 md:p-12 2xl:px-24">
             @foreach ($ethics as $descriptions)
-                <x-description-card :data="$descriptions" :index="$loop->index" :image="$descriptions['image']" />
+                @if ($loop->index === 2)
+                    <div class='mb-32'>
+                        <x-description-card :data="$descriptions" :index="$loop->index" :image="$descriptions['image']" textBoxClass="lg:h-full"/>
+                    </div>
+                @else
+                    <x-description-card :data="$descriptions" :index="$loop->index" :image="$descriptions['image']"/>
+                @endif
             @endforeach
         </div>
     </article>

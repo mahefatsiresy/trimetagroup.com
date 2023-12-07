@@ -32,7 +32,7 @@ return [
     'cards.four.image' => '/images/fight-against-child-labor.webp',
     'cards.four.title' => 'Fight against child labor',
     'cards.four.descriptions.one' => 'We actively participate in the <span class="font-bold">abolition of child labor</span> by seeking out and promoting partners who share our <span class="font-bold">values and commitments</span> ethics.',
-    'cards.four.descriptions.two' => 'Creation of a library, Découverte informatique (accès internet & cours), Computer discovery (Internet access and courses), School bursaries, 0-rate school loans',
+    'cards.four.descriptions.two' => 'Creation of a library, Computer discovery (Internet access and courses), School bursaries, 0-rate school loans',
 
     'cards.five.icon' => '/icons/protection.svg',
     'cards.five.image' => '/images/protection-of-the-group-assets.webp',

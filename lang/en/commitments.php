@@ -32,10 +32,9 @@ return [
 
     'csr-projects.categories.one.title' => 'culture / education',
     'csr-projects.categories.one.descriptions.one' => 'Creation of a library',
-    'csr-projects.categories.one.descriptions.two' => 'Découverte informatique (accès internet & cours)',
-    'csr-projects.categories.one.descriptions.three' => 'Computer discovery (Internet access and courses)',
-    'csr-projects.categories.one.descriptions.four' => 'School bursaries',
-    'csr-projects.categories.one.descriptions.five' => '0-rate school loans',
+    'csr-projects.categories.one.descriptions.two' => 'Computer discovery (Internet access and courses)',
+    'csr-projects.categories.one.descriptions.three' => 'School bursaries',
+    'csr-projects.categories.one.descriptions.four' => '0-rate school loans',
 
     'csr-projects.categories.two.title' => 'sport',
     'csr-projects.categories.two.descriptions.one' => 'Creation of company teams (soccer...)',
