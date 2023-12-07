@@ -64,5 +64,7 @@ return [
 
     'company.products' => 'Produits',
 
-    'comming-soon' => "Plus d'offres à venir..."
+    'comming-soon' => "Plus d'offres à venir...",
+
+    'sorry-not-found' => 'Désolé, page non trouvé'
 ];

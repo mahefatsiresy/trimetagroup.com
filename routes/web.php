@@ -264,3 +264,7 @@ function getCareerSlug()
     }
     return 'careers';
 }
+
+Route::fallback(function() {
+    return view('404');
+});
