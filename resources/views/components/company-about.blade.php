@@ -11,7 +11,7 @@
                 'descriptionCount' => 2,
                 'detailsDesc' => [0, 0, 0],
                 'detailsImg' => [0, 0, 0],
-                'certifications' => [3, 2, 2],
+                'certifications' => 3,
                 'products' => 7
             ];
             break;
@@ -20,9 +20,8 @@
                 'descriptionCount' => 2,
                 'detailsDesc' => [1, 1],
                 'detailsImg' => [0, 0],
-                'certifications' => [3, 5, 0],
+                'certifications' => 3,
                 'products' => 6
-                //'products' => ['/images/TAF/trimeta-product-1.webp', '/images/TAF/trimeta-product-2.webp',]
             ];
             break;
         case 'wimmo':
@@ -30,9 +29,8 @@
                 'descriptionCount' => 2,
                 'detailsDesc' => [1, 0, 0, 0, 0],
                 'detailsImg' => [0, 0, 0, 0, 0],
-                'certifications' => [0, 0, 0],
+                'certifications' => 0,
                 'products' => 6
-                //'products' => ['/images/Wimmo/wimmo-product-2.webp','/images/Wimmo/wimmo-product-3.webp', '/images/Wimmo/wimmo-product-4.jpg']
 
             ];
             break;
@@ -52,8 +50,8 @@
                 'descriptionCount' => 2,
                 'detailsDesc' => [1],
                 'detailsImg' => [0],
-                'certifications' => [0, 0, 0],
-                'products' => 0
+                'certifications' => 0,
+                'products' => 0,
                 //'products' => []
 
             ];
@@ -63,9 +61,8 @@
                 'descriptionCount' => 4,
                 'detailsDesc' => [],
                 'detailsImg' => [],
-                'certifications' => [0, 0, 0],
+                'certifications' => 0,
                 'products' => 3
-                //'products' => ['/images/alma/alma-villas-product.webp','/images/alma/alma-villas-product-2.webp','/images/alma/alma-villas-product-3.webp']
 
             ];
             break;
@@ -109,22 +106,23 @@
         }, range(0, $detailsCount));
     }
 
-    $certifications = [
-        'descriptions' => [],
-        'images' => [],
-    ];
+    $certifications = [];
 
-    if (count($companyData['certifications'])) {
-        for ($i = 0; $i < $companyData['certifications'][0]; $i++) {
-            $certifications['descriptions'][] = __("{$slug}.certifications.descriptions.{$numberLetter[$i]}");
+    if ($companyData['certifications']) {
+        for ($i = 0; $i < $companyData['certifications']; $i++) {
+            $certifications[] = [
+                'title' => __("{$slug}.certifications.{$numberLetter[$i]}.title"),
+                'descriptions' => __("{$slug}.certifications.{$numberLetter[$i]}.descriptions") === "{$slug}.certifications.{$numberLetter[$i]}.descriptions" ? null : __("{$slug}.certifications.{$numberLetter[$i]}.descriptions"),
+                'images' => __("{$slug}.certifications.{$numberLetter[$i]}.images"),
+            ];
         }
 
-        for ($i = 0; $i < $companyData['certifications'][1]; $i++) {
-           $certifications['images'][] = [
-               'image' => __("{$slug}.certifications.images.{$numberLetter[$i]}"),
-               'desc' => __("{$slug}.certifications.images.{$numberLetter[$i]}.desc") === "{$slug}.certifications.images.{$numberLetter[$i]}.desc" ? '' : __("{$slug}.certifications.images.{$numberLetter[$i]}.desc"),
-           ];
-        }
+        //for ($i = 0; $i < $companyData['certifications'][1]; $i++) {
+           //$certifications['images'][] = [
+            //   'image' => __("{$slug}.certifications.images.{$numberLetter[$i]}"),
+           //    'desc' => __("{$slug}.certifications.images.{$numberLetter[$i]}.desc") === "{$slug}.certifications.images.{$numberLetter[$i]}.desc" ? '' : __("{$slug}.certifications.images.{$numberLetter[$i]}.desc"),
+          // ];
+        //}
     }
 
     $contacts = array_map(
@@ -208,34 +206,22 @@
 @endif
 
 {{-- certifications --}}
-@if (0 !== count($certifications['descriptions']) || 0 !== count($certifications['images']))
+@if (0 !== count($certifications))
 <section class="bg-gradient-to-tr from-neutral-950 to-neutral-900 py-8 px-4 md:px-12 2xl:px-24">
     <x-section-title text="Certifications" dark/>
-        @if (0 !== count($certifications['descriptions']))
-            <ul class="pt-4 pl-4 list-disc">
-                @foreach ($certifications['descriptions'] as $description)
-                    <li class="text-neutral-400 mb-2 font-normal w-2/3">
-                        {{ $description }}
-                    </li>
-                @endforeach
-            </ul>
-        @endif
-
-        @if (0 !== count($certifications['images']))
-            {{-- <ul class="pt-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-12 mt-8 w-fit"> --}}
             <ul class="pt-4 lg:pt-8 grid w-full gap-y-8 lg:gap-y-12">
-                @foreach ($certifications['images'] as $img)
+                @foreach ($certifications as $cert)
                     <li class="flex flex-col lg:flex-row gap-4 lg:gap-8">
-                            <img src={{ $img['image'] }} alt="detail image" width="400" height="400" class='inline-block object-contain w-fit h-[196px]'/>
-                            @if ($img['desc'])
-                                <div class="prose lg:prose-lg text-neutral-100">
-                                    {!! $img['desc'] !!}
-                                </div>
-                            @endif
+                            <img src={{ $cert['images'] }} alt="detail image" width="400" height="400" class='inline-block object-contain w-fit h-[196px]'/>
+                            <div class="prose lg:prose-lg text-neutral-300">
+                                <h3 class='text-neutral-100'>{{$cert['title']}}</h4>
+                                @if ($cert['descriptions'])
+                                    {!! $cert['descriptions'] !!}
+                                @endif
+                            </div>
                     </li>
                 @endforeach
             </ul>
-        @endif
 </section>
 @endif
 
