@@ -50,7 +50,7 @@
                 'descriptionCount' => 2,
                 'detailsDesc' => [1],
                 'detailsImg' => [0],
-                'certifications' => 0,
+                'certifications' => 2,
                 'products' => 0,
                 //'products' => []
 

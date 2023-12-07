@@ -87,25 +87,26 @@
         <x-description-card :data="$societalCommitments" :index="0" :image="$societalCommitments['image']" textBoxClass="h-full"/>
     </article>
 
-    <section class="w-full px-4 md:px-12 2xl:px-24 bg-gradient-to-tr from-neutral-950 from-55% to-neutral-950/95 py-12 pt-12">
-        <x-section-title :text="__('commitments.csr-projects.title')" dark/>
-        <ul class="grid gap-8 mt-16 text-slate-700 justify-items-start md:grid-cols-2">
-            @foreach ($csrData['categories'] as $category)
-                <li class="mb-6">
-                     <h3 class="mb-4 text-lg font-bold text-neutral-300 uppercase rounded-md">
-                         {{ $category['title'] }}
-                     </h3>
-                     <ul class="pl-4 text-neutral-400">
-                         @foreach ($category['descriptions'] as $desc)
-                             <li class="mb-2 list-disc">
-                                 {{ $desc }}
-                            </li>
-                        @endforeach
-                    </ul>
-                </li>
-            @endforeach
-        </ul>
-    </section>
+    {{-- Commitments --}}
+    {{-- <section class="w-full px-4 md:px-12 2xl:px-24 bg-gradient-to-tr from-neutral-950 from-55% to-neutral-950/95 py-12 pt-12"> --}}
+    {{--     <x-section-title :text="__('commitments.csr-projects.title')" dark/> --}}
+    {{--     <ul class="grid gap-8 mt-16 text-slate-700 justify-items-start md:grid-cols-2"> --}}
+    {{--         @foreach ($csrData['categories'] as $category) --}}
+    {{--             <li class="mb-6"> --}}
+    {{--                  <h3 class="mb-4 text-lg font-bold text-neutral-300 uppercase rounded-md"> --}}
+    {{--                      {{ $category['title'] }} --}}
+    {{--                  </h3> --}}
+    {{--                  <ul class="pl-4 text-neutral-400"> --}}
+    {{--                      @foreach ($category['descriptions'] as $desc) --}}
+    {{--                          <li class="mb-2 list-disc"> --}}
+    {{--                              {{ $desc }} --}}
+    {{--                         </li> --}}
+    {{--                     @endforeach --}}
+    {{--                 </ul> --}}
+    {{--             </li> --}}
+    {{--         @endforeach --}}
+    {{--     </ul> --}}
+    {{-- </section> --}}
 
     <section id="ethics" class="bg-gradient-to-br from-neutral-950 from-60% to-neutral-900 py-12">
         <x-section-title :text="__('ethics.document-title')" class="px-4 md:px-12 pb-6" dark/>
