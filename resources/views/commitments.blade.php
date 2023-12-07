@@ -46,9 +46,9 @@
 
     // ethics
 
-    $numberLetter = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight'];
+    $numberLetter = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
 
-    $descData = [2, 3, 2, 1, 1, 2];
+    $descData = [2, 3, 9, 2, 1, 2];
 
     $ethics = array_map(
         function ($data, $index) use ($numberLetter) {
