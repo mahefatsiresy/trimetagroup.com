@@ -80,4 +80,11 @@
             &copy; Copyright, 2023
         </small>
     </div>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-27X1LGKN3D"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-27X1LGKN3D');
+    </script>
 </footer>
