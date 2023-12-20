@@ -2,7 +2,7 @@
 
     $numberLetter = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight'];
 
-    $companies = [['Alma Villas', 2], ['Orkidex', 1], ['Millot', 2], ['Trimeta Finance', 1], ['Biosave', 1], ['Trimeta Agrofood', 4], ['Vanille Mad', 2], ['Wimmo', 3], ['Enduma', 1]];
+    $companies = [['Alma Villas', 1], ['Wimmo', 1], ['Orkidex', 1], ['Millot', 2], ['Trimeta Finance', 1], ['Biosave', 1], ['Trimeta Agrofood', 2], ['Vanille Mad', 2], ['SIM', 1], ['Enduma', 1]];
 
     $companies = array_map(function ($company) use ($numberLetter) {
         $data = [

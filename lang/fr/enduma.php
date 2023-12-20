@@ -51,6 +51,14 @@ return [
     'contacts.web' => 'web',
     'contacts.web.value' => 'www.enduma.mg',
 
+    'contacts.facebook' => 'facebook',
+    'contacts.facebook.value' => 'Enduma',
+    'contacts.facebook.link' => 'https://www.facebook.com/EndumaPackaging/?locale=fr_FR',
+
+    'contacts.linkedin' => 'linkedin',
+    'contacts.linkedin.value' => 'Enduma',
+    'contacts.linkedin.link' => 'https://mg.linkedin.com/company/enduma',
+
     'products.one.image' => '/images/Enduma/enduma.webp',
     'products.one.name' => 'Sac agricole',
 

@@ -6,8 +6,7 @@ return [
     'logo' => '/images/logo/logo_wimmo.webp',
     'background' => '/images/Wimmo/wimmo_2.webp',
 
-    'description.one' => 'Since 1990, Wimmo has supported the dynamic development of infrastructure in Madagascar.',
-    'description.two' => 'Our real estate developments meet innovative specifications in line with market needs.',
+    'description.one' => 'Since 1990, Wimmo has supported the dynamic development of infrastructure in Madagascar.', 'description.two' => 'Our real estate developments meet innovative specifications in line with market needs.',
 
     'details.one.icon' => '/icons/certifications.png',
     'details.one.title' => 'RICS member:',
@@ -37,24 +36,29 @@ return [
     'contacts.address' => 'address',
     'contacts.address.value' => 'Saropody 102 Tanjombato',
 
+    'contacts.facebook' => 'facebook',
+    'contacts.facebook.value' => 'Wimmo',
+    'contacts.facebook.link' => 'https://www.facebook.com/wimmomadagascar/',
+
+    'contacts.linkedin' => 'linkedin',
+    'contacts.linkedin.value' => 'Wimmo Madagascar',
+    'contacts.linkedin.link' => 'https://www.linkedin.com/company/wimmo-madagascar/',
+
     'contacts.web' => 'web',
     'contacts.web.value' => 'www.wimmo.mg',
 
     'products.one.image' => '/images/Wimmo/wioffice.webp',
     'products.one.name' => 'Wioffice',
 
-    'products.two.image' => '/images/Wimmo/wihome.jpg',
+    'products.two.image' => '/images/Wimmo/wihome2.webp',
     'products.two.name' => 'Wihome',
 
-    'products.three.image' => '/images/Wimmo/wihome2.webp',
-    'products.three.name' => 'Wihome',
+    'products.three.image' => '/images/Wimmo/wistore.jpg',
+    'products.three.name' => 'Wipark',
 
-    'products.four.image' => '/images/Wimmo/wipark.png',
-    'products.four.name' => 'Wipark',
+    'products.four.image' => '/images/Wimmo/wiholidays.jpg',
+    'products.four.name' => 'Wiholidays',
 
-    'products.five.image' => '/images/Wimmo/wiholidays.jpg',
-    'products.five.name' => 'Wiholidays',
-
-    'products.six.image' => '/images/Wimmo/wistore.jpg',
-    'products.six.name' => 'Wistore',
+    'products.five.image' => '/images/Wimmo/wipark.png',
+    'products.five.name' => 'Wistore',
 ];

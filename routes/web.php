@@ -142,7 +142,6 @@ Route::get('/career', function () {
         $enduma = [];
         $orkidex = [];
         $trimetaAgroFood = [];
-        $millot = [];
         $wimmo = [];
         $almaVillas = [];
 
@@ -157,9 +156,6 @@ Route::get('/career', function () {
                     }
                     if ($category->slug === 'trimeta-agro-food-career') {
                         $trimetaAgroFood[] = $t;
-                    }
-                    if ($category->slug === 'plantation-millot-career') {
-                        $millot[] = $t;
                     }
                     if ($category->slug === 'wimmo-career') {
                         $wimmo[] = $t;
@@ -183,10 +179,6 @@ Route::get('/career', function () {
             [
                 'name' => 'Wimmo',
                 'posts' => $wimmo
-            ],
-            [
-                'name' => 'Plantation Millot',
-                'posts' => $millot
             ],
             [
                 'name' => 'Orkidex',

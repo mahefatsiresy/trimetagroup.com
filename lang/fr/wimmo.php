@@ -41,21 +41,26 @@ return [
     'contacts.web' => 'web',
     'contacts.web.value' => 'www.wimmo.mg',
 
+    'contacts.facebook' => 'facebook',
+    'contacts.facebook.value' => 'Wimmo',
+    'contacts.facebook.link' => 'https://www.facebook.com/wimmomadagascar/',
+
+    'contacts.linkedin' => 'linkedin',
+    'contacts.linkedin.value' => 'Wimmo Madagascar',
+    'contacts.linkedin.link' => 'https://www.linkedin.com/company/wimmo-madagascar/',
+
     'products.one.image' => '/images/Wimmo/wioffice.webp',
     'products.one.name' => 'Wioffice',
 
-    'products.two.image' => '/images/Wimmo/wihome.jpg',
+    'products.two.image' => '/images/Wimmo/wihome2.webp',
     'products.two.name' => 'Wihome',
 
-    'products.three.image' => '/images/Wimmo/wihome2.webp',
-    'products.three.name' => 'Wihome',
+    'products.three.image' => '/images/Wimmo/wistore.jpg',
+    'products.three.name' => 'Wipark',
 
-    'products.four.image' => '/images/Wimmo/wipark.png',
-    'products.four.name' => 'Wipark',
+    'products.four.image' => '/images/Wimmo/wiholidays.jpg',
+    'products.four.name' => 'Wiholidays',
 
-    'products.five.image' => '/images/Wimmo/wiholidays.jpg',
-    'products.five.name' => 'Wiholidays',
-
-    'products.six.image' => '/images/Wimmo/wistore.jpg',
-    'products.six.name' => 'Wistore',
+    'products.five.image' => '/images/Wimmo/wipark.png',
+    'products.five.name' => 'Wistore',
 ];

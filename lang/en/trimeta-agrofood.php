@@ -34,6 +34,8 @@ return [
 
     'certifications.one.title' => 'BIO (EOS/NOP) by ECOCERT',
     'certifications.one.images' => '/images/logo/usda.png',
+    'certifications.one.images.one' => '/images/logo/agriculture_biologique.png',
+    'certifications.one.images.two' => '/images/logo/mg-bio-154.png',
     'certifications.one.descriptions' => '<p>ORGANIC EOS-USDA NOP and equivalence NOP-COR is a production, processing and handling standard for pesticide-free products for consumers.</p><p>Why get certified? To guarantee healthy, pesticide-free products for consumers and environmentally-friendly production for producers.</p><p> How Trimeta Agrofood became certified:<br>Close, long-term collaboration with producer groups and specific farms. Training, assistance and support for producers throughout the production process.</p>',
 
     'certifications.two.title' => 'UEBT-RA by ECOCERT/UEBT',
@@ -56,6 +58,14 @@ return [
 
     'contacts.web' => 'web',
     'contacts.web.value' => 'www.trimeta-agrofood.mg',
+
+    'contacts.facebook' => 'facebook',
+    'contacts.facebook.value' => 'Trimeta Agro Food',
+    'contacts.facebook.link' => 'https://www.facebook.com/trimetaagrofood/',
+
+    'contacts.linkedin' => 'linkedin',
+    'contacts.linkedin.value' => 'Trimeta Agro Food',
+    'contacts.linkedin.link' => 'https://www.linkedin.com/company/trimeta-agro-food',
 
     'products.one.image' => '/images/TAF/trimeta_4.webp',
     'products.one.name' => 'Vanilla',

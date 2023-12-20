@@ -12,6 +12,7 @@
                 'detailsDesc' => [0, 0, 0],
                 'detailsImg' => [0, 0, 0],
                 'certifications' => 3,
+                'other-image' => [0, 0, 0],
                 'products' => 7
             ];
             break;
@@ -21,6 +22,7 @@
                 'detailsDesc' => [1, 1],
                 'detailsImg' => [0, 0],
                 'certifications' => 3,
+                'other-image' => [2, 0, 0],
                 'products' => 6
             ];
             break;
@@ -30,7 +32,8 @@
                 'detailsDesc' => [1, 0, 0, 0, 0],
                 'detailsImg' => [0, 0, 0, 0, 0],
                 'certifications' => 0,
-                'products' => 6
+                'other-image' => [],
+                'products' => 5
 
             ];
             break;
@@ -51,6 +54,7 @@
                 'detailsDesc' => [1],
                 'detailsImg' => [0],
                 'certifications' => 2,
+                'other-image' => [],
                 'products' => 0,
                 //'products' => []
 
@@ -62,6 +66,7 @@
                 'detailsDesc' => [],
                 'detailsImg' => [],
                 'certifications' => 0,
+                'other-image' => [],
                 'products' => 3
 
             ];
@@ -109,11 +114,22 @@
     $certifications = [];
 
     if ($companyData['certifications']) {
+
+
         for ($i = 0; $i < $companyData['certifications']; $i++) {
+            $otherImages = [];
+
+            if (count($companyData['other-image']) > 0) {
+                for ($j = 0; $j < $companyData['other-image'][$i]; $j++) {
+                    $otherImages[] = __("{$slug}.certifications.{$numberLetter[$i]}.images.{$numberLetter[$j]}");
+                }
+            }
+
             $certifications[] = [
                 'title' => __("{$slug}.certifications.{$numberLetter[$i]}.title"),
                 'descriptions' => __("{$slug}.certifications.{$numberLetter[$i]}.descriptions") === "{$slug}.certifications.{$numberLetter[$i]}.descriptions" ? null : __("{$slug}.certifications.{$numberLetter[$i]}.descriptions"),
                 'images' => __("{$slug}.certifications.{$numberLetter[$i]}.images"),
+                'other-image' => $otherImages,
             ];
         }
 
@@ -131,11 +147,12 @@
                 return [
                     'key' => __("{$slug}.contacts.{$key}"),
                     'value' => __("{$slug}.contacts.{$key}.value"),
+                    'link' => __("{$slug}.contacts.{$key}.link"),
                 ];
             }
             return null;
         },
-        ['phone', 'email', 'address', 'web'],
+        ['phone', 'email', 'address', 'web', 'facebook', 'linkedin', 'instagram'],
     );
 
 @endphp
@@ -209,10 +226,17 @@
 @if (0 !== count($certifications))
 <section class="bg-gradient-to-tr from-neutral-950 to-neutral-900 py-8 px-4 md:px-12 2xl:px-24">
     <x-section-title text="Certifications" dark/>
-            <ul class="pt-4 lg:pt-8 grid w-full gap-y-8 lg:gap-y-12">
+            <ul class="pt-4 lg:pt-8 grid w-full gap-8 lg:gap-y-12 2xl:grid-cols-2">
                 @foreach ($certifications as $cert)
                     <li class="flex flex-col lg:flex-row gap-4 lg:gap-8">
-                            <img src={{ $cert['images'] }} alt="detail image" width="400" height="400" class='inline-block object-contain w-fit h-[196px]'/>
+                            <div class="grid gap-2 grid-cols-3 lg:grid-cols-1">
+                                <img src={{ $cert['images'] }} alt="detail image" width="400" height="400" class='inline-block object-contain w-fit h-[196px]'/>
+                                @if (count($cert['other-image']) !== 0)
+                                @foreach ($cert['other-image'] as $oi)
+                                    <img src={{ $oi }} alt="detail image" width="400" height="400" class='inline-block object-contain w-fit h-[196px]'/>
+                                @endforeach
+                                @endif
+                            </div>
                             <div class="prose lg:prose-lg text-neutral-300">
                                 <h3 class='text-neutral-100'>{{$cert['title']}}</h4>
                                 @if ($cert['descriptions'])
@@ -238,6 +262,11 @@
                         <x-contact-icon :index="$loop->index" />
                         @if ('web' === $contact['key'])
                             <a href="https://{{ $contact['value'] }}" target="_blank"
+                                class="hover:underline hover:text-blue-400">
+                                {{ $contact['value'] }}
+                            </a>
+                        @elseif ('facebook' === $contact['key'] || 'linkedin' === $contact['key']|| 'instagram' === $contact['key'])
+                            <a href="{{ $contact['link'] }}" target="_blank"
                                 class="hover:underline hover:text-blue-400">
                                 {{ $contact['value'] }}
                             </a>

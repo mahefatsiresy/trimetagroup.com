@@ -21,6 +21,17 @@ return [
     'contacts.address' => 'adresse',
     'contacts.address.value' => 'Saropody 102 Tanjombato',
 
+    'contacts.web' => 'web',
+    'contacts.web.value' => 'www.almavillas.mg',
+
+    'contacts.facebook' => 'facebook',
+    'contacts.facebook.value' => 'Alma Villas',
+    'contacts.facebook.link' => 'https://www.facebook.com/profile.php?id=100091326835343&paipv=0&eav=AfZ8k4_OjTTOfKrJZ-7G0zfHuhOotGX9nN0QzpO-gTJumorsDa-V5cJmrLOJ25o_PZw',
+
+    'contacts.instagram' => 'instagram',
+    'contacts.instagram.value' => 'ALMA VILLAS NOSY BE',
+    'contacts.instagram.link' => 'https://www.instagram.com/almavillas_nosybe?igshid=YWYwM2I1ZDdmOQ==',
+
     'products.one.image' => '/images/alma/alma-1.webp',
     'products.one.name' => 'Beach front villa',
 
