@@ -1,6 +1,8 @@
 <?php
 
 return [
+    'document-title' => 'Orkidex | Vanilla transformer in Madagascar',
+    'meta-description' => "The Trimeta Group's expert manufacturer of flavors and extracts for the food industry, ORKIDEX combines innovation and quality to create exceptional flavors.",
 
     'name' => 'Orkidex',
     'date' => '2019',

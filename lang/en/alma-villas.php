@@ -1,6 +1,8 @@
 <?php
 
 return [
+    'document-title' => "Alma Villas Nosy be | Madagascar's ultimate luxury destination",
+    'meta-description' => "Explore the perfect harmony between luxury and nature at Alma Villas, a proud property of the Trimeta Group. Enjoy private beaches, lush tropical gardens and exquisitely comfortable rooms.",
 
     'name' => 'Alma Villas',
     'date' => '2021',

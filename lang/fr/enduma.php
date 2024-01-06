@@ -1,6 +1,9 @@
 <?php
 
 return [
+    'document-title' => 'Enduma | Leaders en tissage de sacs agricoles à Madagascar',
+    'meta-description' => 'Découvrez Enduma, fièrement affiliée au groupe Trimeta et leader incontesté en tissage de sacs dédiés à la collecte, au transport et au stockage agricole.',
+
     'name' => 'Enduma',
     'date' => '1976',
     'logo' => '/images/logo/logo_enduma.webp',

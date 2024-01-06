@@ -1,4 +1,4 @@
-@props(['title' => ''])
+@props(['title' => '', 'description' => ''])
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>{{ '' === $title ? __('common.document-title') : $title . ' - ' . __('common.document-title') }}</title>
+    <meta name="description" content="{{$description}}">
     <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>

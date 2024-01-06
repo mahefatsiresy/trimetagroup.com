@@ -1,6 +1,9 @@
 <?php
 
 return [
+    'document-title' => 'Trimeta Agro Food | Exporter of agricultural products from Madagascar',
+    'meta-description' => 'Trimeta Agro Food is a division of the Trimeta Group, which refines and exports exceptional products such as vanilla, cloves, pink berries, pepper and cinnamon.',
+
     'name' => 'Trimeta Agro Food',
     'date' => '1996',
     'logo' => '/images/logo/logo_trimeta.webp',

@@ -1,6 +1,8 @@
 <?php
 
 return [
+    'document-title' => 'Orkidex | Transformateur de vanille à Madagascar',
+    'meta-description' => "Expert en fabrication d'arômes et d'extraits pour l'agro-alimentaire du groupe Trimeta, ORKIDEX allie innovation et qualité pour créer des saveurs exceptionnelles.",
 
     'name' => 'Orkidex',
     'date' => '2019',

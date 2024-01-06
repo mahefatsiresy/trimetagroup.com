@@ -1,6 +1,9 @@
 <?php
 
 return [
+    'document-title' => 'Wimmo | Promoteur immobilier à Madagascar',
+    'meta-description' => 'A Trimeta Group company dedicated to real estate excellence. Let us guide you towards the realization of your real estate dreams.',
+
     'name' => 'Wimmo',
     'date' => '1990',
     'logo' => '/images/logo/logo_wimmo.webp',

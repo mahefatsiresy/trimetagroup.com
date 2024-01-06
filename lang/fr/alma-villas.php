@@ -1,6 +1,8 @@
 <?php
 
 return [
+    'document-title' => "Alma Villas Nosy be | l'ultime destination de luxe à Madagascar",
+    'meta-description' => "Explorez l'harmonie parfaite entre le luxe et la nature chez Alma Villas, une fière propriété du groupe Trimeta. Profitez de plages privées, d'un jardin tropical luxuriant et de chambres d'un confort exquis.",
 
     'name' => 'Alma Villas',
     'date' => '2021',

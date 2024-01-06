@@ -1,6 +1,9 @@
 <?php
 
 return [
+    'document-title' => 'Enduma | Leaders in agricultural bag weaving in Madagascar',
+    'meta-description' => 'Discover Enduma, proudly affiliated with the Trimeta Group and the undisputed leader in weaving bags for agricultural collection, transport and storage.',
+
     'name' => 'Enduma',
     'date' => '1976',
     'logo' => '/images/logo/logo_enduma.webp',

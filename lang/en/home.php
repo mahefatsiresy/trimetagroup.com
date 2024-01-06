@@ -1,7 +1,8 @@
 <?php
 
 return [
-    'document-title' => 'Trimeta Group',
+    'document-title' => 'Together, anything is possible',
+
     'title' => 'Groupe TRIMETA<span class="text-gray-100 text-lg md:text-2xl">, <span class="block mt-2">together anything is possible</span></span>',
     'subtitle' => 'A family-run group, its vocation is to ensure the long-term development of each of its of each of its entities, while respecting their know-how and experience.',
     'cta' => 'Contact Us',

@@ -1,6 +1,9 @@
 <?php
 
 return [
+    'document-title' => 'Trimeta Agro Food | Exportateur de denrées agricoles de Madagascar',
+    'meta-description' => 'Trimeta Agro Food est une division du groupe Trimeta qui affine, exporte des produits d’exception : vanille, girofle, baie rose, poivre et cannelle.',
+
     'name' => 'Trimeta Agro Food',
     'date' => '1996',
     'logo' => '/images/logo/logo_trimeta.webp',
