@@ -17,16 +17,16 @@
         class="bg-gradient-to-b from-neutral-950/40 from-15% via-neutral-950/0 to-90% to-neutral-950/90 w-full h-full flex flex-col justify-between p-4 2xl:px-8 transition-none">
 
         @if($key === 'trimeta-agrofood')
-            <img src="{{ $logo }}" alt="logo" width="400" height="400"
+            <img src="{{ $logo }}" alt="logo of {{$key}}" width="400" height="400"
                 class="w-[176px] h-auto lg:h-[56px] lg:w-[144px] 2xl:w-[128px] object-contain transition-none" />
         @elseif ($key === 'alma-villas')
             <div class="bg-neutral-50 w-[128px] grid place-items-center">
-                <img src="{{ $logo }}" alt="logo" width="400" height="400"
+                <img src="{{ $logo }}" alt="logo of {{$key}}" width="400" height="400"
                     class="w-[176px] h-auto lg:h-[52px] lg:w-auto object-contain transition-none" />
             </div>
         @else
             <div class="bg-neutral-50 w-fit">
-                <img src="{{ $logo }}" alt="logo" width="400" height="400"
+                <img src="{{ $logo }}" alt="logo of {{$key}}" width="400" height="400"
                     class="w-[176px] h-auto lg:h-[52px] lg:w-[128px] 2xl:w-[128px] object-contain transition-none" />
             </div>
         @endif
