@@ -23,9 +23,10 @@
     );
 @endphp
 
-<x-layout>
+<x-layout :title="__('home.document-title')">
     {{-- companies --}}
     <section class="w-full pt-8 text-neutral-100 bg-gradient-to-tl from-neutral-950 to-neutral-900 md:pt-12">
+        <h1 class='hidden'>Trimeta Group</h1>
         <p class="px-6 mt-16 mb-8 md:px-12 text-center text-lg">
             {{ __('home.sections.group.subtitle') }}
         </p>
