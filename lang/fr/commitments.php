@@ -2,6 +2,8 @@
 
 return [
     'document-title' => 'Nos engagements',
+    'meta-description' => "Découvrez notre engagement profond envers l'égalité entre hommes et femmes, la RSE et notre responsabilité envers la société. Au sein du groupe, nous croyons en la diversité, le respect mutuel et une empreinte sociale positive.",
+
     'title' => 'Nos engagements',
     'background' => '/images/Groupe/groupe_2.webp',
 

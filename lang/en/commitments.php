@@ -2,6 +2,8 @@
 
 return [
     'document-title' => 'Our Commitments',
+    'meta-description' => "Discover our deep commitment to gender equality, CSR and our responsibility to society. Within the Group, we believe in diversity, mutual respect and a positive social footprint.",
+
     'title' => 'Our commitments',
     'background' => '/images/Groupe/groupe_2.webp',
 
