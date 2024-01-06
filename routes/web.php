@@ -96,7 +96,7 @@ Route::get('about-us/{slug}', function ($slug) {
                 }
             }
         }
-        return view('posts.show', ['post' => $post, 'posts' => $posts]);
+        return view('posts.show', ['post' => $post, 'posts' => $posts, 'slug' => $slug]);
     } catch (Exception $e) {
         return view('posts.show', ['error' => true]);
     }

@@ -67,5 +67,12 @@ return [
 
     'comming-soon' => 'Comming soon ...',
 
-    'sorry-not-found' => 'Sorry, page not found'
+    'sorry-not-found' => 'Sorry, page not found',
+
+    "ceo-words.meta-description" => "",
+    'our-history.meta-description' => "",
+    'our-mission.meta-description' => "Explore how our missions positively impact the sectors in which we operate. Welcome to the world of Trimeta Group's bold missions, where every initiative contributes to positive transformation.",
+    'our-values.meta-description' => "Discover the core values of the Trimeta Group: Delivering Excellence and Committing to Positive Impact. Immerse yourself in our commitment to excellence, where quality is at the heart of everything we do.",
+    'legal-notice.meta-description' => '',
+    'about-us.meta-description' => "Discover the essence of Trimeta, our group dedicated to excellence and innovation. Immerse yourself in our history, explore our vision of the future and learn how we redefine standards in our industries."
 ];

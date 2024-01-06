@@ -68,5 +68,12 @@ return [
 
     'comming-soon' => "Plus d'offres à venir...",
 
-    'sorry-not-found' => 'Désolé, page non trouvé'
+    'sorry-not-found' => 'Désolé, page non trouvé',
+
+    "ceo-words.meta-description" => "",
+    'our-history.meta-description' => "",
+    'our-mission.meta-description' => "Explorez comment nos missions impactent positivement les secteurs dans lesquels nous opérons. Bienvenue dans l'univers des missions audacieuses du groupe Trimeta, où chaque initiative contribue à une transformation positive.",
+    'our-values.meta-description' => "Découvrez les valeurs fondamentales du groupe Trimeta : Offrir l'Excellence et S'Engager pour un Impact Positif. Plongez dans notre engagement envers l'excellence, où la qualité est au cœur de tout ce que nous entreprenons.",
+    'legal-notice.meta-description' => '',
+    'about-us.meta-description' => "Découvrez l'essence de Trimeta, notre groupe dédié à l'excellence et à l'innovation. Plongez dans notre histoire, explorez notre vision du futur et apprenez comment nous redéfinissons les normes dans nos secteurs d'activité."
 ];
