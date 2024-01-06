@@ -38,7 +38,7 @@ return [
     'products.one.name' => 'Beach front villa',
 
     'products.two.image' => '/images/alma/alma-villas-product-3.webp',
-    'products.two.name' => 'Beach front villa',
+    'products.two.name' => 'Excursion',
 
     'products.three.image' => '/images/alma/garden-villa.jpg',
     'products.three.name' => 'Garden villa',
