@@ -2,6 +2,7 @@
 return [
 
     'document-title' => 'Dates clés du Groupe',
+    'meta-description' => "Découvrez les moments clés qui ont marqué notre parcours exceptionnel, des dates emblématiques qui ont jalonné la création et l'évolution de nos sociétés.",
 
     'Alma Villas.date' => '2023',
     'Alma Villas.image' => '/images/logo/alma_logo.webp',

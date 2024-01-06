@@ -2,6 +2,7 @@
 return [
 
     'document-title' => 'Group milestones',
+    'meta-description' => "Discover the key moments that have marked our exceptional career, the emblematic dates that have marked the creation and evolution of our companies.",
 
     'Alma Villas.date' => '2023',
     'Alma Villas.image' => '/images/logo/alma_logo.webp',
