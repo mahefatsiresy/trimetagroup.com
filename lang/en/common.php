@@ -42,6 +42,8 @@ return [
     "commitments.csr-projects.background" => '/images/Groupe/enduma_7.webp',
 
     'news.document-title' => 'News',
+    'news.meta-description' => "Stay up to date with the latest exciting news from our Group. Explore the defining moments, innovations and inspiring stories that shape our journey.",
+
     'news.post.cta' => 'Read post',
     'news.post.no-image' => 'No Image',
     'news.empty' => 'No article has been published',
