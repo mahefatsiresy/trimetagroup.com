@@ -215,7 +215,7 @@
         @for($i = 0; $i < $companyData['products']; $i++)
         <li class="h-[320px]">
             <div class="text-neutral-100 text-center pb-2">{{__("{$slug}.products.{$numberLetter[$i]}.name")}}</div>
-            <img src='{{__("{$slug}.products.{$numberLetter[$i]}.image")}}' alt="{{$slug}} product" class="w-full h-[296px] object-cover object-bottom bg-neutral-800"/>
+            <img src='{{__("{$slug}.products.{$numberLetter[$i]}.image")}}' alt="{{__("{$slug}.products.{$numberLetter[$i]}.name")}} {{$slug}}" class="w-full h-[296px] object-cover object-bottom bg-neutral-800"/>
         </li>
         @endfor
     </ul>
