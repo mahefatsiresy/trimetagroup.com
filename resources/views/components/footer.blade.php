@@ -77,7 +77,7 @@
     </div>
     <div class="flex items-center justify-center p-1 bg-neutral-900 text-neutral-50 self-end">
         <small class="flex items-center gap-1">
-            &copy; Copyright, 2023
+            &copy; Copyright, 2024
         </small>
     </div>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-27X1LGKN3D"></script>
