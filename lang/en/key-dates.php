@@ -40,9 +40,8 @@ return [
     'Vanille Mad.about.two' => 'Creation of Madagascar Cloves for clove exports',
 
     'SIM.date' => '1990',
-    'SIM.image' => '/images/logo/sim.jpeg',
+    'SIM.image' => '/images/logo/sim.webp',
     'SIM.about.one' => 'SIM (Société Immobilère Michelin), the real estate developer, became WIMMO in January 2020',
-    'SIM.about.two' => 'Real estate developer',
 
     'Enduma.date' => '1976',
     'Enduma.image' => '/images/logo/logo_enduma.webp',

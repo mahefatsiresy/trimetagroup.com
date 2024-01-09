@@ -40,7 +40,7 @@ return [
     'Vanille Mad.about.two' => 'Création de Madagascar Cloves pour l\'exportation de Girofle',
 
     'SIM.date' => '1990',
-    'SIM.image' => '/images/logo/sim.jpeg',
+    'SIM.image' => '/images/logo/sim.webp',
     'SIM.about.one' => 'Création de la SIM (Société Immobilère Michelin), le promoteur immobilier est devenu WIMMO en janvier 2020',
 
     'Enduma.date' => '1976',

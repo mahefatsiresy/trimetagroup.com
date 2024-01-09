@@ -36,17 +36,17 @@ return [
     // 'certifications.images.five' => '/images/logo/rainforest-alliance.png',
 
     'certifications.one.title' => 'BIO (EOS/NOP) by ECOCERT',
-    'certifications.one.images' => '/images/logo/usda.png',
-    'certifications.one.images.one' => '/images/logo/agriculture_biologique.png',
-    'certifications.one.images.two' => '/images/logo/mg-bio-154.png',
+    'certifications.one.images' => '/images/logo/usda.webp',
+    'certifications.one.images.one' => '/images/logo/agriculture_biologique.webp',
+    'certifications.one.images.two' => '/images/logo/mg-bio-154.webp',
     'certifications.one.descriptions' => '<p>ORGANIC EOS-USDA NOP and equivalence NOP-COR is a production, processing and handling standard for pesticide-free products for consumers.</p><p>Why get certified? To guarantee healthy, pesticide-free products for consumers and environmentally-friendly production for producers.</p><p> How Trimeta Agrofood became certified:<br>Close, long-term collaboration with producer groups and specific farms. Training, assistance and support for producers throughout the production process.</p>',
 
     'certifications.two.title' => 'UEBT-RA by ECOCERT/UEBT',
-    'certifications.two.images' => '/images/logo/ubet-ra.jpeg',
+    'certifications.two.images' => '/images/logo/ubet-ra.webp',
     'certifications.two.descriptions' => '<p>UEBT-RA: is the fusion of two standards UEBT and Rainforest Alliance, promotes ethical and sustainable sourcing; a system has been put in place throughout sourcing to comply with UEBT/RA standard requirements. The aim: to assure consumers of our commitment to biodiversity sourcing practices that aim to regenerate ecosystems and with social respect.</p><p>Why get certified? For sustainable production and respect for the social value of people in the supply chain, as well as business ethics.</p><p>UEBT/RA certification is issued by ECOCERT, an organization accredited by UEBT, and compliance with the UEBT/RA standard is an effective way of demonstrating our commitment to sustainable development.  Consumers are reassured that ingredients are sourced with respect for people and biodiversity.</p><p>How Trimeta Agrofood achieved certification:<br>Close, long-term collaboration with producer groups committed to meeting UEBT/RA requirements on specific farms. Training, assistance and support and CSR at producer level throughout production.</p>',
 
     'certifications.three.title' => 'FAIRTRADE by FLOCERT',
-    'certifications.three.images' => '/images/logo/fairtrade.png',
+    'certifications.three.images' => '/images/logo/fairtrade.webp',
     'certifications.three.descriptions' => '<p>Fairtrade: a standard for sustainable production, processing that respects the social value of human beings and fair trade.</p><p>Why get certified? For sustainable production and respect for the social value of man in production, as well as fair trade ethics.</p><p>How Trimeta Agrofood became certified:<br>Close, long-term collaboration with producer groups and specific farms. Training, assistance and CSR support for producers throughout the production process.</p>',
 
 
