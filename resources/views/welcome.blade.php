@@ -23,7 +23,7 @@
     );
 @endphp
 
-<x-layout :title="__('home.document-title')">
+<x-layout :title="__('home.document-title')" :description="__('home.meta-description')">
     {{-- companies --}}
     <section class="w-full pt-8 text-neutral-100 bg-gradient-to-tl from-neutral-950 to-neutral-900 md:pt-12">
         <h1 class='hidden'>Trimeta Group</h1>

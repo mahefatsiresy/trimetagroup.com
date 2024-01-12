@@ -2,6 +2,7 @@
 
 return [
     'document-title' => 'Ensemble, tout devient possible',
+    'meta-description' => 'Le groupe Trimeta est un groupe de société industrielle, commerciales, immobilier et hôtelier comprenant Enduma, Trimeta agrofood, Wimmo, Orkidex, Alma Villas',
 
     'title' => 'Groupe TRIMETA<span class="text-gray-100 text-lg md:text-2xl">, <span class="block mt-2">ensemble tout devient possible</span></span>',
     'subtitle' => 'Groupe à caractère familial, il a pour vocation d’assurer le développement à long terme de chacune de ses entités dans le respect de ce qui fait leur savoir-faire et leur expérience.',
