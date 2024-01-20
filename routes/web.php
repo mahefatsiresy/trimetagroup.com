@@ -71,32 +71,32 @@ Route::get('about-us/{slug}', function ($slug) {
 
         $post = buildPost($post);
 
-        // get related posts
-        $posts = [];
+        // // get related posts
+        // $posts = [];
 
-        $isNotCEOWords = 'ceo-words' !== $slug || $frTranslation['ceo-words'] !== $slug;
-        $isNotOurHistory = 'our-history' !== $slug || $frTranslation['our-history'] !== $slug;
-        $isNotOurMission = 'our-mission' !== $slug || $frTranslation['our-mission'] !== $slug;
+        // $isNotCEOWords = 'ceo-words' !== $slug || $frTranslation['ceo-words'] !== $slug;
+        // $isNotOurHistory = 'our-history' !== $slug || $frTranslation['our-history'] !== $slug;
+        // $isNotOurMission = 'our-mission' !== $slug || $frTranslation['our-mission'] !== $slug;
 
 
-        // if not special pages
-        if ($isNotCEOWords || $isNotOurHistory || $isNotOurMission) {
-            $temp = Post::where('post_name', '!=', $slug)
-                ->where('ping_status', 'open')
-                ->published()
-                ->paginate(3);
-            // ->map(function ($p) {
-            //     return buildPost($p);
-            // });
+        // // if not special pages
+        // if ($isNotCEOWords || $isNotOurHistory || $isNotOurMission) {
+        //     $temp = Post::where('post_name', '!=', $slug)
+        //         ->where('ping_status', 'open')
+        //         ->published()
+        //         ->paginate(3);
+        //     // ->map(function ($p) {
+        //     //     return buildPost($p);
+        //     // });
 
-            // only add non null value
-            foreach ($temp as $p) {
-                if ($p) {
-                    $posts[] = $p;
-                }
-            }
-        }
-        return view('posts.show', ['post' => $post, 'posts' => $posts, 'slug' => $slug]);
+        //     // only add non null value
+        //     foreach ($temp as $p) {
+        //         if ($p) {
+        //             $posts[] = $p;
+        //         }
+        //     }
+        // }
+        return view('posts.show', ['post' => $post, 'posts' => null, 'slug' => $slug]);
     } catch (Exception $e) {
         return view('posts.show', ['error' => true]);
     }
