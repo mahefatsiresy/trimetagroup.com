@@ -23,12 +23,28 @@ Route::get('lang/{locale}', function ($locale) {
     return redirect()->back();
 });
 
+// Route::get('/lang/{locale}/{$path}', function ($locale, $path) {
+//     app()->setLocale($locale);
+//     session()->put('locale', $locale);
+
+
+//     return redirect()->to("/{'fr' === $locale ? $path : $locale . $path");
+// });
+
 Route::get('/', function () {
     try {
-
         return view('welcome', ['posts' => getPostsByCategory(getNewsSlug())]);
     } catch (Exception $e) {
 
+        return view('welcome');
+    }
+});
+
+Route::get('/en', function () {
+    try {
+        updateLocaleTo('en');
+        return view('welcome', ['posts' => getPostsByCategory(getNewsSlug())]);
+    } catch (Exception $e) {
         return view('welcome');
     }
 });
@@ -41,10 +57,27 @@ Route::get('/activities/{slug}', function ($slug) {
         $slug === 'orkidex' ||
         $slug === 'alma-villas'
     ) {
+        updateLocaleTo('fr');
         return view('activities', ['slug' => $slug]);
     }
     abort(404);
 })->name('activities');
+
+Route::get('/en/activities/{slug}', function ($slug) {
+    if (
+        $slug === 'enduma' ||
+        $slug === 'trimeta-agrofood' ||
+        $slug === 'wimmo' ||
+        $slug === 'orkidex' ||
+        $slug === 'alma-villas'
+    ) {
+        updateLocaleTo('en');
+        return view('activities', ['slug' => $slug]);
+    }
+    abort(404);
+})->name('activities');
+
+
 
 Route::get('/about-us/key-dates', function () {
     return view('key-dates');
@@ -103,6 +136,12 @@ Route::get('about-us/{slug}', function ($slug) {
 })->name('about-us');
 
 Route::get('/our-commitments', function () {
+    updateLocaleTo('fr');
+    return view('commitments');
+})->name('commitments');
+
+Route::get('/en/our-commitments', function () {
+    updateLocaleTo('en');
     return view('commitments');
 })->name('commitments');
 
@@ -260,3 +299,10 @@ function getCareerSlug()
 Route::fallback(function() {
     return view('404');
 });
+
+function updateLocaleTo($locale) {
+    if ($locale !== Session::get('locale')) {
+        app()->setLocale($locale);
+        session()->put('locale', $locale);
+    }
+}

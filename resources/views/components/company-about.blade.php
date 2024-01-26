@@ -261,15 +261,15 @@
                     <li class="flex gap-4 lg:gap-2 items-center">
                         <x-contact-icon :index="$loop->index" />
                         @if ('web' === $contact['key'])
-                            <a href="https://{{ $contact['value'] }}" target="_blank"
+                            <x-link href="https://{{ $contact['value'] }}" target="_blank"
                                 class="hover:underline hover:text-blue-400">
                                 {{ $contact['value'] }}
-                            </a>
+                            </x-link>
                         @elseif ('facebook' === $contact['key'] || 'linkedin' === $contact['key']|| 'instagram' === $contact['key'])
-                            <a href="{{ $contact['link'] }}" target="_blank"
+                            <x-link href="{{ $contact['link'] }}" target="_blank"
                                 class="hover:underline hover:text-blue-400">
                                 {{ $contact['value'] }}
-                            </a>
+                            </x-link>
                         @else
                             {{ $contact['value'] }}
                         @endif

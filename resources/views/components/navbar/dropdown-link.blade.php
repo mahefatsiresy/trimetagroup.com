@@ -13,18 +13,18 @@
                     <ul>
                         @foreach ($content as $lnk)
                             <li>
-                                <a href="{{ $parentRoute }}/{{ $lnk }}"
+                                <x-link href="{{ $parentRoute }}/{{ $lnk }}"
                                     class="block w-full font-medium text-sm py-2 hover:font-bold hover:underline hover:underline-offset-8">
                                     {{ __('common.navbar.links.' . $trigger . '.' . $lnk) }}
-                                </a>
+                                </x-link>
                             </li>
                         @endforeach
                     </ul>
                 @else
-                    <a href="{{ $parentRoute }}/{{ $content }}"
+                    <x-link href="{{ $parentRoute }}/{{ $content }}"
                         class="block w-full px-4 py-2 text-sm hover:font-bold hover:underline hover:underline-offset-8">
                         {{ __('common.navbar.links.' . $trigger . '.' . $content) }}
-                    </a>
+                    </x-link>
                 @endif
             </li>
         @endforeach

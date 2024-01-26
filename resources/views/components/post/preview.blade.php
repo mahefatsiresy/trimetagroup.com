@@ -1,7 +1,7 @@
 @props(['post', 'dark' => false])
 
 <li>
-    <a href="/news/{{ $post['slug'] }}" class="overflow-hidden w-full block">
+    <x-link href="/news/{{ $post['slug'] }}" class="overflow-hidden w-full block">
         @if ($post['thumbnail'])
             <img src="{{ $post['thumbnail'] }}" alt="thubmnail of {{ $post['slug'] }}" width="800" height="800"
                 class="w-full h-[256px] object-cover hover:scale-105 duration-300" />
@@ -10,13 +10,13 @@
                 {{ __('common.news.post.no-image') }}
             </div>
         @endif
-    </a>
+    </x-link>
     <div class="flex flex-col justify-between gap-3 bg-gradient-to-br from-neutral-950 to bg-neutral-900 p-6">
         <div>
             <h3 class="text-xl lg:text-2xl font-semibold mb-2 text-neutral-100">
-                <a href="/news/{{ $post['slug'] }}">
+                <x-link href="/news/{{ $post['slug'] }}">
                     {{ $post['title'] }}
-                </a>
+                </x-link>
             </h3>
 
             <div class="text-neutral-500 text-sm font-semibold">{{ $post['date'] }}</div>

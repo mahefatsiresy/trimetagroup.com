@@ -47,12 +47,12 @@
                 @else
                     <div class="flex overflow-x-scroll py-8 w-full scrollbar-track-transparent scrollbar scrollbar-thumb-neutral-800">
                         @foreach($companyPosts['posts'] as $post)
-                        <a href="/career/{{$post['slug']}}" class="cursor-pointer relative h-[328px] min-w-[256px] w-[256px] lg:min-w-[204px] lg:w-[204px] rounded-lg mr-4 border border-neutral-900 hover:border-neutral-600">
+                        <x-link href="/career/{{$post['slug']}}" class="cursor-pointer relative h-[328px] min-w-[256px] w-[256px] lg:min-w-[204px] lg:w-[204px] rounded-lg mr-4 border border-neutral-900 hover:border-neutral-600">
                             <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/70 from-30% hover:from-neutral-950/40 flex items-end p-4 pb-8 text-neutral-50 rounded-lg">
                                 <p class="font-semibold text-lg">{{$post['title']}}</p>
                             </div>
                             <div class="h-full w-full bg-cover bg-center rounded-lg" style="background-image: url({{$post['thumbnail']}});"></div>
-                        </a>
+                        </x-link>
                         @endforeach
                     </div>
                 @endif

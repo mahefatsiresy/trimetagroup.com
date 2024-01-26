@@ -73,7 +73,7 @@
         </div>
     </div>
     <div class="text-end px-4 md:px-12 2xl:px-24 py-4">
-        <a href="/about-us/legal-notice">{{__('common.terms-of-use')}}</a>
+        <x-link href="/about-us/legal-notice">{{__('common.terms-of-use')}}</x-link>
     </div>
     <div class="flex items-center justify-center p-1 bg-neutral-900 text-neutral-50 self-end">
         <small class="flex items-center gap-1">

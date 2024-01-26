@@ -13,9 +13,10 @@
     <div class="w-full nav-container">
         <div class="flex items-center h-full gap-6 pl-4 lg:px-12 2xl:px-24 lg:justify-between">
             {{-- logo --}}
-            <a href="/" class="block font-semibold text-lg" style="font-family: Poppins">
-                {{-- <img src="/images/logo/groupe.png" alt="logo trimeta group" class="w-auto h-full"> --}} Trimeta Group
-            </a>
+            {{-- <a href="/" class="block font-semibold text-lg" style="font-family: Poppins"> --}}
+                {{-- <img src="/images/logo/groupe.png" alt="logo trimeta group" class="w-auto h-full"> --}}
+            {{-- </a> --}}
+            <x-link href='/' class="block font-semibold text-lg" style="font-family: Poppins">Trimeta Group</x-link>
 
 
             {{-- links --}}
@@ -23,12 +24,12 @@
                 <x-navbar.dropdown-link trigger="group" :contents="$group" parentRoute="/about-us" :active="request()->routeIs('about-us')" />
                 <x-navbar.dropdown-link trigger="activities" :contents="$activities" parentRoute="/activities"
                     :active="request()->routeIs('activities')" />
-                <a href="/our-commitments"
-                    class="block px-4 py-2 rounded-md font-medium text-sm 2xl:text-base hover:bg-neutral-800/70 {{ request()->routeIs('commitments') ? 'underline underline-offset-8' : '' }}">{{ __('common.navbar.links.our-commitments') }}</a>
-                <a href="/news"
-                    class="block px-4 py-2 rounded-md font-medium text-sm 2xl:text-base hover:bg-neutral-800/70 {{ request()->routeIs('news') ? 'underline underline-offset-8' : '' }}">{{ __('common.navbar.links.news') }}</a>
-                <a href="/career"
-                    class="block px-4 py-2 rounded-md font-medium text-sm 2xl:text-base hover:bg-neutral-800/70 {{ request()->routeIs('career') ? 'underline underline-offset-8' : '' }}">{{ __('common.navbar.links.career') }}</a>
+                <x-link href="/our-commitments"
+                    class="block px-4 py-2 rounded-md font-medium text-sm 2xl:text-base hover:bg-neutral-800/70 {{ request()->routeIs('commitments') ? 'underline underline-offset-8' : '' }}">{{ __('common.navbar.links.our-commitments') }}</x-link>
+                <x-link href="/news"
+                    class="block px-4 py-2 rounded-md font-medium text-sm 2xl:text-base hover:bg-neutral-800/70 {{ request()->routeIs('news') ? 'underline underline-offset-8' : '' }}">{{ __('common.navbar.links.news') }}</x-link>
+                <x-link href="/career"
+                    class="block px-4 py-2 rounded-md font-medium text-sm 2xl:text-base hover:bg-neutral-800/70 {{ request()->routeIs('career') ? 'underline underline-offset-8' : '' }}">{{ __('common.navbar.links.career') }}</x-link>
             </div>
 
 
@@ -55,9 +56,9 @@
             <div class="w-screen px-4 pt-4 list-none bg-neutral-950 text-neutral-50 menu-items">
                 <x-navbar.drawer-link trigger="group" :contents="$group" parentRoute="/about-us" />
                 <x-navbar.drawer-link trigger="activities" :contents="$activities" parentRoute="/activities" />
-                <a href="/our-commitments" class="block py-2">{{ __('common.navbar.links.our-commitments') }}</a>
-                <a href="/news" class="block py-2">{{ __('common.navbar.links.news') }}</a>
-                <a href="/career" class="block py-2">{{ __('common.navbar.links.career') }}</a>
+                <x-link href="/our-commitments" class="block py-2">{{ __('common.navbar.links.our-commitments') }}</x-link>
+                <x-link href="/news" class="block py-2">{{ __('common.navbar.links.news') }}</x-link>
+                <x-link href="/career" class="block py-2">{{ __('common.navbar.links.career') }}</x-link>
             </div>
         {{-- </div> --}}
     </div>

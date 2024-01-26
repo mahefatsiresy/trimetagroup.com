@@ -9,7 +9,7 @@
         @if ($posts->isEmpty())
             <div class="pb-8 h-[90vh] flex items-center justify-center bg-neutral-950 text-neutral-100">
                 <h1>{{__('common.news.soon')}}</h1>
-                <a href='/' class="underline pl-1">Go back home</a>
+                <x-link href='/' class="underline pl-1">Go back home</x-link>
             </div>
         @else
             <x-post.hero :post="$posts[0]" withCta />
