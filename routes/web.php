@@ -168,6 +168,16 @@ Route::get('news/{slug}', function ($slug) {
 
 Route::get('/news', function () {
     try {
+        updateLocaleTo('fr');
+        return view('posts.index', ['posts' => getPostsByCategory(getNewsSlug())]);
+    } catch (Exception $e) {
+        return view('posts.index', ['error' => true]);
+    }
+})->name('news');
+
+Route::get('/en/news', function () {
+    try {
+        updateLocaleTo('en');
         return view('posts.index', ['posts' => getPostsByCategory(getNewsSlug())]);
     } catch (Exception $e) {
         return view('posts.index', ['error' => true]);
@@ -176,6 +186,8 @@ Route::get('/news', function () {
 
 Route::get('/career', function () {
     try {
+        updateLocaleTo('fr');
+
         $temp = getPostsByCategory(getCareerSlug());
 
         $enduma = [];
@@ -235,6 +247,71 @@ Route::get('/career', function () {
         return view('career.index', ['error' => true]);
     }
 })->name('career');
+
+
+Route::get('en/career', function () {
+    try {
+        updateLocaleTo('en');
+        $temp = getPostsByCategory(getCareerSlug());
+
+        $enduma = [];
+        $orkidex = [];
+        $trimetaAgroFood = [];
+        $wimmo = [];
+        $almaVillas = [];
+
+        foreach ($temp as $t) {
+            if ($t['categories']) {
+                foreach ($t['categories'] as $category) {
+                    if ($category->slug === 'enduma-career') {
+                        $enduma[] = $t;
+                    }
+                    if ($category->slug === 'orkidex-career') {
+                        $orkidex[] = $t;
+                    }
+                    if ($category->slug === 'trimeta-agro-food-career') {
+                        $trimetaAgroFood[] = $t;
+                    }
+                    if ($category->slug === 'wimmo-career') {
+                        $wimmo[] = $t;
+                    }
+                    if ($category->slug === 'alma-villas-career') {
+                        $almaVillas[] = $t;
+                    }
+                }
+            }
+        }
+
+        $posts = [
+            [
+                'name' => 'Enduma',
+                'posts' => $enduma
+            ],
+            [
+                'name' => 'Trimeta Agro Food',
+                'posts' => $trimetaAgroFood
+            ],
+            [
+                'name' => 'Wimmo',
+                'posts' => $wimmo
+            ],
+            [
+                'name' => 'Orkidex',
+                'posts' => $orkidex
+            ],
+            [
+                'name' => 'Alma Villas',
+                'posts' => $almaVillas
+            ],
+
+        ];
+
+        return view('career.index', ['posts' => $posts]);
+    } catch (Exception $e) {
+        return view('career.index', ['error' => true]);
+    }
+})->name('career');
+
 
 Route::get('career/{slug}', function ($slug) {
     try {
