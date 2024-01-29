@@ -1,3 +1,11 @@
+ @php
+ $request_uri_contains_en = "/en" === substr($_SERVER['REQUEST_URI'], 0, 3);
+ $links = [
+    'fr' => $request_uri_contains_en ? substr($_SERVER['REQUEST_URI'], 3) : $_SERVER['REQUEST_URI'],
+    'en' => $request_uri_contains_en ? $_SERVER['REQUEST_URI'] : "/en" . $_SERVER['REQUEST_URI'],
+];
+
+ @endphp
  <div x-data="{ show: false }" @click.away="show = false">
 
      <div @click="show = !show" class="flex items-center gap-2 px-3 py-2 cursor-pointer">
@@ -17,8 +25,10 @@
 
      <div x-show="show" class="absolute z-50 w-24 pt-4 rounded-md bg-neutral-950 text-neutral-50" style="display: none">
          @foreach ($available_locales as $locale_name => $locale_value)
-             <a href="/lang/{{ $locale_value }}"
-                 class="block px-3 py-4 hover:underline hover:underline-offset-8 hover:font-semibold">{{ $locale_name }}</a>
+                <a 
+                    href="{{$links[$locale_value]}}"
+                    class="block px-3 py-4 hover:underline hover:underline-offset-8 hover:font-semibold"
+                >{{ $locale_name }}</a>
          @endforeach
      </div>
 

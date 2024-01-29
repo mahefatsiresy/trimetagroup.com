@@ -16,23 +16,9 @@ use PhpParser\Node\Stmt\TryCatch;
 |
 */
 
-Route::get('lang/{locale}', function ($locale) {
-    app()->setLocale($locale);
-    session()->put('locale', $locale);
-
-    return redirect()->back();
-});
-
-// Route::get('/lang/{locale}/{$path}', function ($locale, $path) {
-//     app()->setLocale($locale);
-//     session()->put('locale', $locale);
-
-
-//     return redirect()->to("/{'fr' === $locale ? $path : $locale . $path");
-// });
-
 Route::get('/', function () {
     try {
+        updateLocaleTo('fr');
         return view('welcome', ['posts' => getPostsByCategory(getNewsSlug())]);
     } catch (Exception $e) {
 
@@ -80,12 +66,20 @@ Route::get('/en/activities/{slug}', function ($slug) {
 
 
 Route::get('/about-us/key-dates', function () {
+    updateLocaleTo('fr');
+    return view('key-dates');
+})->name('about-us');
+
+Route::get('/en/about-us/key-dates', function () {
+    updateLocaleTo('en');
     return view('key-dates');
 })->name('about-us');
 
 
 Route::get('about-us/{slug}', function ($slug) {
     try {
+
+        updateLocaleTo('fr');
 
         $frTranslation = [
             "ceo-words" => "les-mots-du-president",
@@ -103,32 +97,33 @@ Route::get('about-us/{slug}', function ($slug) {
         $post = Post::slug($slug)->first();
 
         $post = buildPost($post);
+        return view('posts.show', ['post' => $post, 'posts' => null, 'slug' => $slug]);
+    } catch (Exception $e) {
+        return view('posts.show', ['error' => true]);
+    }
+})->name('about-us');
 
-        // // get related posts
-        // $posts = [];
+Route::get('/en/about-us/{slug}', function ($slug) {
+    try {
 
-        // $isNotCEOWords = 'ceo-words' !== $slug || $frTranslation['ceo-words'] !== $slug;
-        // $isNotOurHistory = 'our-history' !== $slug || $frTranslation['our-history'] !== $slug;
-        // $isNotOurMission = 'our-mission' !== $slug || $frTranslation['our-mission'] !== $slug;
+        updateLocaleTo('en');
 
+        $frTranslation = [
+            "ceo-words" => "les-mots-du-president",
+            'our-history' => "notre-histoire",
+            'our-mission' => "notre-mission",
+            'our-values' => "nos-valeurs",
+            'legal-notice' => 'mentions-legales',
+            'about-us' => 'a-propos-de-nous'
+        ];
 
-        // // if not special pages
-        // if ($isNotCEOWords || $isNotOurHistory || $isNotOurMission) {
-        //     $temp = Post::where('post_name', '!=', $slug)
-        //         ->where('ping_status', 'open')
-        //         ->published()
-        //         ->paginate(3);
-        //     // ->map(function ($p) {
-        //     //     return buildPost($p);
-        //     // });
+        if ('fr' === Session::get('locale')) {
+            $slug = $frTranslation[$slug];
+        }
 
-        //     // only add non null value
-        //     foreach ($temp as $p) {
-        //         if ($p) {
-        //             $posts[] = $p;
-        //         }
-        //     }
-        // }
+        $post = Post::slug($slug)->first();
+
+        $post = buildPost($post);
         return view('posts.show', ['post' => $post, 'posts' => null, 'slug' => $slug]);
     } catch (Exception $e) {
         return view('posts.show', ['error' => true]);
@@ -315,6 +310,20 @@ Route::get('en/career', function () {
 
 Route::get('career/{slug}', function ($slug) {
     try {
+        updateLocaleTo('fr');
+        $post = Post::slug($slug)->first();
+
+        $post = buildPost($post);
+
+        return view('posts.show', ['post' => $post, 'posts' => []]);
+    } catch (Exception $e) {
+        return view('posts.show', ['error' => true]);
+    }
+});
+
+Route::get('/en/career/{slug}', function ($slug) {
+    try {
+        updateLocaleTo('en');
         $post = Post::slug($slug)->first();
 
         $post = buildPost($post);
