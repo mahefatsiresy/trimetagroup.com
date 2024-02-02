@@ -128,7 +128,7 @@
             $certifications[] = [
                 'title' => __("{$slug}.certifications.{$numberLetter[$i]}.title"),
                 'descriptions' => __("{$slug}.certifications.{$numberLetter[$i]}.descriptions") === "{$slug}.certifications.{$numberLetter[$i]}.descriptions" ? null : __("{$slug}.certifications.{$numberLetter[$i]}.descriptions"),
-                'images' => __("{$slug}.certifications.{$numberLetter[$i]}.images"),
+                'images' => __("{$slug}.certifications.{$numberLetter[$i]}.images") === "{$slug}.certifications.{$numberLetter[$i]}.images" ? null : __("{$slug}.certifications.{$numberLetter[$i]}.images"),
                 'other-image' => $otherImages,
             ];
         }
@@ -230,7 +230,9 @@
                 @foreach ($certifications as $cert)
                     <li class="flex flex-col lg:flex-row gap-4 lg:gap-8">
                             <div class="grid gap-2 grid-cols-3 lg:grid-cols-1">
-                                <img src={{ $cert['images'] }} alt="detail image" width="400" height="400" class='inline-block object-contain w-fit h-[196px]'/>
+                                @if ($cert['images'])
+                                    <img src={{ $cert['images'] }} alt="logo {{$cert['title']}}" width="400" height="400" class='inline-block object-contain w-fit h-[196px]'/>
+                                @endif
                                 @if (count($cert['other-image']) !== 0)
                                 @foreach ($cert['other-image'] as $oi)
                                     <img src={{ $oi }} alt="detail image" width="400" height="400" class='inline-block object-contain w-fit h-[196px]'/>
