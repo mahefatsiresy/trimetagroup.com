@@ -97,9 +97,9 @@ Route::get('about-us/{slug}', function ($slug) {
         $post = Post::slug($slug)->first();
 
         $post = buildPost($post);
-        return view('posts.show', ['post' => $post, 'posts' => null, 'slug' => $slug]);
+        return view('posts.show', ['post' => $post, 'posts' => null, 'path' => "/about-us/{$slug}"]);
     } catch (Exception $e) {
-        return view('posts.show', ['error' => true]);
+        return view('posts.show', ['error' => true, 'path' => "/about-us/{$slug}"], );
     }
 })->name('about-us');
 
@@ -155,9 +155,9 @@ Route::get('news/{slug}', function ($slug) {
                 return buildPost($p);
             });
 
-        return view('posts.show', ['post' => $post, 'posts' => $posts]);
+        return view('posts.show', ['post' => $post, 'posts' => $posts, 'path' => "/news/{$slug}"], );
     } catch (\Throwable $th) {
-        return view('posts.show', ['error' => true]);
+        return view('posts.show', ['error' => true, 'path' => "/news/{$slug}"]);
     }
 })->name('news');
 

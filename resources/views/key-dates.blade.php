@@ -21,7 +21,7 @@
 
 @endphp
 
-<x-layout :title="__('key-dates.document-title')" :description="__('key-dates.meta-description')">
+<x-layout :title="__('key-dates.document-title')" :description="__('key-dates.meta-description')" path='/about-us/key-dates'>
     <div class="pt-24 pb-24 overflow-x-hidden bg-gradient-to-tl from-neutral-950 from-80% to-neutral-900">
         <x-section-title :text="__('key-dates.document-title')" class="px-4 md:px-12" dark/>
         <ul class="w-full px-4 lg:px-12 lg:w-6/7 lg:max-w-6xl mx-auto mt-12 text-neutral-300 md:text-neutral-900">

@@ -70,7 +70,7 @@
     );
 @endphp
 
-<x-layout :title="__('commitments.document-title')" :description="__('commitments.meta-description')">
+<x-layout :title="__('commitments.document-title')" :description="__('commitments.meta-description')" path="/our-commitments">
     <article class="pt-16 bg-neutral-950">
         <x-section-title :text="__('commitments.document-title')" class="px-4 md:px-12 pb-6" dark/>
         <div class="p-4 md:p-12 2xl:px-24">
