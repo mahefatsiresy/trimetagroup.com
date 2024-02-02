@@ -18,7 +18,7 @@ return [
     'details.two.title' => '50,000,000 m2 of woven fabric/year',
 
     'details.three.icon' => '/icons/bag.png',
-    'details.three.title' => '26 500 000 m2 de sacs fabriqués/an',
+    'details.three.title' => '26,500,000 m2 of bags manufactured/year',
 
     'details.four.icon' => '/icons/certifications.png',
     // 'details.four.title' => 'Certifications',
