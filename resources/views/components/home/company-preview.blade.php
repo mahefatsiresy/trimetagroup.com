@@ -1,7 +1,7 @@
 @props(['key', 'index'])
 
 @php
-    $href = $key;
+    $href = __("home.sections.group.${key}.url");
     $name = __("home.sections.group.${key}.name");
     $logo = __("home.sections.group.${key}.logo");
     $background = __("home.sections.group.${key}.background");
@@ -13,7 +13,7 @@
     class="w-full h-[512px] lg:w-[calc(100vw/5)] lg:h-full bg-center bg-cover bg-no-repeat lg:hover:w-[744px] 2xl:hover:w-[960px] transition-all ease-in-out duration-1000 cursor-pointer delay-0"
     style="background-image: url({{ $background }});z-index: {{ $index + 2 }};">
 
-    <x-link href="/activities/{{ $href }}"
+    <x-link href="{{$href}}"
         class="bg-gradient-to-b from-neutral-950/40 from-15% via-neutral-950/0 to-90% to-neutral-950/90 w-full h-full flex flex-col justify-between p-4 2xl:px-8 transition-none">
 
         @if($key === 'trimeta-agrofood')

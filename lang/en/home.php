@@ -11,18 +11,21 @@ return [
     'sections.group.subtitle' => 'We bring together 5 distinct trades/companies',
 
     'sections.group.enduma.name' => 'Enduma',
+    'sections.group.enduma.url' => '/activities/enduma',
     'sections.group.enduma.logo' => '/images/logo/logo_enduma.webp',
     'sections.group.enduma.background' => '/images/Enduma/enduma.webp',
-    'sections.group.enduma.description' => "Packaging designer",
+    'sections.group.enduma.description' => 'Packaging designer',
     // 'sections.group.enduma.description' => 'Designer, manufacturer and trader of woven Polypropylene products.',
 
     'sections.group.trimeta-agrofood.name' => 'Trimeta Agro Food',
+    'sections.group.trimeta-agrofood.url' => '/activities/trimeta-agrofood',
     'sections.group.trimeta-agrofood.logo' => '/images/logo/logo_trimeta.webp',
     'sections.group.trimeta-agrofood.background' => '/images/TAF/trimeta_4.webp',
     'sections.group.trimeta-agrofood.description' => "Exportateur de vanille et d'épice",
     // 'sections.group.trimeta-agrofood.description' => 'Collector, processor, packer and exporter of Madagascan vanilla and spices.',
 
     'sections.group.wimmo.name' => 'Wimmo',
+    'sections.group.wimmo.url' => '/activities/wimmo',
     'sections.group.wimmo.logo' => '/images/logo/logo_wimmo.webp',
     'sections.group.wimmo.background' => '/images/Wimmo/wimmo_2.webp',
     'sections.group.wimmo.description' => 'Real estate developer',
@@ -34,12 +37,14 @@ return [
     'sections.group.millot.description' => 'Cocoa exporter',
 
     'sections.group.orkidex.name' => 'Orkidex',
+    'sections.group.orkidex.url' => '/activities/orkidex',
     'sections.group.orkidex.logo' => '/images/logo/logo_orkidex.webp',
     'sections.group.orkidex.background' => '/images/TAF/trimeta_2.webp',
     'sections.group.orkidex.description' => 'Vanilla transformer',
     // 'sections.group.orkidex.description' => 'Processor of vanilla powder and extract',
 
     'sections.group.alma-villas.name' => 'Alma Villas',
+    'sections.group.alma-villas.url' => '/activities/alma-villas',
     'sections.group.alma-villas.logo' => '/images/logo/alma_logo.webp',
     'sections.group.alma-villas.background' => '/images/alma/alma-villas-product.webp',
     'sections.group.alma-villas.description' => 'Tourist villa rental',
@@ -93,7 +98,7 @@ return [
     'sections.responsibilities.five.icon' => '/icons/gift.svg',
     'sections.responsibilities.five.image' => '/images/Groupe/transport.webp',
     'sections.responsibilities.five.descriptions.one' => 'Employee pick-up at 07:15 AM.',
-    'sections.responsibilities.five.descriptions.two' =>  'After the working day for employees who finish at 17:00. A charter is signed by employees to ensure the smooth running of this service.',
+    'sections.responsibilities.five.descriptions.two' => 'After the working day for employees who finish at 17:00. A charter is signed by employees to ensure the smooth running of this service.',
 
     'sections.responsibilities.six.title' => 'Christmas and June 26 basket',
     'sections.responsibilities.six.icon' => '/icons/transport.svg',
@@ -129,5 +134,5 @@ return [
     'sections.commitment.content' => 'Culture, social responsibility or environment... The Trimeta Group and its entities mobilize resources and skills for initiatives that benefit society.',
     'sections.commitment.cta' => 'See details',
 
-    'about-us' => 'About us'
+    'about-us' => 'About us',
 ];

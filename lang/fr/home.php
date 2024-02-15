@@ -11,18 +11,21 @@ return [
     'sections.group.subtitle' => 'Nous rassemblons 5 métiers/entreprises distincts',
 
     'sections.group.enduma.name' => 'Enduma',
+    'sections.group.enduma.url' => '/activites/enduma',
     'sections.group.enduma.logo' => '/images/logo/logo_enduma.webp',
     'sections.group.enduma.background' => '/images/Enduma/enduma.webp',
     'sections.group.enduma.description' => "Concepteur d'emballage",
     // 'sections.group.enduma.description' => 'Concepteur, fabriquant et négociant de produits tissés ou non tissés à base de Polypropylène.',
 
     'sections.group.trimeta-agrofood.name' => 'Trimeta Agro Food',
+    'sections.group.trimeta-agrofood.url' => '/activites/trimeta-agrofood',
     'sections.group.trimeta-agrofood.logo' => '/images/logo/logo_trimeta.webp',
     'sections.group.trimeta-agrofood.background' => '/images/TAF/trimeta_4.webp',
     'sections.group.trimeta-agrofood.description' => "Exportateur de vanille et d'épice",
     // 'sections.group.trimeta-agrofood.description' => 'Collecteur, préparateur, conditionneur, exportateur de vanille et d\'épices malgaches.',
 
     'sections.group.wimmo.name' => 'Wimmo',
+    'sections.group.wimmo.url' => '/activites/wimmo',
     'sections.group.wimmo.logo' => '/images/logo/logo_wimmo.webp',
     'sections.group.wimmo.background' => '/images/Wimmo/wimmo_2.webp',
     'sections.group.wimmo.description' => 'Promoteur immobilier',
@@ -34,11 +37,13 @@ return [
     'sections.group.millot.description' => 'Exportateur de cacao',
 
     'sections.group.orkidex.name' => 'Orkidex',
+    'sections.group.orkidex.url' => '/activites/orkidex',
     'sections.group.orkidex.logo' => '/images/logo/logo_orkidex.webp',
     'sections.group.orkidex.background' => '/images/TAF/trimeta_2.webp',
     'sections.group.orkidex.description' => 'Transformateur de vanille',
 
     'sections.group.alma-villas.name' => 'Alma Villas',
+    'sections.group.alma-villas.url' => '/activites/alma-villas',
     'sections.group.alma-villas.logo' => '/images/logo/alma_logo.webp',
     'sections.group.alma-villas.background' => '/images/alma/alma-villas-product.webp',
     // 'sections.group.alma-villas.background' => '/images/alma/alma-1.webp',
@@ -90,7 +95,7 @@ return [
     'sections.responsibilities.five.icon' => '/icons/gift.svg',
     'sections.responsibilities.five.image' => '/images/Groupe/transport.webp',
     'sections.responsibilities.five.descriptions.one' => 'Ramassage des employés en début de journée à 07h15.',
-    'sections.responsibilities.five.descriptions.two' =>  'Après la journée de travail pour les salariés qui terminent à 17h00. Une charte est signée par les salariés pour respecter le bon fonctionnement de ce service.',
+    'sections.responsibilities.five.descriptions.two' => 'Après la journée de travail pour les salariés qui terminent à 17h00. Une charte est signée par les salariés pour respecter le bon fonctionnement de ce service.',
 
     'sections.responsibilities.six.title' => 'Panier de Noêl et de 26 Juin',
     'sections.responsibilities.six.icon' => '/icons/transport.svg',
@@ -126,5 +131,5 @@ return [
     'sections.commitment.title' => 'Nos engagements',
     'sections.commitment.cta' => 'Voir les détails',
 
-    'about-us' => 'A propos du groupe'
+    'about-us' => 'A propos du groupe',
 ];
