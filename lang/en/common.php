@@ -4,30 +4,56 @@ return [
     'document-title' => 'Trimeta Group',
 
     'navbar.links.group.trigger' => 'Our group',
-    'navbar.links.group.ceo-words' => 'CEO words',
-    'navbar.links.group.our-history' => 'Our history',
+
+    // 'navbar.links.group.ceo-words' => 'CEO words',
+    // 'navbar.links.group.ceo-words.url' => '/our-group/ceo-words',
+
+    // 'navbar.links.group.our-history' => 'Our history',
+    // 'navbar.links.group.our-history.url' => '/our-group/our-history',
+
     'navbar.links.group.key-dates' => 'Key dates',
+    'navbar.links.group.key-dates.url' => '/our-group/key-dates',
+
     'navbar.links.group.about-us' => 'About us',
+    'navbar.links.group.about-us.url' => '/our-group/about-us',
+
     'navbar.links.group.our-mission' => 'Our mission',
+    'navbar.links.group.our-mission.url' => '/our-group/our-mission',
+
     'navbar.links.group.our-values' => 'Our values',
+    'navbar.links.group.our-values.url' => '/our-group/our-values',
 
     'navbar.links.activities.trigger' => 'Our activities',
     'navbar.links.activities.1.title' => 'Industry',
     'navbar.links.activities.2.title' => 'Food Industry',
     'navbar.links.activities.3.title' => 'Real estate',
     'navbar.links.activities.4.title' => 'Hotel and Tourism',
+
     'navbar.links.activities.enduma' => 'Enduma',
+    'navbar.links.activities.enduma.url' => '/activities/enduma',
+
     'navbar.links.activities.trimeta-agrofood' => 'Trimeta Agro Food',
+    'navbar.links.activities.trimeta-agrofood.url' => '/activities/trimeta-agrofood',
+
     'navbar.links.activities.wimmo' => 'Wimmo',
-    'navbar.links.activities.millot' => 'Plantation Millot',
+    'navbar.links.activities.wimmo.url' => '/activities/wimmo',
+
     'navbar.links.activities.orkidex' => 'Orkidex',
+    'navbar.links.activities.orkidex.url' => '/activities/orkidex',
+
     'navbar.links.activities.alma-villas' => 'Alma Villas',
+    'navbar.links.activities.alma-villas.url' => '/activities/alma-villas',
 
     'navbar.links.our-commitments' => 'Our Commitments',
+    'navbar.links.our-commitments.url' => '/our-commitments',
+
     'navbar.links.news' => 'News',
+    'navbar.links.news.url' => '/news',
+
     'navbar.links.cta' => 'Contact us',
 
     'navbar.links.career' => 'Our careers',
+    'navbar.links.career.url' => '/career',
 
     'company-news-title :company' => ':company news and activities',
     'company-news-empty :company' => 'No article about :company has been published',

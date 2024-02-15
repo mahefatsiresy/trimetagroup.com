@@ -35,7 +35,7 @@ Route::get('/en', function () {
     }
 });
 
-Route::get('/activities/{slug}', function ($slug) {
+Route::get('/activites/{slug}', function ($slug) {
     if (
         $slug === 'enduma' ||
         $slug === 'trimeta-agrofood' ||
@@ -65,72 +65,46 @@ Route::get('/en/activities/{slug}', function ($slug) {
 
 
 
-Route::get('/about-us/key-dates', function () {
+Route::get('/notre-groupe/dates-cles', function () {
     updateLocaleTo('fr');
     return view('key-dates');
 })->name('about-us');
 
-Route::get('/en/about-us/key-dates', function () {
+Route::get('/en/our-group/key-dates', function () {
     updateLocaleTo('en');
     return view('key-dates');
 })->name('about-us');
 
 
-Route::get('about-us/{slug}', function ($slug) {
+Route::get('notre-groupe/{slug}', function ($slug) {
     try {
 
         updateLocaleTo('fr');
-
-        $frTranslation = [
-            "ceo-words" => "les-mots-du-president",
-            'our-history' => "notre-histoire",
-            'our-mission' => "notre-mission",
-            'our-values' => "nos-valeurs",
-            'legal-notice' => 'mentions-legales',
-            'about-us' => 'a-propos-de-nous'
-        ];
-
-        if ('fr' === Session::get('locale')) {
-            $slug = $frTranslation[$slug];
-        }
 
         $post = Post::slug($slug)->first();
 
         $post = buildPost($post);
         return view('posts.show', ['post' => $post, 'posts' => null, 'path' => "/about-us/{$slug}"]);
     } catch (Exception $e) {
-        return view('posts.show', ['error' => true, 'path' => "/about-us/{$slug}"], );
+        return view('posts.show', ['error' => true, 'path' => "/notre-groupe/{$slug}"], );
     }
-})->name('about-us');
+})->name('notre-groupe');
 
-Route::get('/en/about-us/{slug}', function ($slug) {
+Route::get('/en/our-group/{slug}', function ($slug) {
     try {
 
         updateLocaleTo('en');
-
-        $frTranslation = [
-            "ceo-words" => "les-mots-du-president",
-            'our-history' => "notre-histoire",
-            'our-mission' => "notre-mission",
-            'our-values' => "nos-valeurs",
-            'legal-notice' => 'mentions-legales',
-            'about-us' => 'a-propos-de-nous'
-        ];
-
-        if ('fr' === Session::get('locale')) {
-            $slug = $frTranslation[$slug];
-        }
 
         $post = Post::slug($slug)->first();
 
         $post = buildPost($post);
         return view('posts.show', ['post' => $post, 'posts' => null, 'slug' => $slug]);
     } catch (Exception $e) {
-        return view('posts.show', ['error' => true]);
+        return view('posts.show', ['error' => true, 'path' => "/en/our-group/{$slug}"]);
     }
-})->name('about-us');
+})->name('our-group');
 
-Route::get('/our-commitments', function () {
+Route::get('/nos-engagements', function () {
     updateLocaleTo('fr');
     return view('commitments');
 })->name('commitments');
@@ -161,7 +135,29 @@ Route::get('news/{slug}', function ($slug) {
     }
 })->name('news');
 
-Route::get('/news', function () {
+Route::get('en/news/{slug}', function ($slug) {
+    try {
+        $post = Post::slug($slug)->first();
+
+        $post = buildPost($post);
+
+        $posts = Post::where('post_name', '!=', $slug)
+            ->where('ping_status', 'open')
+            ->published()
+            ->taxonomy('category', getNewsSlug())
+            ->paginate(3)
+            ->map(function ($p) {
+                return buildPost($p);
+            });
+
+        return view('posts.show', ['post' => $post, 'posts' => $posts, 'path' => "/news/{$slug}"], );
+    } catch (\Throwable $th) {
+        return view('posts.show', ['error' => true, 'path' => "/news/{$slug}"]);
+    }
+})->name('news');
+
+
+Route::get('/actualites', function () {
     try {
         updateLocaleTo('fr');
         return view('posts.index', ['posts' => getPostsByCategory(getNewsSlug())]);
@@ -179,7 +175,7 @@ Route::get('/en/news', function () {
     }
 })->name('news');
 
-Route::get('/career', function () {
+Route::get('/carriere', function () {
     try {
         updateLocaleTo('fr');
 

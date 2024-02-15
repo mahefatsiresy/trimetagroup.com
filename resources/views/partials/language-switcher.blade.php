@@ -1,9 +1,79 @@
  @php
- $request_uri_contains_en = "/en" === substr($_SERVER['REQUEST_URI'], 0, 3);
- $links = [
-    'fr' => $request_uri_contains_en ? substr($_SERVER['REQUEST_URI'], 3) : $_SERVER['REQUEST_URI'],
-    'en' => $request_uri_contains_en ? $_SERVER['REQUEST_URI'] : "/en" . $_SERVER['REQUEST_URI'],
-];
+     $links = [
+         'fr' => '',
+         'en' => '/en',
+     ];
+
+     // get link translation
+     if ($_SERVER['REQUEST_URI'] === '/' || $_SERVER['REQUEST_URI'] === '/en') {
+         $links['fr'] = '/';
+         $links['en'] = '/en';
+     }
+
+     if ($_SERVER['REQUEST_URI'] === '/notre-groupe/dates-cles' || $_SERVER['REQUEST_URI'] === '/en/our-group/key-dates') {
+         $links['fr'] = '/notre-groupe/dates-cles';
+         $links['en'] = '/en/our-group/key-dates';
+     }
+
+     if ($_SERVER['REQUEST_URI'] === '/notre-groupe/a-propos-de-nous' || $_SERVER['REQUEST_URI'] === '/en/our-group/about-us') {
+         $links['fr'] = '/notre-groupe/a-propos-de-nous';
+         $links['en'] = '/en/our-group/about-us';
+     }
+
+     if ($_SERVER['REQUEST_URI'] === '/notre-groupe/notre-mission' || $_SERVER['REQUEST_URI'] === '/en/our-group/our-mission') {
+         $links['fr'] = '/notre-groupe/notre-mission';
+         $links['en'] = '/en/our-group/our-mission';
+     }
+
+     if ($_SERVER['REQUEST_URI'] === '/notre-groupe/nos-valeurs' || $_SERVER['REQUEST_URI'] === '/en/our-group/our-values') {
+         $links['fr'] = '/notre-groupe/nos-valeurs';
+         $links['en'] = '/en/our-group/our-values';
+     }
+
+     if ($_SERVER['REQUEST_URI'] === '/activites/enduma' || $_SERVER['REQUEST_URI'] === '/en/activities/enduma') {
+         $links['fr'] = '/activites/enduma';
+         $links['en'] = '/en/activities/enduma';
+     }
+
+     if ($_SERVER['REQUEST_URI'] === '/activites/wimmo' || $_SERVER['REQUEST_URI'] === '/en/activities/wimmo') {
+         $links['fr'] = '/activites/wimmo';
+         $links['en'] = '/en/activities/wimmo';
+     }
+
+     if ($_SERVER['REQUEST_URI'] === '/activites/trimeta-agrofood' || $_SERVER['REQUEST_URI'] === '/en/activities/trimeta-agrofood') {
+         $links['fr'] = '/activites/trimeta-agrofood';
+         $links['en'] = '/en/activities/trimeta-agrofood';
+     }
+
+     if ($_SERVER['REQUEST_URI'] === '/activites/orkidex' || $_SERVER['REQUEST_URI'] === '/en/activities/orkidex') {
+         $links['fr'] = '/activites/orkidex';
+         $links['en'] = '/en/activities/orkidex';
+     }
+
+     if ($_SERVER['REQUEST_URI'] === '/activites/alma-villas' || $_SERVER['REQUEST_URI'] === '/en/activities/alma-villas') {
+         $links['fr'] = '/activites/alma-villas';
+         $links['en'] = '/en/activities/alma-villas';
+     }
+
+     if ($_SERVER['REQUEST_URI'] === '/nos-engagements' || $_SERVER['REQUEST_URI'] === '/en/our-commitments') {
+         $links['fr'] = '/nos-engagements';
+         $links['en'] = '/en/our-commitments';
+     }
+
+     if ($_SERVER['REQUEST_URI'] === '/actualites' || $_SERVER['REQUEST_URI'] === '/en/news') {
+         $links['fr'] = '/actualites';
+         $links['en'] = '/en/news';
+     }
+
+     if ($_SERVER['REQUEST_URI'] === '/actualites' || $_SERVER['REQUEST_URI'] === '/en/news') {
+         $links['fr'] = '/actualites';
+         $links['en'] = '/en/news';
+     }
+
+     if ($_SERVER['REQUEST_URI'] === '/carriere' || $_SERVER['REQUEST_URI'] === '/en/career') {
+         $links['fr'] = '/carriere';
+         $links['en'] = '/en/career';
+     }
 
  @endphp
  <div x-data="{ show: false }" @click.away="show = false">
@@ -23,12 +93,11 @@
 
      </div>
 
-     <div x-show="show" class="absolute z-50 w-24 pt-4 rounded-md bg-neutral-950 text-neutral-50" style="display: none">
+     <div x-show="show" class="absolute z-50 w-24 pt-4 rounded-md bg-neutral-950 text-neutral-50"
+         style="display: none">
          @foreach ($available_locales as $locale_name => $locale_value)
-                <a 
-                    href="{{$links[$locale_value]}}"
-                    class="block px-3 py-4 hover:underline hover:underline-offset-8 hover:font-semibold"
-                >{{ $locale_name }}</a>
+             <a href="{{ $links[$locale_value] }}"
+                 class="block px-3 py-4 hover:underline hover:underline-offset-8 hover:font-semibold">{{ $locale_name }}</a>
          @endforeach
      </div>
 

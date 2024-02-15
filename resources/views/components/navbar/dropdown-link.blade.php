@@ -9,11 +9,13 @@
         @foreach ($contents as $content)
             <li>
                 @if (is_array($content))
-                    <div class="text-sm mb-2 uppercase text-neutral-400">{{__('common.navbar.links.' . $trigger . '.' . $loop->iteration . '.' . 'title')}}</div>
+                    <div class="text-sm mb-2 uppercase text-neutral-400">
+                        {{ __('common.navbar.links.' . $trigger . '.' . $loop->iteration . '.' . 'title') }}
+                    </div>
                     <ul>
                         @foreach ($content as $lnk)
                             <li>
-                                <x-link href="{{ $parentRoute }}/{{ $lnk }}"
+                                <x-link href="{{ __('common.navbar.links.' . $trigger . '.' . $lnk . '.url') }}"
                                     class="block w-full font-medium text-sm py-2 hover:font-bold hover:underline hover:underline-offset-8">
                                     {{ __('common.navbar.links.' . $trigger . '.' . $lnk) }}
                                 </x-link>
@@ -21,7 +23,7 @@
                         @endforeach
                     </ul>
                 @else
-                    <x-link href="{{ $parentRoute }}/{{ $content }}"
+                    <x-link href="{{ __('common.navbar.links.' . $trigger . '.' . $content . '.url') }}"
                         class="block w-full px-4 py-2 text-sm hover:font-bold hover:underline hover:underline-offset-8">
                         {{ __('common.navbar.links.' . $trigger . '.' . $content) }}
                     </x-link>

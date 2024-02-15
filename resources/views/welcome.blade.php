@@ -59,7 +59,7 @@
             <div class="pl-4 pb-6 text-lg md:text-xl md:max-w-3xl text-neutral-100">
                 {{ __("home.sections.ethics.resume.one") }}
             </div>
-            <x-button href="/about-us/our-values">
+            <x-button href="{{  __('common.navbar.links.group.our-values.url') }}">
                 {{ __('home.sections.ethics.cta') }}
             </x-button>
         </div>
@@ -73,7 +73,7 @@
                 <div class="pl-4 pb-6 text-lg md:text-xl max-w-[640px]">
                     {{ __("home.sections.commitment.content") }}
                 </div>
-                <x-button href="/our-commitments">
+                <x-button href="{{  __('common.navbar.links.our-commitments.url') }}">
                     {{ __('home.sections.commitment.cta') }}
                 </x-button>
             </div>
