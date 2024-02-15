@@ -64,11 +64,11 @@ return [
     'commitments.environmental.document-title' => 'Nos engagements environnemental',
     'commitments.environmental.background' => '/images/Groupe/enduma_7.webp',
 
-    "commitments.csr-projects.document-title" => 'Nos projet RSE',
-    "commitments.csr-projects.background" => '/images/Groupe/enduma_7.webp',
+    'commitments.csr-projects.document-title' => 'Nos projet RSE',
+    'commitments.csr-projects.background' => '/images/Groupe/enduma_7.webp',
 
     'news.document-title' => 'Actualités',
-    'news.meta-description' => "Restez informé avec les dernières actualités passionnantes de notre groupe. Explorez les moments marquants, les innovations et les histoires inspirantes qui façonnent notre parcours.",
+    'news.meta-description' => 'Restez informé avec les dernières actualités passionnantes de notre groupe. Explorez les moments marquants, les innovations et les histoires inspirantes qui façonnent notre parcours.',
 
     'news.post.cta' => 'Lire l\'article',
     'news.post.no-image' => 'Pas d\'image',
@@ -96,10 +96,11 @@ return [
 
     'sorry-not-found' => 'Désolé, page non trouvé',
 
-    "ceo-words.meta-description" => "",
-    'our-history.meta-description' => "",
+    'ceo-words.meta-description' => '',
+    'our-history.meta-description' => '',
     'our-mission.meta-description' => "Explorez comment nos missions impactent positivement les secteurs dans lesquels nous opérons. Bienvenue dans l'univers des missions audacieuses du groupe Trimeta, où chaque initiative contribue à une transformation positive.",
     'our-values.meta-description' => "Découvrez les valeurs fondamentales du groupe Trimeta : Offrir l'Excellence et S'Engager pour un Impact Positif. Plongez dans notre engagement envers l'excellence, où la qualité est au cœur de tout ce que nous entreprenons.",
     'legal-notice.meta-description' => '',
-    'about-us.meta-description' => "Découvrez l'essence de Trimeta, notre groupe dédié à l'excellence et à l'innovation. Plongez dans notre histoire, explorez notre vision du futur et apprenez comment nous redéfinissons les normes dans nos secteurs d'activité."
+    'about-us.meta-description' => "Découvrez l'essence de Trimeta, notre groupe dédié à l'excellence et à l'innovation. Plongez dans notre histoire, explorez notre vision du futur et apprenez comment nous redéfinissons les normes dans nos secteurs d'activité.",
+    'legal-notice.url' => '/notre-groupe/mentions-legales',
 ];
