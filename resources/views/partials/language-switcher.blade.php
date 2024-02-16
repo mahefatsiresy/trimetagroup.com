@@ -4,73 +4,79 @@
          'en' => '/en',
      ];
 
+    $req_uri = $_SERVER['REQUEST_URI'];
+
+    if ('/' === substr($req_uri, -1)) {
+        $req_uri = substr($req_uri, 0, -1);
+    }
+
      // get link translation
-     if ($_SERVER['REQUEST_URI'] === '/' || $_SERVER['REQUEST_URI'] === '/en') {
+     if ($req_uri === '/' || $req_uri === '/en') {
          $links['fr'] = '/';
          $links['en'] = '/en';
      }
 
-     if ($_SERVER['REQUEST_URI'] === '/notre-groupe/dates-cles' || $_SERVER['REQUEST_URI'] === '/en/our-group/key-dates') {
+     if ($req_uri === '/notre-groupe/dates-cles' || $req_uri === '/en/our-group/key-dates') {
          $links['fr'] = '/notre-groupe/dates-cles';
          $links['en'] = '/en/our-group/key-dates';
      }
 
-     if ($_SERVER['REQUEST_URI'] === '/notre-groupe/a-propos-de-nous' || $_SERVER['REQUEST_URI'] === '/en/our-group/about-us') {
+     if ($req_uri === '/notre-groupe/a-propos-de-nous' || $req_uri === '/en/our-group/about-us') {
          $links['fr'] = '/notre-groupe/a-propos-de-nous';
          $links['en'] = '/en/our-group/about-us';
      }
 
-     if ($_SERVER['REQUEST_URI'] === '/notre-groupe/notre-mission' || $_SERVER['REQUEST_URI'] === '/en/our-group/our-mission') {
+     if ($req_uri === '/notre-groupe/notre-mission' || $req_uri === '/en/our-group/our-mission') {
          $links['fr'] = '/notre-groupe/notre-mission';
          $links['en'] = '/en/our-group/our-mission';
      }
 
-     if ($_SERVER['REQUEST_URI'] === '/notre-groupe/nos-valeurs' || $_SERVER['REQUEST_URI'] === '/en/our-group/our-values') {
+     if ($req_uri === '/notre-groupe/nos-valeurs' || $req_uri === '/en/our-group/our-values') {
          $links['fr'] = '/notre-groupe/nos-valeurs';
          $links['en'] = '/en/our-group/our-values';
      }
 
-     if ($_SERVER['REQUEST_URI'] === '/activites/enduma' || $_SERVER['REQUEST_URI'] === '/en/activities/enduma') {
+     if ($req_uri === '/activites/enduma' || $req_uri === '/en/activities/enduma') {
          $links['fr'] = '/activites/enduma';
          $links['en'] = '/en/activities/enduma';
      }
 
-     if ($_SERVER['REQUEST_URI'] === '/activites/wimmo' || $_SERVER['REQUEST_URI'] === '/en/activities/wimmo') {
+     if ($req_uri === '/activites/wimmo' || $req_uri === '/en/activities/wimmo') {
          $links['fr'] = '/activites/wimmo';
          $links['en'] = '/en/activities/wimmo';
      }
 
-     if ($_SERVER['REQUEST_URI'] === '/activites/trimeta-agrofood' || $_SERVER['REQUEST_URI'] === '/en/activities/trimeta-agrofood') {
+     if ($req_uri === '/activites/trimeta-agrofood' || $req_uri === '/en/activities/trimeta-agrofood') {
          $links['fr'] = '/activites/trimeta-agrofood';
          $links['en'] = '/en/activities/trimeta-agrofood';
      }
 
-     if ($_SERVER['REQUEST_URI'] === '/activites/orkidex' || $_SERVER['REQUEST_URI'] === '/en/activities/orkidex') {
+     if ($req_uri === '/activites/orkidex' || $req_uri === '/en/activities/orkidex') {
          $links['fr'] = '/activites/orkidex';
          $links['en'] = '/en/activities/orkidex';
      }
 
-     if ($_SERVER['REQUEST_URI'] === '/activites/alma-villas' || $_SERVER['REQUEST_URI'] === '/en/activities/alma-villas') {
+     if ($req_uri === '/activites/alma-villas' || $req_uri === '/en/activities/alma-villas') {
          $links['fr'] = '/activites/alma-villas';
          $links['en'] = '/en/activities/alma-villas';
      }
 
-     if ($_SERVER['REQUEST_URI'] === '/nos-engagements' || $_SERVER['REQUEST_URI'] === '/en/our-commitments') {
+     if ($req_uri === '/nos-engagements' || $req_uri === '/en/our-commitments') {
          $links['fr'] = '/nos-engagements';
          $links['en'] = '/en/our-commitments';
      }
 
-     if ($_SERVER['REQUEST_URI'] === '/actualites' || $_SERVER['REQUEST_URI'] === '/en/news') {
+     if ($req_uri === '/actualites' || $req_uri === '/en/news') {
          $links['fr'] = '/actualites';
          $links['en'] = '/en/news';
      }
 
-     if ($_SERVER['REQUEST_URI'] === '/actualites' || $_SERVER['REQUEST_URI'] === '/en/news') {
+     if ($req_uri === '/actualites' || $req_uri === '/en/news') {
          $links['fr'] = '/actualites';
          $links['en'] = '/en/news';
      }
 
-     if ($_SERVER['REQUEST_URI'] === '/carriere' || $_SERVER['REQUEST_URI'] === '/en/career') {
+     if ($req_uri === '/carriere' || $req_uri === '/en/career') {
          $links['fr'] = '/carriere';
          $links['en'] = '/en/career';
      }

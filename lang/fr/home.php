@@ -129,6 +129,7 @@ return [
     'csr-project.environment.descriptions.four' => 'Création de puit pour la population locale',
 
     'sections.commitment.title' => 'Nos engagements',
+    'sections.commitment.content' => 'Culture, responsabilité sociale ou environnement... Le Groupe Trimeta et ses entités mobilisent des ressources et des compétences pour des initiatives qui bénéficient à la société.',
     'sections.commitment.cta' => 'Voir les détails',
 
     'about-us' => 'A propos du groupe',
