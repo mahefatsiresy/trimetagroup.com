@@ -1,4 +1,4 @@
- <x-layout :title="__('common.news.document-title')" :description="__('common.news.meta-description')" path='/news'>
+ <x-layout :title="__('common.news.document-title')" :description="__('common.news.meta-description')" path={{$path}}>
     @if (isset($error))
         <div class="px-4 md:px-12 2xl:px-24 pb-8 h-[60vh] md:h-[75vh] lg:h-[90vh] flex flex-col items-center justify-center bg-neutral-950 text-neutral-100">
             <h1 class="text-xl md:text-3xl text-red-500 mb-8">{{__("common.cdn-error-title")}}</h1>

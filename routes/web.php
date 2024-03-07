@@ -67,12 +67,12 @@ Route::get('/en/activities/{slug}', function ($slug) {
 
 Route::get('/notre-groupe/dates-cles', function () {
     updateLocaleTo('fr');
-    return view('key-dates');
+    return view('key-dates', ['path' => '/notre-groupe/date-cles']);
 })->name('about-us');
 
 Route::get('/en/our-group/key-dates', function () {
     updateLocaleTo('en');
-    return view('key-dates');
+    return view('key-dates', ['path' => '/our-group/key-dates']);
 })->name('about-us');
 
 
@@ -84,7 +84,7 @@ Route::get('notre-groupe/{slug}', function ($slug) {
         $post = Post::slug($slug)->first();
 
         $post = buildPost($post);
-        return view('posts.show', ['post' => $post, 'posts' => null, 'path' => "/about-us/{$slug}"]);
+        return view('posts.show', ['post' => $post, 'posts' => null, 'path' => "/notre-groupe/{$slug}"]);
     } catch (Exception $e) {
         return view('posts.show', ['error' => true, 'path' => "/notre-groupe/{$slug}"], );
     }
@@ -98,20 +98,20 @@ Route::get('/en/our-group/{slug}', function ($slug) {
         $post = Post::slug($slug)->first();
 
         $post = buildPost($post);
-        return view('posts.show', ['post' => $post, 'posts' => null, 'slug' => $slug]);
+        return view('posts.show', ['post' => $post, 'posts' => null, 'path' => "/our-group/{$slug}"]);
     } catch (Exception $e) {
-        return view('posts.show', ['error' => true, 'path' => "/en/our-group/{$slug}"]);
+        return view('posts.show', ['error' => true, 'path' => "/our-group/{$slug}"]);
     }
 })->name('our-group');
 
 Route::get('/nos-engagements', function () {
     updateLocaleTo('fr');
-    return view('commitments');
+    return view('commitments', ['path' => '/nos-engagements']);
 })->name('commitments');
 
 Route::get('/en/our-commitments', function () {
     updateLocaleTo('en');
-    return view('commitments');
+    return view('commitments', ['path' =>  'our-commitments']);
 })->name('commitments');
 
 Route::get('news/{slug}', function ($slug) {
@@ -160,18 +160,18 @@ Route::get('en/news/{slug}', function ($slug) {
 Route::get('/actualites', function () {
     try {
         updateLocaleTo('fr');
-        return view('posts.index', ['posts' => getPostsByCategory(getNewsSlug())]);
+        return view('posts.index', ['posts' => getPostsByCategory(getNewsSlug()), 'path' => '/actualites']);
     } catch (Exception $e) {
-        return view('posts.index', ['error' => true]);
+        return view('posts.index', ['error' => true, 'path' => '/actualites']);
     }
 })->name('news');
 
 Route::get('/en/news', function () {
     try {
         updateLocaleTo('en');
-        return view('posts.index', ['posts' => getPostsByCategory(getNewsSlug())]);
+        return view('posts.index', ['posts' => getPostsByCategory(getNewsSlug()), 'path' => '/news']);
     } catch (Exception $e) {
-        return view('posts.index', ['error' => true]);
+        return view('posts.index', ['error' => true, 'path' => '/news']);
     }
 })->name('news');
 
@@ -233,9 +233,9 @@ Route::get('/carriere', function () {
 
         ];
 
-        return view('career.index', ['posts' => $posts]);
+        return view('career.index', ['posts' => $posts, 'path' => "/carrieres"]);
     } catch (Exception $e) {
-        return view('career.index', ['error' => true]);
+        return view('career.index', ['error' => true, 'path' => '/carrieres']);
     }
 })->name('career');
 
@@ -297,23 +297,23 @@ Route::get('en/career', function () {
 
         ];
 
-        return view('career.index', ['posts' => $posts]);
+        return view('career.index', ['posts' => $posts, 'path' => '/career']);
     } catch (Exception $e) {
-        return view('career.index', ['error' => true]);
+        return view('career.index', ['error' => true, 'path' => '/career']);
     }
 })->name('career');
 
 
-Route::get('career/{slug}', function ($slug) {
+Route::get('carriere/{slug}', function ($slug) {
     try {
         updateLocaleTo('fr');
         $post = Post::slug($slug)->first();
 
         $post = buildPost($post);
 
-        return view('posts.show', ['post' => $post, 'posts' => []]);
+        return view('posts.show', ['post' => $post, 'posts' => [], 'path' => "/carriere/{$slug}"]);
     } catch (Exception $e) {
-        return view('posts.show', ['error' => true]);
+        return view('posts.show', ['error' => true, 'path' => "/carriere/{$slug}"]);
     }
 });
 
@@ -324,9 +324,9 @@ Route::get('/en/career/{slug}', function ($slug) {
 
         $post = buildPost($post);
 
-        return view('posts.show', ['post' => $post, 'posts' => []]);
+        return view('posts.show', ['post' => $post, 'posts' => [], 'path' => "/career/{$slug}"]);
     } catch (Exception $e) {
-        return view('posts.show', ['error' => true]);
+        return view('posts.show', ['error' => true, 'path' => "/career/{$slug}"]);
     }
 });
 

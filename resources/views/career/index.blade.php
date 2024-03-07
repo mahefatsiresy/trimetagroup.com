@@ -1,4 +1,4 @@
-<x-layout :title='__("career.document-title")' :description='__("career.meta-description")'>
+<x-layout :title='__("career.document-title")' :description='__("career.meta-description")' path={{$path}}>
     {{-- hero --}}
     <div class="flex relative h-[50vh] lg:h-[70vh] pt-16 bg-neutral-950">
         <div class="h-full w-full bg-cover bg-center" style="background-image: url(/images/career/enduma-job.webp);"></div>
