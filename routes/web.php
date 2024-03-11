@@ -44,7 +44,7 @@ Route::get('/activites/{slug}', function ($slug) {
         $slug === 'alma-villas'
     ) {
         updateLocaleTo('fr');
-        return view('activities', ['slug' => $slug]);
+        return view('activities', ['slug' => $slug, 'path' => "/activites/{slug}"]);
     }
     abort(404);
 })->name('activities');
@@ -58,7 +58,7 @@ Route::get('/en/activities/{slug}', function ($slug) {
         $slug === 'alma-villas'
     ) {
         updateLocaleTo('en');
-        return view('activities', ['slug' => $slug]);
+        return view('activities', ['slug' => $slug, 'path' => "/activities/{slug}"]);
     }
     abort(404);
 })->name('activities');
