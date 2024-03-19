@@ -215,6 +215,10 @@ Route::get('/carriere', function () {
 
         $posts = [
             [
+                'name' => 'The Group',
+                'posts' => $theGroup
+            ],
+            [
                 'name' => 'Enduma',
                 'posts' => $enduma
             ],
@@ -233,10 +237,6 @@ Route::get('/carriere', function () {
             [
                 'name' => 'Alma Villas',
                 'posts' => $almaVillas
-            ],
-            [
-                'name' => 'The Group',
-                'posts' => $theGroup
             ],
 
         ];
@@ -287,6 +287,10 @@ Route::get('en/career', function () {
 
         $posts = [
             [
+                'name' => 'Le Groupe',
+                'posts' => $theGroup
+            ],
+            [
                 'name' => 'Enduma',
                 'posts' => $enduma
             ],
@@ -305,10 +309,6 @@ Route::get('en/career', function () {
             [
                 'name' => 'Alma Villas',
                 'posts' => $almaVillas
-            ],
-            [
-                'name' => 'Le Groupe',
-                'posts' => $theGroup
             ],
 
         ];
