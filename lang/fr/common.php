@@ -23,6 +23,9 @@ return [
     'navbar.links.group.our-values' => 'Nos valeurs',
     'navbar.links.group.our-values.url' => '/notre-groupe/nos-valeurs',
 
+    'navbar.links.group.our-ethical-charter' => 'Notre charte éthique',
+    'navbar.links.group.our-ethical-charter.url' => '/notre-groupe/notre-charte-ethique',
+
     'navbar.links.activities.trigger' => 'Nos activités',
     'navbar.links.activities.2.title' => 'Industrie',
     'navbar.links.activities.2.title' => 'Industrie agro-alimentaire',

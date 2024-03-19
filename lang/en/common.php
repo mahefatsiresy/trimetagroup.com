@@ -23,6 +23,13 @@ return [
     'navbar.links.group.our-values' => 'Our values',
     'navbar.links.group.our-values.url' => '/our-group/our-values',
 
+    'navbar.links.group.our-ethical-charter' => 'Our ethical charter',
+    'navbar.links.group.our-ethical-charter.url' => '/our-group/our-ethical-charter',
+
+
+    'navbar.links.group.our-values' => 'Our values',
+    'navbar.links.group.our-values.url' => '/our-group/our-values',
+
     'navbar.links.activities.trigger' => 'Our activities',
     'navbar.links.activities.1.title' => 'Industry',
     'navbar.links.activities.2.title' => 'Food Industry',
