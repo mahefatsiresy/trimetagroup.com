@@ -86,7 +86,7 @@ Route::get('notre-groupe/{slug}', function ($slug) {
         $post = buildPost($post);
         return view('posts.show', ['post' => $post, 'posts' => null, 'path' => "/notre-groupe/{$slug}"]);
     } catch (Exception $e) {
-        return view('posts.show', ['error' => true, 'path' => "/notre-groupe/{$slug}"], );
+        return view('posts.show', ['error' => true, 'path' => "/notre-groupe/{$slug}"],);
     }
 })->name('notre-groupe');
 
@@ -129,7 +129,7 @@ Route::get('news/{slug}', function ($slug) {
                 return buildPost($p);
             });
 
-        return view('posts.show', ['post' => $post, 'posts' => $posts, 'path' => "/news/{$slug}"], );
+        return view('posts.show', ['post' => $post, 'posts' => $posts, 'path' => "/news/{$slug}"],);
     } catch (\Throwable $th) {
         return view('posts.show', ['error' => true, 'path' => "/news/{$slug}"]);
     }
@@ -150,7 +150,7 @@ Route::get('en/news/{slug}', function ($slug) {
                 return buildPost($p);
             });
 
-        return view('posts.show', ['post' => $post, 'posts' => $posts, 'path' => "/news/{$slug}"], );
+        return view('posts.show', ['post' => $post, 'posts' => $posts, 'path' => "/news/{$slug}"],);
     } catch (\Throwable $th) {
         return view('posts.show', ['error' => true, 'path' => "/news/{$slug}"]);
     }
@@ -186,6 +186,7 @@ Route::get('/carriere', function () {
         $trimetaAgroFood = [];
         $wimmo = [];
         $almaVillas = [];
+        $theGroup = [];
 
         foreach ($temp as $t) {
             if ($t['categories']) {
@@ -204,6 +205,9 @@ Route::get('/carriere', function () {
                     }
                     if ($category->slug === 'alma-villas-career') {
                         $almaVillas[] = $t;
+                    }
+                    if ($category->slug === 'group-career') {
+                        $theGroup[] = $t;
                     }
                 }
             }
@@ -229,6 +233,10 @@ Route::get('/carriere', function () {
             [
                 'name' => 'Alma Villas',
                 'posts' => $almaVillas
+            ],
+            [
+                'name' => 'The Group',
+                'posts' => $theGroup
             ],
 
         ];
@@ -250,6 +258,7 @@ Route::get('en/career', function () {
         $trimetaAgroFood = [];
         $wimmo = [];
         $almaVillas = [];
+        $theGroup = [];
 
         foreach ($temp as $t) {
             if ($t['categories']) {
@@ -268,6 +277,9 @@ Route::get('en/career', function () {
                     }
                     if ($category->slug === 'alma-villas-career') {
                         $almaVillas[] = $t;
+                    }
+                    if ($category->slug === 'group-career') {
+                        $theGroup[] = $t;
                     }
                 }
             }
@@ -293,6 +305,10 @@ Route::get('en/career', function () {
             [
                 'name' => 'Alma Villas',
                 'posts' => $almaVillas
+            ],
+            [
+                'name' => 'Le Groupe',
+                'posts' => $theGroup
             ],
 
         ];
@@ -378,11 +394,12 @@ function getCareerSlug()
     return 'careers';
 }
 
-Route::fallback(function() {
+Route::fallback(function () {
     return view('404');
 });
 
-function updateLocaleTo($locale) {
+function updateLocaleTo($locale)
+{
     if ($locale !== Session::get('locale')) {
         app()->setLocale($locale);
         session()->put('locale', $locale);
