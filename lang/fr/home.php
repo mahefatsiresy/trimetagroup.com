@@ -8,7 +8,7 @@ return [
     'subtitle' => 'Groupe à caractère familial, il a pour vocation d’assurer le développement à long terme de chacune de ses entités dans le respect de ce qui fait leur savoir-faire et leur expérience.',
     'cta' => 'Nous contacter',
     'sections.group.title' => 'Nos entités',
-    'sections.group.subtitle' => 'Nous rassemblons 5 métiers/entreprises distincts',
+    'sections.group.subtitle' => 'Nous rassemblons 4 métiers/entreprises distincts',
 
     'sections.group.enduma.name' => 'Enduma',
     'sections.group.enduma.url' => '/activites/enduma',

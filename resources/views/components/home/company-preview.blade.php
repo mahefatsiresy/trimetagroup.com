@@ -9,8 +9,7 @@
 @endphp
 
 <li
-    {{-- class="w-full h-[512px] lg:w-[calc(100vw/6)] lg:h-full bg-center bg-cover bg-no-repeat hover:w-[456px] transition-all ease-in-out duration-1000 cursor-pointer delay-0" --}}
-    class="w-full h-[512px] lg:w-[calc(100vw/5)] lg:h-full bg-center bg-cover bg-no-repeat lg:hover:w-[744px] 2xl:hover:w-[960px] transition-all ease-in-out duration-1000 cursor-pointer delay-0"
+    class="w-full h-[512px] lg:w-[calc(100vw/4)] lg:h-full bg-center bg-cover bg-no-repeat lg:hover:w-[800px] 2xl:hover:w-[960px] transition-all ease-in-out duration-1000 cursor-pointer delay-0"
     style="background-image: url({{ $background }});z-index: {{ $index + 2 }};">
 
     <x-link href="{{$href}}"

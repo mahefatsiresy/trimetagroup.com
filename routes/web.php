@@ -40,7 +40,7 @@ Route::get('/activites/{slug}', function ($slug) {
         $slug === 'enduma' ||
         $slug === 'trimeta-agrofood' ||
         $slug === 'wimmo' ||
-        $slug === 'orkidex' ||
+        // $slug === 'orkidex' ||
         $slug === 'alma-villas'
     ) {
         updateLocaleTo('fr');
@@ -54,7 +54,7 @@ Route::get('/en/activities/{slug}', function ($slug) {
         $slug === 'enduma' ||
         $slug === 'trimeta-agrofood' ||
         $slug === 'wimmo' ||
-        $slug === 'orkidex' ||
+        // $slug === 'orkidex' ||
         $slug === 'alma-villas'
     ) {
         updateLocaleTo('en');

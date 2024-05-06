@@ -2,7 +2,7 @@
     $group = ['key-dates', 'about-us', 'our-mission', 'our-values', 'our-ethical-charter'];
     $activities = [
         'industry' => ['enduma'],
-        'agro' => ['trimeta-agrofood', 'orkidex'],
+        'agro' => ['trimeta-agrofood'],
         'immo' => ['wimmo'],
         'hotel' => ['alma-villas'],
     ];
